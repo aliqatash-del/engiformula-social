@@ -16,11 +16,28 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Meta and Telegram secrets
+        id: ready
+        env:
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          # Reports need the Page token (README step 3) and the bot (step 5); skip until both exist.
+          if [ -n "$PAGE_ACCESS_TOKEN" ] && [ -n "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::PAGE_ACCESS_TOKEN or TELEGRAM_BOT_TOKEN not set yet; skipping."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.ready.outputs.ok == 'true'
       - uses: actions/setup-python@v5
+        if: steps.ready.outputs.ok == 'true'
         with: { python-version: "3.12", cache: pip }
       - run: pip install -r requirements.txt
+        if: steps.ready.outputs.ok == 'true'
       - name: Pick job
+        if: steps.ready.outputs.ok == 'true'
         id: pick
         run: |
           JOB="${{ github.event.inputs.job }}"
@@ -33,6 +50,7 @@ jobs:
           fi
           echo "job=$JOB" >> "$GITHUB_OUTPUT"
       - name: Run
+        if: steps.ready.outputs.ok == 'true'
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -46,6 +64,7 @@ jobs:
             python scripts/insights.py ${{ steps.pick.outputs.job }}
           fi
       - name: Save data
+        if: steps.ready.outputs.ok == 'true'
         run: |
           git config user.name "engiformula-bot"
           git config user.email "bot@users.noreply.github.com"
