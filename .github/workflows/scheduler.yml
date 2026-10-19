@@ -17,11 +17,28 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Check Telegram secrets
+        id: ready
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Until the approval bot is set up there is nothing to do: skip instead of failing every 30 min.
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set yet (README step 5); skipping."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.ready.outputs.ok == 'true'
       - uses: actions/setup-python@v5
+        if: steps.ready.outputs.ok == 'true'
         with: { python-version: "3.12", cache: pip }
       - run: pip install -r requirements.txt
+        if: steps.ready.outputs.ok == 'true'
       - name: Run scheduler
+        if: steps.ready.outputs.ok == 'true'
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -35,6 +52,7 @@ jobs:
           PUBLIC_MEDIA_BASE_URL: ${{ secrets.PUBLIC_MEDIA_BASE_URL }}
         run: python scripts/scheduler.py
       - name: Save status changes
+        if: steps.ready.outputs.ok == 'true'
         run: |
           git config user.name "engiformula-bot"
           git config user.email "bot@users.noreply.github.com"
