@@ -1,0 +1,42 @@
+name: Media storage check (README step 4)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Upload a test image and fetch it from the public URL
+        env:
+          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          PUBLIC_MEDIA_BASE_URL: ${{ secrets.PUBLIC_MEDIA_BASE_URL }}
+        run: |
+          cd scripts
+          python - <<'PY'
+          import pathlib, sys, time, requests
+          from storage import public_url
+          sample = pathlib.Path("../content/queue/2026-11-02-rebar-weight/slide-01.jpg")
+          url = public_url(sample, "storage-check")
+          for attempt in range(5):
+              r = requests.get(url, timeout=30)
+              if r.status_code == 200:
+                  break
+              time.sleep(3)
+          print("public URL status:", r.status_code, "| content-type:", r.headers.get("content-type"),
+                "| bytes:", len(r.content), "of", sample.stat().st_size)
+          ok = r.status_code == 200 and r.headers.get("content-type", "").startswith("image/jpeg") \
+              and len(r.content) == sample.stat().st_size
+          print("Instagram can fetch media:", "YES" if ok else "NO")
+          sys.exit(0 if ok else 1)
+          PY
