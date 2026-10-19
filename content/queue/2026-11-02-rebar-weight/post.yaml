@@ -1,0 +1,83 @@
+id: 2026-11-02-rebar-weight
+slot: '2026-11-02T20:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A 12 mm bar weighs 0.888 kg/m — and you can work that out in 2 seconds.
+
+
+  W = D²/162 (D in mm, W in kg/m). In the US: W = 2.67 × d² (d in inches, lb/ft).
+
+  Swipe for the full table of metric and #3–#9 bars.
+
+
+  Which bar size do you order most on your sites?
+
+
+  Save this for your next takeoff and send it to the engineer who still uses a printed
+  table.
+
+  Free Rebar Weight calculator → link in bio.'
+hashtags:
+- '#civilengineering'
+- '#rebar'
+- '#structuralengineering'
+- '#constructionsite'
+- '#engiformula'
+first_comment: 'Free rebar weight calculator: https://engiformula.com/calculators'
+alt_text: Carousel explaining the rebar weight formula W equals D squared over 162,
+  with a table of common bar weights in kg per metre and pounds per foot.
+ai_generated: false
+slides:
+- style: block
+  title: How heavy is a ==12 mm== rebar?
+  body: The 2-second formula every site engineer should know — no table needed.
+  cta: SWIPE FOR THE FORMULA →
+  counter: 1 / 4
+- title: Weight per metre
+  formula: W = D² / 162
+  legend: D = bar diameter in mm  ·  W = kg per metre
+  result: 12² / 162 ≈ **0.89 kg/m**
+  counter: 2 / 4
+- title: Common bars, at a glance
+  table:
+  - - METRIC
+    - kg/m
+    - US BAR
+    - lb/ft
+  - - Ø10
+    - '0.617'
+    - '#3'
+    - '0.376'
+  - - Ø12
+    - ==0.888==
+    - '#4'
+    - ==0.668==
+  - - Ø16
+    - '1.578'
+    - '#5'
+    - '1.043'
+  - - Ø20
+    - '2.466'
+    - '#6'
+    - '1.502'
+  - - Ø25
+    - '3.853'
+    - '#8'
+    - '2.670'
+  legend: 'US formula: W (lb/ft) = 2.67 × d²  (d in inches)'
+  counter: 3 / 4
+- style: block
+  title: Need a whole ==bar schedule?==
+  body: Enter size, length and quantity — get total weight in kg or lb, free.
+  cta: Save this · Free calculator → link in bio
+  counter: 4 / 4
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg

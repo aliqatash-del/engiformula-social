@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Inter"; font-weight: 400; src: url("{{ fonts }}/inter-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 500; src: url("{{ fonts }}/inter-latin-500-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 600; src: url("{{ fonts }}/inter-latin-600-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Space Grotesk"; font-weight: 600; src: url("{{ fonts }}/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("{{ fonts }}/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 600; src: url("{{ fonts }}/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
+  :root {
+    --paper: {{ c.paper }}; --surface: {{ c.surface }}; --ink: {{ c.ink }}; --muted: {{ c.ink_muted }};
+    --grid: {{ c.grid_line }}; --blue: {{ c.formula_blue }}; --orange: {{ c.safety_orange }};
+    --yellow: {{ c.rebar_yellow }}; --navy: {{ c.navy }};
+  }
+  html, body { margin: 0; }
+  .s { width: {{ w }}px; height: {{ h }}px; box-sizing: border-box; padding: {{ safe }}px; position: relative;
+       display: flex; flex-direction: column; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden;
+       background-color: var(--paper);
+       background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+       background-size: 40px 40px; }
+  .s.dark { --paper: {{ c.night_paper }}; --surface: {{ c.night_surface }}; --grid: {{ c.night_grid }};
+            --ink: #F1F4F8; --muted: #A9B6C6; --blue: #6E9BFF; }
+  .s.block { background: {{ pillar.chip_bg }}; background-image: none; color: {{ pillar.chip_fg }}; }
+  .s.block .muted, .s.block .site, .s.block .count { color: inherit; opacity: .85; }
+  .s.reel { padding-top: {{ reel_top }}px; padding-bottom: {{ reel_bottom }}px; }
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .chip { font: 600 22px/28px "JetBrains Mono", monospace; letter-spacing: .08em; padding: 10px 16px; border-radius: 6px;
+          background: {{ pillar.chip_bg }}; color: {{ pillar.chip_fg }}; }
+  .s.block .chip { background: {{ pillar.chip_fg }}; color: {{ pillar.chip_bg }}; }
+  .count { font: 600 22px/28px "JetBrains Mono", monospace; color: var(--muted); }
+  h1 { font: 700 {{ title_size }}px/1.0 "Space Grotesk", sans-serif; letter-spacing: -.02em; margin: {{ title_gap }}px 0 0; }
+  .body { font: 500 34px/46px Inter, sans-serif; margin-top: 36px; max-width: 900px; white-space: pre-line; }
+  .formula { margin-top: 48px; background: var(--surface); border-radius: 16px; padding: 44px; box-shadow: 0 0 0 2px var(--grid);
+             font: 600 {{ formula_size }}px/1.15 "JetBrains Mono", monospace; color: var(--blue); }
+  .legend { margin-top: 20px; font: 500 28px/38px Inter, sans-serif; color: var(--muted); white-space: pre-line; }
+  .hl { background: var(--yellow); color: {{ c.ink }}; padding: 0 10px; }
+  .num { color: var(--blue); }
+  .cta { margin-top: auto; font: 600 34px/44px Inter, sans-serif; }
+  .foot { margin-top: 40px; display: flex; justify-content: space-between; align-items: baseline; }
+  .mark { font: 700 30px/1 "Space Grotesk", sans-serif; }
+  .mark b { color: var(--blue); font-weight: 700; }
+  .s.block .mark b { color: inherit; }
+  .site { font: 600 22px/1 "JetBrains Mono", monospace; color: var(--muted); }
+  .spacer { flex-grow: 1; }
+  .tbl { margin-top: 40px; display: grid; gap: 14px 24px; background: var(--surface); border-radius: 16px; padding: 36px;
+         box-shadow: 0 0 0 2px var(--grid); font: 600 34px/44px "JetBrains Mono", monospace; }
+  .tbl .th { font-size: 22px; letter-spacing: .06em; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="s {{ slide.style or '' }} {{ 'reel' if kind in ('reel_cover', 'story') else '' }}">
+  <div class="top">
+    <span class="chip">{{ pillar.label }}</span>
+    {% if slide.counter %}<span class="count">{{ slide.counter }}</span>{% endif %}
+  </div>
+  {% if slide.title %}<h1>{{ slide.title | hl }}</h1>{% endif %}
+  {% if slide.body %}<div class="body">{{ slide.body | hl }}</div>{% endif %}
+  {% if slide.formula %}<div class="formula">{{ slide.formula }}</div>{% endif %}
+  {% if slide.table %}<div class="tbl" style="grid-template-columns: repeat({{ slide.table[0]|length }}, minmax(0, 1fr))">
+    {% for row in slide.table %}{% set head = loop.first %}{% for cell in row %}<span class="{{ 'th' if head else '' }}">{{ cell | hl }}</span>{% endfor %}{% endfor %}
+  </div>{% endif %}
+  {% if slide.legend %}<div class="legend">{{ slide.legend }}</div>{% endif %}
+  {% if slide.result %}<h1 style="font-size: 64px; margin-top: 48px">{{ slide.result | hl }}</h1>{% endif %}
+  <div class="spacer"></div>
+  {% if slide.cta %}<div class="cta">{{ slide.cta | hl }}</div>{% endif %}
+  <div class="foot">
+    <span class="mark">Engi<b>Formula</b></span>
+    <span class="site">engiformula.com</span>
+  </div>
+</div>
+</body>
+</html>

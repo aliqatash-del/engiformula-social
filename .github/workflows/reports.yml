@@ -1,0 +1,54 @@
+name: Reports (daily insights, weekly summary, token check)
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 09:00 Riyadh — daily snapshot
+    - cron: "0 7 * * 0"        # Sunday 10:00 Riyadh — weekly summary
+    - cron: "30 5 * * 1"       # Monday 08:30 Riyadh — token health check
+  workflow_dispatch:
+    inputs:
+      job: { description: "daily | weekly | check", default: "daily" }
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Pick job
+        id: pick
+        run: |
+          JOB="${{ github.event.inputs.job }}"
+          if [ -z "$JOB" ]; then
+            case "${{ github.event.schedule }}" in
+              "0 7 * * 0") JOB=weekly ;;
+              "30 5 * * 1") JOB=check ;;
+              *) JOB=daily ;;
+            esac
+          fi
+          echo "job=$JOB" >> "$GITHUB_OUTPUT"
+      - name: Run
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PAGE_ACCESS_TOKEN: ${{ secrets.PAGE_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ steps.pick.outputs.job }}" = "check" ]; then
+            python scripts/setup_tokens.py check
+          else
+            python scripts/insights.py ${{ steps.pick.outputs.job }}
+          fi
+      - name: Save data
+        run: |
+          git config user.name "engiformula-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A data
+          git diff --cached --quiet || git commit -m "reports: $(date -u +%F)"
+          git push

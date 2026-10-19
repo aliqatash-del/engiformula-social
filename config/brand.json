@@ -1,0 +1,41 @@
+{
+  "name": "EngiFormula Social",
+  "colors": {
+    "paper": "#F7F5F0",
+    "surface": "#FFFFFF",
+    "ink": "#0E2A47",
+    "ink_muted": "#4A5B70",
+    "grid_line": "#D9DEE6",
+    "navy": "#0E2A47",
+    "formula_blue": "#1E5BD8",
+    "safety_orange": "#F26A1B",
+    "orange_text": "#B84A0B",
+    "rebar_yellow": "#FFC145",
+    "steel": "#8A9BB0",
+    "concrete": "#E6E8EB",
+    "signal_green": "#187A50",
+    "alert_red": "#C73A3A",
+    "night_paper": "#0A1626",
+    "night_surface": "#12233A",
+    "night_grid": "#22364F"
+  },
+  "pillars": {
+    "calculator": {"label": "CALCULATOR", "chip_bg": "#1E5BD8", "chip_fg": "#FFFFFF"},
+    "knowledge":  {"label": "KNOW THIS", "chip_bg": "#0E2A47", "chip_fg": "#FFFFFF"},
+    "site":       {"label": "SITE REALITY", "chip_bg": "#F26A1B", "chip_fg": "#0E2A47"},
+    "community":  {"label": "QUIZ", "chip_bg": "#FFC145", "chip_fg": "#0E2A47"},
+    "career":     {"label": "CAREER", "chip_bg": "#E6E8EB", "chip_fg": "#0E2A47"}
+  },
+  "fonts": {
+    "display": "Space Grotesk",
+    "text": "Inter",
+    "mono": "JetBrains Mono"
+  },
+  "canvas": {
+    "feed": [1080, 1350],
+    "reel": [1080, 1920],
+    "safe_margin": 72,
+    "reel_safe_top": 220,
+    "reel_safe_bottom": 420
+  }
+}

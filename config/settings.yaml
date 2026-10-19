@@ -1,0 +1,29 @@
+# EngiFormula social automation — main settings
+# Times are stored with offsets; the scheduler compares in UTC.
+
+timezone: Asia/Riyadh          # owner's time zone (approvals + reminders)
+graph_api_version: v24.0       # Meta Graph API version; update when Meta deprecates it
+
+slots:                         # daily publishing slots, in the owner's time zone (winter time)
+  A: "15:00"                   # 12:00 London  / 07:00 New York — UK audience, carousels
+  B: "20:00"                   # 17:00 London  / 12:00 New York — US audience, Reels
+
+approval:
+  send_batch_days_ahead: 7     # posts within this window are sent to Telegram for approval
+  reminder_daily_at: "09:00"   # daily reminder for anything still pending
+  final_reminder_hours: 2      # last reminder this many hours before the slot
+  publish_window_minutes: 45   # an approved post publishes if the scheduler runs within this window after its slot
+  never_autopublish: true      # unapproved posts are skipped, never published
+
+limits:                        # enforced by validate.py before anything is sent for approval
+  instagram_max_hashtags: 5
+  instagram_caption_max_chars: 2200
+  instagram_carousel_max_items: 10
+  facebook_reel_max_seconds: 90
+  instagram_reel_max_seconds: 900
+  image_max_mb: 8
+
+brand:
+  handle_instagram: "@engiformula"
+  website: "engiformula.com"
+  signature_hashtag: "#engiformula"
