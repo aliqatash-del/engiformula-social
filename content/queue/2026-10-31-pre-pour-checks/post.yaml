@@ -1,0 +1,73 @@
+id: 2026-10-31-pre-pour-checks
+slot: '2026-10-31T15:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: site
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Five checks before the truck arrives. Every one of them is cheaper now than
+  after the pour.
+
+
+  Cover, chairs, forms, embeds, and the ticket. Ten minutes with a tape and the drawings.
+
+  Most "concrete problems" are really pre-pour problems (typical practice).
+
+
+  What''s the one check you never skip?
+
+
+  Send this to your foreman before the next pour.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#siteengineer'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel checklist of five checks before a concrete pour: rebar cover,
+  chairs and spacing, formwork, embeds and sleeves, and the delivery ticket.'
+ai_generated: false
+manual_steps: 'Optional: a story with a poll ''Which check do you skip most?'' (stickers
+  are app-only).'
+slides:
+- style: block
+  title: 5 checks ==before the pour==
+  body: Ten minutes, one tape, the drawings.
+  cta: SWIPE →
+  counter: 1 / 7
+- title: 1. Cover
+  body: Measure cover to the bars at several points against the drawings. Too little
+    cover is the start of corrosion.
+  counter: 2 / 7
+- title: 2. Chairs and spacing
+  body: Bars on chairs, not on the subgrade. Check spacing and laps against the bar
+    schedule.
+  counter: 3 / 7
+- title: 3. Formwork
+  body: Line, level and bracing. Clean out debris and standing water before the first
+    bucket.
+  counter: 4 / 7
+- title: 4. Embeds and sleeves
+  body: 'Anchor bolts, sleeves, conduits, waterstops: in place, fixed, and checked
+    by the trades who need them.'
+  counter: 5 / 7
+- title: 5. The ticket
+  body: Mix, **strength**, slump and time batched. Wrong mix on the ticket? Don't
+    place it.
+  counter: 6 / 7
+- style: block
+  title: Then order the ==right volume==
+  body: Free concrete calculator with waste built in.
+  cta: Save this · Free calculator → link in bio
+  counter: 7 / 7
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg
+- slide-07.jpg

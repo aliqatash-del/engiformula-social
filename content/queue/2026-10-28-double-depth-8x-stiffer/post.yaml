@@ -1,0 +1,86 @@
+id: 2026-10-28-double-depth-8x-stiffer
+slot: '2026-10-28T15:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Double the depth of a beam and it gets 8 times stiffer. Double the width
+  and you only get 2 times.
+
+
+  For a rectangle, I = b·h³/12. Depth is cubed, width isn''t.
+
+  A 2×12 joist on edge (1.5 × 11.25 in) has I = 178 in⁴. Laid flat: 3.2 in⁴. Same
+  wood, 56 times less stiff.
+
+
+  Where have you seen a member installed the weak way round?
+
+
+  Send this to someone who still thinks "bigger is bigger".'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#structuralengineering'
+- '#beamdesign'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel explaining that beam stiffness depends on depth cubed: doubling
+  depth gives 8 times the moment of inertia, doubling width gives 2 times; a 2 by
+  12 on edge has I of 178 inches to the fourth versus 3.2 laid flat.'
+ai_generated: false
+slides:
+- style: block
+  title: Double the depth. ==8× stiffer.==
+  body: Double the width? Only 2×. Here's why.
+  cta: SWIPE →
+  counter: 1 / 6
+- title: Moment of inertia, rectangle
+  formula: I = b · h³ / 12
+  legend: b = width · h = depth (in the direction of bending)
+  formula_size: 68
+  counter: 2 / 6
+- title: Depth is cubed
+  table:
+  - - CHANGE
+    - I BECOMES
+  - - Width × 2
+    - 2 × I
+  - - Depth × 2
+    - ==8 × I==
+  - - Depth × 1.5
+    - 3.4 × I
+  legend: Deflection is inversely proportional to I
+  counter: 3 / 6
+- title: Same 2×12, two ways
+  table:
+  - - ORIENTATION
+    - SIZE
+    - I
+  - - On edge
+    - 1.5 × 11.25 in
+    - ==178 in⁴==
+  - - Flat
+    - 11.25 × 1.5 in
+    - 3.2 in⁴
+  legend: Actual dressed size of a nominal 2×12
+  counter: 4 / 6
+- title: The takeaway
+  body: Need less deflection? Add **depth** before you add width. Check the member
+    orientation on site, not just the size.
+  counter: 5 / 6
+- style: block
+  title: Get I for ==any section==
+  body: Rectangles, I-beams, T-sections. Free, with the formula shown.
+  cta: Save this · Free calculator → link in bio
+  counter: 6 / 6
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg

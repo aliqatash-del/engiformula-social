@@ -1,0 +1,52 @@
+id: 2026-10-27-quiz-5-bar-vs-16mm
+slot: '2026-10-27T15:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Quiz: which bar is heavier per foot, a US #5 or a metric 16 mm?
+
+
+  They look identical on site: #5 is 5/8 in (15.9 mm), the metric bar is 16 mm (0.63
+  in).
+
+  One of them is heavier. Answer on Thursday.
+
+
+  A, B, or "they''re the same"? Comment your pick before you look it up.
+
+
+  Send this to the person on your team who orders the steel.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#rebar'
+- '#structuralengineering'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Quiz graphic asking which rebar is heavier per foot: a US number 5 bar
+  or a metric 16 millimeter bar, with options A, B and C.'
+ai_generated: false
+slides:
+- style: dark
+  title: Which bar is ==heavier== per foot?
+  table:
+  - - ''
+    - BAR
+    - DIAMETER
+  - - A
+    - 'US #5'
+    - 0.625 in
+  - - B
+    - Metric 16 mm
+    - 0.630 in
+  - - C
+    - Same weight
+    - —
+  body: Comment A, B or C. Answer on Thursday.
+  cta: NO LOOKING IT UP
+media:
+- slide-01.jpg

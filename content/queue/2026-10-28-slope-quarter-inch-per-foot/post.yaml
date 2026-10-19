@@ -1,0 +1,87 @@
+id: 2026-10-28-slope-quarter-inch-per-foot
+slot: '2026-10-28T20:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: '1/4 in per foot is a 2.08% slope, not 2%. Small difference, until it''s
+  200 ft of pipe or paving.
+
+
+  Percent slope = rise ÷ run × 100. 0.25 in ÷ 12 in = 2.08% (20.8 mm per m).
+
+  Common ones: 1/8 in/ft = 1.04%, 1/2 in/ft = 4.17%, and a 1:12 ramp = 8.33%.
+
+
+  Which slope do you specify most: in/ft, %, or 1:x?
+
+
+  Save this cheat sheet. Free slope calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#drainage'
+- '#sitework'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel converting slopes: 1/8 inch per foot is 1.04 percent, 1/4 inch
+  per foot is 2.08 percent, 1/2 inch per foot is 4.17 percent, and a 1 in 12 ramp
+  is 8.33 percent.'
+ai_generated: false
+slides:
+- style: block
+  title: 1/4 in per ft is ==not 2%==
+  body: It's 2.08%. The cheat sheet for every slope format.
+  cta: SWIPE →
+  counter: 1 / 6
+- title: The formula
+  formula: '% = rise ÷ run × 100'
+  legend: Rise and run in the same units
+  formula_size: 56
+  counter: 2 / 6
+- title: 1/4 in per foot
+  formula: 0.25 ÷ 12 × 100 = 2.08%
+  result: 'Metric: **20.8 mm per m**'
+  formula_size: 56
+  counter: 3 / 6
+- title: Slope cheat sheet
+  table:
+  - - IN/FT
+    - '%'
+    - MM/M
+  - - 1/8
+    - '1.04'
+    - '10.4'
+  - - 1/4
+    - ==2.08==
+    - '20.8'
+  - - 1/2
+    - '4.17'
+    - '41.7'
+  legend: 'Going the other way: 2% = 0.24 in/ft'
+  counter: 4 / 6
+- title: Ratios too
+  table:
+  - - RATIO
+    - '%'
+  - - '1:20'
+    - '5.00'
+  - - '1:12'
+    - ==8.33==
+  legend: 1:12 is the steepest ramp slope in the 2010 ADA Standards (405.2)
+  counter: 5 / 6
+- style: block
+  title: Rise, run, ==done==
+  body: Enter any two values. Get %, degrees and ratio, free.
+  cta: Save this · Free calculator → link in bio
+  counter: 6 / 6
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg
