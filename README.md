@@ -105,6 +105,7 @@ DRY_RUN=1 FAKE_NOW=2026-11-02T20:05:00+03:00 python scripts/scheduler.py   # sho
 | `templates/slide.html` + `fonts/` | The brand template every image is rendered from (fonts are SIL OFL) |
 | `content/queue/<id>/post.yaml` | One post: caption, hashtags, slides, status |
 | `scripts/render.py` | Slides → 1080×1350 / 1080×1920 JPEGs |
+| `scripts/voiceover.py` | Slide `voice:` lines → free Kokoro AI voice (voice.m4a) + word-timed captions.srt; runs in the Build reels workflow on every pushed reel |
 | `scripts/make_reel.py` | Frames + voiceover + captions → Meta-ready MP4 |
 | `scripts/validate.py` | Hashtag cap, caption length, links, sizes, alt text, reel length |
 | `scripts/telegram.py` | Approval previews, buttons, edit notes |

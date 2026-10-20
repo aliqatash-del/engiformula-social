@@ -1,0 +1,88 @@
+id: 2026-10-31-guess-the-column-volume
+slot: '2026-10-31T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Guess before the answer: how much concrete is in an 18 in round column,
+  12 ft tall?
+
+
+  π × 0.75² × 12 = 21.2 ft³ ÷ 27 = 0.785 yd³ (0.60 m³).
+
+  Fun fact: that''s exactly π/4 yd³. Ten of them is just under 8 yd³.
+
+
+  What was your guess? Be honest in the comments.
+
+
+  Save this. Free concrete calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#civilengineeringstudents'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Reel asking viewers to guess the concrete in an 18 inch diameter round
+  column 12 feet tall, then showing the answer: 21.2 cubic feet, 0.785 cubic yards,
+  0.60 cubic meters.'
+ai_generated: false
+slides:
+- style: dark
+  title: 'Guess: concrete in an ==18 in round column==?'
+  body: 12 ft tall.
+  seconds: 6.17
+  voice: Quick guess. How much concrete in an eighteen inch round column, twelve feet
+    tall?
+- title: Your options
+  table:
+  - - ''
+    - VOLUME
+  - - A
+    - 0.5 yd³
+  - - B
+    - 0.8 yd³
+  - - C
+    - 1.2 yd³
+  body: Comment before the answer.
+  seconds: 4.42
+  voice: Half a yard, point eight, or one point two? Pick one.
+- title: Radius in feet
+  formula: 18 in ÷ 2 = 0.75 ft
+  seconds: 4.82
+  voice: Radius is nine inches, or point seven five feet.
+  formula_size: 56
+- title: Volume
+  formula: π × 0.75² × 12 = 21.2 ft³
+  seconds: 6.8
+  voice: Pi times point seven five squared times twelve. Twenty one point two cubic
+    feet.
+  formula_size: 48
+- title: 'Answer: ==B=='
+  formula: 21.2 ÷ 27 = 0.785 yd³
+  result: 'Metric: **0.60 m³**'
+  seconds: 6.62
+  voice: Divide by twenty seven. Point seven eight five cubic yards. The answer is
+    B.
+  formula_size: 56
+- style: block
+  title: What was ==your guess==?
+  cta: Free calculator → link in bio
+  seconds: 4.03
+  voice: Be honest. What was your guess? Comment below.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 55a5e1f48073
+media:
+- reel.mp4

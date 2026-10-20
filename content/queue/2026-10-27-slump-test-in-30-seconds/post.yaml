@@ -1,0 +1,92 @@
+id: 2026-10-27-slump-test-in-30-seconds
+slot: '2026-10-27T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: site
+status: draft
+source: https://engiformula.com/calculators
+caption: 'The slump test in 30 seconds: 3 layers, 25 rods each, lift in about 5 seconds.
+
+
+  Cone: 12 in tall, 8 in base, 4 in top (300 / 200 / 100 mm). ASTM C143 in the US,
+  EN 12350-2 in the UK and Ireland.
+
+  Measure the drop from the cone height to the center of the slumped top.
+
+
+  What slump do you see rejected most often on your sites?
+
+
+  Send this to the newest engineer on your site.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#sitelife'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Reel showing the concrete slump test steps: cone dimensions 12, 8 and 4
+  inches, three layers rodded 25 times each, lift the cone in about 5 seconds, measure
+  the drop.'
+ai_generated: false
+slides:
+- style: dark
+  title: The slump test in ==30 seconds==
+  seconds: 3.4
+  voice: The slump test, in thirty seconds.
+- title: The cone
+  table:
+  - - ''
+    - US
+    - METRIC
+  - - Height
+    - 12 in
+    - 300 mm
+  - - Base
+    - 8 in
+    - 200 mm
+  - - Top
+    - 4 in
+    - 100 mm
+  legend: ASTM C143 · EN 12350-2
+  seconds: 8.8
+  voice: The cone is twelve inches tall, eight at the base, four at the top. Three
+    hundred, two hundred, one hundred millimeters.
+- title: Fill in ==3 layers==
+  body: Each about one third of the volume. Stand on the foot pieces.
+  seconds: 5.2
+  voice: Damp cone, stand on the foot pieces, and fill it in three layers.
+- title: Rod each layer ==25 times==
+  body: Spread the strokes over the whole section.
+  seconds: 5.25
+  voice: Rod each layer twenty five times, spread over the whole section.
+- title: Strike off, then lift
+  body: Straight up, steady, in about **5 seconds**. No twisting.
+  seconds: 5.9
+  voice: Strike off the top, then lift straight up in about five seconds. No twisting.
+- title: Measure the drop
+  body: From the cone height to the center of the slumped top.
+  result: That drop is the **slump**
+  seconds: 5.97
+  voice: Measure from the cone height down to the center of the slumped top. That's
+    your slump.
+- style: block
+  title: Send this to your ==newest engineer==
+  cta: Free concrete calculators → link in bio
+  seconds: 3.88
+  voice: Send this to the newest engineer on your site.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: d4755dc0e6d6
+media:
+- reel.mp4

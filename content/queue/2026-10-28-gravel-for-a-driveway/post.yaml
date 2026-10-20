@@ -1,0 +1,91 @@
+id: 2026-10-28-gravel-for-a-driveway
+slot: '2026-10-28T20:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A 12 × 40 ft driveway, 4 in of gravel: 5.9 yd³, about 8.3 tons.
+
+
+  12 × 40 × 4/12 = 160 ft³ ÷ 27 = 5.93 yd³ (4.53 m³).
+
+  Crushed stone is often taken as about 1.4 tons per yd³ (typical; ask your supplier):
+  8.3 tons, or 7.7–8.9 tons across 1.3–1.5.
+
+
+  Do you order gravel by the ton or by the yard where you work?
+
+
+  Save this for your next driveway quote. Free gravel calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#gravel'
+- '#driveway'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel working out gravel for a 12 by 40 foot driveway at 4 inches: 160
+  cubic feet, 5.93 cubic yards, 4.53 cubic meters, about 8.3 tons at 1.4 tons per
+  cubic yard.'
+ai_generated: false
+slides:
+- style: block
+  title: Gravel for a ==12 × 40 ft== driveway?
+  body: 4 in deep. Yards and tons.
+  cta: SWIPE →
+  counter: 1 / 7
+- title: 'Step 1: volume'
+  formula: 12 × 40 × 4/12 = 160 ft³
+  legend: Length × width × depth, all in feet
+  formula_size: 56
+  counter: 2 / 7
+- title: 'Step 2: cubic yards'
+  formula: 160 ÷ 27 = 5.93 yd³
+  result: 'Metric: **4.53 m³**'
+  formula_size: 56
+  counter: 3 / 7
+- title: 'Step 3: tons'
+  formula: 5.93 × 1.4 = 8.3 tons
+  legend: 1.4 tons/yd³ is a typical crushed stone figure. Ask your supplier for theirs.
+  formula_size: 56
+  counter: 4 / 7
+- title: Density changes the order
+  table:
+  - - TONS / yd³
+    - ORDER
+  - - '1.3'
+    - 7.7 tons
+  - - '1.4'
+    - ==8.3 tons==
+  - - '1.5'
+    - 8.9 tons
+  legend: Same driveway, same depth
+  counter: 5 / 7
+- title: Going 6 in deep?
+  table:
+  - - DEPTH
+    - yd³
+    - TONS @ 1.4
+  - - 4 in
+    - '5.93'
+    - '8.3'
+  - - 6 in
+    - '8.89'
+    - '12.4'
+  counter: 6 / 7
+- style: block
+  title: Your driveway, ==your density==
+  body: Enter size, depth and material. Free.
+  cta: Save this · Free calculator → link in bio
+  counter: 7 / 7
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg
+- slide-07.jpg

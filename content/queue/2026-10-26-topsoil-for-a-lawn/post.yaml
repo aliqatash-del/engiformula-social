@@ -1,0 +1,97 @@
+id: 2026-10-26-topsoil-for-a-lawn
+slot: '2026-10-26T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A 20 × 30 ft lawn, 4 in of topsoil: 7.4 yd³. That''s 200 one-cubic-foot
+  bags.
+
+
+  20 × 30 × 4/12 = 200 ft³ ÷ 27 = 7.41 yd³ (5.66 m³). Add about 10% for settling (typical
+  practice): 8.15 yd³.
+
+  At that size, bulk delivery usually beats bags.
+
+
+  Bags or bulk: where''s your cut-off?
+
+
+  Save this before you order. Free topsoil calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#landscaping'
+- '#topsoil'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Reel working out topsoil for a 20 by 30 foot lawn at 4 inches deep: 200
+  cubic feet, 7.41 cubic yards, 5.66 cubic meters, about 8.15 cubic yards with 10
+  percent extra.'
+ai_generated: false
+slides:
+- style: dark
+  title: Topsoil for a ==20 × 30 ft== lawn?
+  body: 4 inches deep.
+  seconds: 5.47
+  voice: How much topsoil for a twenty by thirty foot lawn, four inches deep?
+- title: Inches to feet first
+  formula: 4 ÷ 12 = 0.333 ft
+  seconds: 5.0
+  voice: First, turn four inches into feet. That's a third of a foot.
+  formula_size: 56
+- title: Volume
+  formula: 20 × 30 × 4/12 = 200 ft³
+  seconds: 5.4
+  voice: Twenty times thirty times a third gives two hundred cubic feet.
+  formula_size: 56
+- title: To cubic yards
+  formula: 200 ÷ 27 = 7.41 yd³
+  result: 'Metric: **5.66 m³**'
+  seconds: 7.42
+  voice: Divide by twenty seven. Seven point four cubic yards, or five point seven
+    cubic meters.
+  formula_size: 56
+- title: Add for settling
+  table:
+  - - EXTRA
+    - ORDER
+  - - 0%
+    - 7.41 yd³
+  - - 10%
+    - ==8.15 yd³==
+  legend: Typical practice
+  seconds: 7.17
+  voice: Topsoil settles, so most people add about ten percent. Order around eight
+    cubic yards.
+- title: Or in bags
+  table:
+  - - BAG SIZE
+    - BAGS
+  - - 1 ft³
+    - '200'
+  - - 0.75 ft³
+    - '267'
+  seconds: 6.57
+  voice: In bags, that's two hundred one cubic foot bags. At that size, bulk wins.
+- style: block
+  title: Any area, ==any depth==
+  cta: Free calculator → link in bio
+  seconds: 5.4
+  voice: Save this, and use the free topsoil calculator. Link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 2a33de8e2fd8
+media:
+- reel.mp4

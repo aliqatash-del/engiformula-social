@@ -27,7 +27,8 @@ Write for sends: every post should be worth forwarding to a colleague.
 - Hooks ≤ 7 words on covers; ≤ 25 words of body per slide.
 
 ## post.yaml fields
-id, slot, type (image|carousel|reel|story|text), platforms, pillar (calculator|knowledge|site|community|career), status (draft), source, caption, hashtags, first_comment, alt_text, ai_generated, manual_steps, slides[] (title, body, formula, legend, result, table, cta, style, seconds), voiceover, captions.
+id, slot, type (image|carousel|reel|story|text), platforms, pillar (calculator|knowledge|site|community|career), status (draft), source, caption, hashtags, first_comment, alt_text, ai_generated, manual_steps, slides[] (title, body, formula, legend, result, table, cta, style, seconds, voice), voiceover, captions.
+Reels: give every slide a `voice` line written as spoken ("number four bar", "P S I", "cubic yards"); pushing the post runs .github/workflows/build-reels.yml (Kokoro TTS, voice set in config/settings.yaml `voice:`), which stretches `seconds`, writes voice.m4a + captions.srt and builds reel.mp4.
 
 ## Quality gate before you finish
 - Every number recomputed in Python and shown.

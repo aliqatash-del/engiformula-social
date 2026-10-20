@@ -1,0 +1,49 @@
+id: 2026-10-29-answer-pipe-drop-1-percent
+slot: '2026-10-29T15:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Answer: C, 12 in. 1% of 100 ft is 1 ft.
+
+
+  Percent slope = drop ÷ run × 100, so drop = 100 ft × 0.01 = 1 ft = 12 in.
+
+  Metric: 30 m at 1% drops 300 mm. Same rule, 10 mm per meter.
+
+
+  Did you get it right?
+
+
+  Save this. Free percent slope calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#drainage'
+- '#sitework'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Quiz answer graphic: a 100 foot run at 1 percent slope drops 12 inches,
+  answer C; in metric, 30 meters at 1 percent drops 300 millimeters.'
+ai_generated: false
+slides:
+- style: dark
+  title: 'Answer: ==C, 12 in=='
+  formula: 100 ft × 0.01 = 1 ft
+  table:
+  - - RUN
+    - AT 1%
+    - DROP
+  - - 100 ft
+    - × 0.01
+    - 12 in
+  - - 30 m
+    - × 0.01
+    - 300 mm
+  cta: 1% = 1 FT PER 100 FT
+  formula_size: 56
+media:
+- slide-01.jpg

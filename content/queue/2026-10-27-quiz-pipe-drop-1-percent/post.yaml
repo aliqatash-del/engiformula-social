@@ -1,0 +1,45 @@
+id: 2026-10-27-quiz-pipe-drop-1-percent
+slot: '2026-10-27T15:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Quiz: a 100 ft sewer run is laid at 1%. How much lower is the far end?
+
+
+  No calculator allowed. Answer on Thursday.
+
+
+  A, B or C? Comment your pick.
+
+
+  Tag the person on your crew who sets the laser.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#drainage'
+- '#sitework'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Quiz graphic: a 100 foot sewer run at 1 percent slope, how much does it
+  drop? Options: A 1 inch, B 10 inches, C 12 inches.'
+ai_generated: false
+slides:
+- style: dark
+  title: 100 ft of pipe at ==1%==. How much does it drop?
+  table:
+  - - ''
+    - DROP
+  - - A
+    - 1 in
+  - - B
+    - 10 in
+  - - C
+    - 12 in
+  body: Comment A, B or C. Answer on Thursday.
+  cta: NO CALCULATOR
+media:
+- slide-01.jpg

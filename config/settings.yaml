@@ -12,7 +12,7 @@ approval:
   send_batch_days_ahead: 7     # posts within this window are sent to Telegram for approval
   reminder_daily_at: "09:00"   # daily reminder for anything still pending
   final_reminder_hours: 2      # last reminder this many hours before the slot
-  publish_window_minutes: 45   # an approved post publishes if the scheduler runs within this window after its slot
+  publish_window_minutes: 120  # GitHub's 30-min cron can run 20+ min late; this keeps an approved post from being skipped
   never_autopublish: true      # unapproved posts are skipped, never published
 
 limits:                        # enforced by validate.py before anything is sent for approval
@@ -22,6 +22,15 @@ limits:                        # enforced by validate.py before anything is sent
   facebook_reel_max_seconds: 90
   instagram_reel_max_seconds: 900
   image_max_mb: 8
+
+voice:                         # Reel voiceover (scripts/voiceover.py, Kokoro TTS — runs in build-reels.yml)
+  name: am_michael             # Kokoro voice: am_michael (US male); alternatives am_fenrir, am_puck, af_heart (US female)
+  lang_code: a                 # a = American English, b = British English (use a b* voice, e.g. bm_george)
+  speed: 1.0                   # 0.9 slower … 1.1 faster
+  lead_seconds: 0.1            # silence before each slide's line
+  pad_seconds: 0.35            # silence after it before the next frame
+  caption_words: 3             # words per burned-in caption chunk
+  max_seconds: 60              # warn if the reel runs longer
 
 brand:
   handle_instagram: "@engiformula"
