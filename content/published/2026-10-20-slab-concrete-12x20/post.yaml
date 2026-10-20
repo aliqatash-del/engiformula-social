@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
+status: published
 source: https://engiformula.com/calculators
 caption: 'A 12 × 20 ft slab, 4 in thick, needs 2.96 yd³ of concrete (2.27 m³). Here''s
   the 20-second method.
@@ -80,3 +80,8 @@ media:
 - slide-06.jpg
 telegram_message_id: 13
 decided_at: '2026-10-20T14:19:39.243117+00:00'
+published_at: '2026-10-20T17:04:35.960386+00:00'
+published_ids:
+  instagram: '18088457159507915'
+  facebook: '133344266715154_1549710327187456'
+publish_errors: null
