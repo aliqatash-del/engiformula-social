@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'Quiz: a 100 ft sewer run is laid at 1%. How much lower is the far end?
 
@@ -43,3 +43,4 @@ slides:
   cta: NO CALCULATOR
 media:
 - slide-01.jpg
+telegram_message_id: 74
