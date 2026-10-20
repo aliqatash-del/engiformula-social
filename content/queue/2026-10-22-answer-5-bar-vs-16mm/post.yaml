@@ -1,0 +1,49 @@
+id: 2026-10-22-answer-5-bar-vs-16mm
+slot: '2026-10-22T15:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Answer: B. A 16 mm bar weighs 1.578 kg/m (1.060 lb/ft). A #5 weighs 1.043
+  lb/ft (1.552 kg/m).
+
+
+  The 16 mm bar is 0.1 mm fatter and about 1.7% heavier.
+
+  That''s 17 lb more on every 1,000 ft of bar. Small, but it shows up on a steel order.
+
+
+  Did you get it right? Be honest.
+
+
+  Save this for the next mixed-units job.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#rebar'
+- '#structuralengineering'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Quiz answer graphic: B, the 16 millimeter bar is heavier at 1.060 pounds
+  per foot versus 1.043 for a US number 5 bar.'
+ai_generated: false
+slides:
+- style: dark
+  title: 'Answer: ==B==, the 16 mm bar'
+  table:
+  - - BAR
+    - lb/ft
+    - kg/m
+  - - 'US #5'
+    - '1.043'
+    - '1.552'
+  - - 16 mm
+    - ==1.060==
+    - '1.578'
+  body: 'About 1.7% heavier: 17 lb more per 1,000 ft.'
+  cta: DID YOU GET IT?
+media:
+- slide-01.jpg

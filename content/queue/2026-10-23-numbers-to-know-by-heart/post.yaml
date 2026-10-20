@@ -1,0 +1,84 @@
+id: 2026-10-23-numbers-to-know-by-heart
+slot: '2026-10-23T15:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: career
+status: draft
+source: https://engiformula.com/calculators
+caption: '6 conversions every new site engineer should know without reaching for a
+  phone.
+
+
+  1 yd³ = 27 ft³ = 0.765 m³. 4,000 psi ≈ 27.6 MPa. 1 kip = 4.448 kN.
+
+  Learn these and you''ll catch a wrong number on a delivery ticket before anyone
+  else does.
+
+
+  Which conversion do you still look up every time?
+
+
+  Save this and send it to a grad starting on site.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#engineeringstudent'
+- '#siteengineer'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel listing six conversions to memorize: 27 cubic feet per cubic yard,
+  0.765 cubic meters per cubic yard, 4,000 psi is 27.6 MPa, 1 kip is 4.448 kN, 1 foot
+  is 0.3048 meters, and 1 pound per foot is 1.488 kilograms per meter.'
+ai_generated: false
+slides:
+- style: block
+  title: 6 numbers to know ==by heart==
+  body: For your first year on site.
+  cta: SWIPE →
+  counter: 1 / 8
+- title: Volume
+  formula: 1 yd³ = 27 ft³
+  result: and **0.765 m³** (1 m³ = 1.308 yd³)
+  formula_size: 68
+  counter: 2 / 8
+- title: Strength
+  formula: 4,000 psi ≈ 27.6 MPa
+  legend: 1 MPa = 145 psi
+  formula_size: 56
+  counter: 3 / 8
+- title: Force
+  formula: 1 kip = 4.448 kN
+  legend: 1 kip = 1,000 lb
+  formula_size: 68
+  counter: 4 / 8
+- title: Length
+  formula: 1 ft = 0.3048 m
+  legend: Exact, by definition
+  formula_size: 68
+  counter: 5 / 8
+- title: Weight per length
+  formula: 1 lb/ft = 1.488 kg/m
+  legend: For rebar, steel sections and pipe
+  formula_size: 56
+  counter: 6 / 8
+- title: Density
+  formula: 150 lb/ft³ ≈ 2,400 kg/m³
+  legend: Normal-weight concrete (typical)
+  formula_size: 56
+  counter: 7 / 8
+- style: block
+  title: Convert ==anything==
+  body: Free calculators with the formula shown.
+  cta: Save this · Free calculators → link in bio
+  counter: 8 / 8
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg
+- slide-07.jpg
+- slide-08.jpg

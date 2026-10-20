@@ -1,0 +1,51 @@
+id: 2026-10-22-yard-of-concrete-weighs
+slot: '2026-10-22T20:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A cubic yard of concrete weighs about 4,000 lb. That''s 2 tons in every
+  yard on the truck.
+
+
+  Normal-weight concrete runs about 145–150 lb/ft³ (2,300–2,400 kg/m³).
+
+  150 lb/ft³ × 27 ft³ = 4,050 lb. A 10 yd³ load is over 40,000 lb of concrete alone.
+
+
+  What''s the heaviest pour you''ve been on?
+
+
+  Send this to whoever is planning the formwork.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#formwork'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Graphic showing one cubic yard of normal-weight concrete weighs about 4,050
+  pounds, or 2,400 kilograms per cubic meter, and a 10 cubic yard truck carries over
+  40,000 pounds.
+ai_generated: false
+slides:
+- title: 1 yd³ of concrete weighs
+  result: '**4,050 lb**'
+  table:
+  - - ''
+    - WEIGHT
+  - - 1 ft³
+    - 150 lb
+  - - 1 yd³
+    - ==4,050 lb==
+  - - 10 yd³ load
+    - 40,500 lb
+  - - 1 m³
+    - 2,400 kg
+  legend: Normal-weight concrete, 150 lb/ft³ (typical; 145–150)
+  cta: PLAN YOUR FORMWORK FOR IT
+media:
+- slide-01.jpg

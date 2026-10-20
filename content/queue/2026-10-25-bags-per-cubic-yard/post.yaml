@@ -1,0 +1,49 @@
+id: 2026-10-25-bags-per-cubic-yard
+slot: '2026-10-25T15:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'It takes 45 bags of 80 lb premix to make one cubic yard of concrete. That
+  is 3,600 lb of bags.
+
+
+  A typical 80 lb bag yields about 0.60 ft³ (check the bag). 27 ft³ ÷ 0.60 = 45 bags.
+
+  60 lb bags (about 0.45 ft³): 60 bags. Add 10% and you''re at 50 bags of 80 lb.
+
+
+  At what size job do you stop mixing bags and call a truck?
+
+
+  Send this to a friend about to pour a shed slab.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#diy'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Graphic showing one cubic yard of concrete takes 45 bags of 80 pound premix
+  or 60 bags of 60 pound premix, based on typical bag yields.
+ai_generated: false
+slides:
+- title: Bags for ==1 yd³== of concrete
+  result: '**45** × 80 lb bags'
+  table:
+  - - BAG
+    - YIELD
+    - BAGS / YD³
+  - - 80 lb
+    - 0.60 ft³
+    - ==45==
+  - - 60 lb
+    - 0.45 ft³
+    - '60'
+  legend: Typical yields; check the bag. 1 yd³ = 27 ft³ = 0.765 m³
+  cta: FREE CONCRETE CALCULATOR → LINK IN BIO
+media:
+- slide-01.jpg

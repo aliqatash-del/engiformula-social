@@ -1,0 +1,77 @@
+id: 2026-10-23-bricks-per-square-foot
+slot: '2026-10-23T20:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A US modular brick wall takes 6.75 bricks per ft². A UK wall takes 59 per
+  m². Same idea, different brick.
+
+
+  US modular with 3/8 in joints: 8 × 2⅔ in per brick → 144 ÷ 21.33 = 6.75 per ft²
+  (72.7 per m²).
+
+  UK 215 × 65 mm with 10 mm joints: 225 × 75 mm → 59.3 per m² (5.5 per ft²).
+
+
+  US or UK brick on your current job?
+
+
+  Save this for your next masonry takeoff. Free brick calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#masonry'
+- '#bricklaying'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Carousel showing a US modular brick wall needs 6.75 bricks per square foot
+  and a UK wall 59.3 bricks per square meter; a 10 by 8 foot wall needs 540 bricks,
+  567 with 5 percent extra.
+ai_generated: false
+slides:
+- style: block
+  title: Bricks per ft²? ==6.75==
+  body: US modular vs UK standard, worked out.
+  cta: SWIPE →
+  counter: 1 / 6
+- title: US modular brick
+  formula: 8 × 2⅔ in = 21.33 in²
+  legend: Nominal size, including 3/8 in joints
+  formula_size: 56
+  counter: 2 / 6
+- title: Per square foot
+  formula: 144 ÷ 21.33 = 6.75
+  result: 'Metric: **72.7 per m²**'
+  formula_size: 56
+  counter: 3 / 6
+- title: 'Example: 10 × 8 ft wall'
+  table:
+  - - ''
+    - BRICKS
+  - - 80 ft² × 6.75
+    - '540'
+  - - + 5% waste
+    - ==567==
+  legend: Single wythe, no openings
+  counter: 4 / 6
+- title: UK standard brick
+  formula: 225 × 75 mm → 59.3 per m²
+  legend: 215 × 65 mm brick + 10 mm joints
+  formula_size: 56
+  counter: 5 / 6
+- style: block
+  title: Bricks, blocks, ==mortar==
+  body: Enter wall size and openings. Get counts, free.
+  cta: Save this · Free calculator → link in bio
+  counter: 6 / 6
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg

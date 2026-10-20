@@ -1,0 +1,49 @@
+id: 2026-10-24-pipe-holds-gallons
+slot: '2026-10-24T20:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'One foot of 12 in pipe holds 5.88 gallons of water. 100 ft holds 588.
+
+
+  Volume per foot = π/4 × D² (D in ft) = 0.785 ft³. × 7.48 gal/ft³ = 5.88 gal (22.2
+  L).
+
+  Metric: a 300 mm pipe holds 70.7 L per meter.
+
+
+  Ever had to estimate how much water you''re about to drain from a line?
+
+
+  Save this. Free pipe volume calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#hydraulics'
+- '#plumbing'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Graphic showing one foot of 12 inch pipe holds 5.88 gallons, 100 feet holds
+  588 gallons, and a 300 millimeter pipe holds 70.7 liters per meter.
+ai_generated: false
+slides:
+- title: How much does a ==12 in pipe== hold?
+  formula: π/4 × 1² × 7.48
+  table:
+  - - LENGTH
+    - VOLUME
+  - - 1 ft
+    - ==5.88 gal==
+  - - 100 ft
+    - 588 gal
+  - - 300 mm pipe, 1 m
+    - 70.7 L
+  legend: Full pipe, inside diameter · 7.48 gal per ft³
+  cta: FREE PIPE VOLUME CALCULATOR → LINK IN BIO
+  formula_size: 68
+media:
+- slide-01.jpg

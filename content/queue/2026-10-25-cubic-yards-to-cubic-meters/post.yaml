@@ -1,0 +1,56 @@
+id: 2026-10-25-cubic-yards-to-cubic-meters
+slot: '2026-10-25T20:00:00+03:00'
+type: image
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+source: https://engiformula.com/calculators
+caption: '1 m³ = 1.31 yd³. 1 yd³ = 0.765 m³. The cheat sheet for every mixed-units
+  concrete order.
+
+
+  The factor is 1.308. Round to 1.3 for a quick check, never for the order.
+
+  10 m³ is 13.08 yd³, so rounding to 1.3 would leave you 0.08 yd³ short.
+
+
+  Which do you order concrete in: yd³ or m³?
+
+
+  Save this for the next international drawing set.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#engineeringstudent'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Cheat sheet converting cubic yards and cubic meters: 1 cubic yard is 0.76
+  cubic meters, 10 cubic yards is 7.65, 1 cubic meter is 1.31 cubic yards, 10 cubic
+  meters is 13.08 cubic yards.'
+ai_generated: false
+slides:
+- title: yd³ ⇄ m³ ==cheat sheet==
+  table:
+  - - yd³
+    - m³
+    - m³
+    - yd³
+  - - '1'
+    - '0.76'
+    - '1'
+    - '1.31'
+  - - '5'
+    - '3.82'
+    - '5'
+    - '6.54'
+  - - '10'
+    - ==7.65==
+    - '10'
+    - ==13.08==
+  legend: 1 yd³ = 0.7646 m³ · 1 m³ = 1.308 yd³
+  cta: SAVE THIS FOR YOUR NEXT ORDER
+media:
+- slide-01.jpg
