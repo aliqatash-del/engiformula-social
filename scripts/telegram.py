@@ -150,7 +150,20 @@ if __name__ == "__main__":
                 print(u["update_id"], "tap", cb.get("data"), "chat ok:", str(cb["message"]["chat"]["id"]) == str(chat_id()))
             else:
                 print(u["update_id"], "message", "chat ok:", str(m.get("chat", {}).get("id")) == str(chat_id()), repr(m.get("text", ""))[:40])
+    elif sys.argv[1:] == ["token"]:
+        # Describes the saved token's shape without printing it, to spot a bad paste.
+        import os, re
+        raw = os.getenv("TELEGRAM_BOT_TOKEN", "")
+        tok = raw.strip()
+        print("length:", len(raw), "| stray spaces/newlines:", raw != tok)
+        print("looks like a bot token (digits:35 chars):", bool(re.fullmatch(r"\d{6,12}:[A-Za-z0-9_-]{35}", tok)))
+        print("has spaces inside:", " " in tok, "| colons:", tok.count(":"))
+        try:
+            me = call("getMe").get("result", {})
+            print("Telegram accepts it: True | bot username:", me.get("username"))
+        except RuntimeError as exc:
+            print("Telegram accepts it: False |", str(exc).split("failed")[-1][:60])
     elif sys.argv[1:2] == ["test"]:
         print(send("EngiFormula bot is connected ✅"))
     else:
-        print("usage: telegram.py whoami | test | updates")
+        print("usage: telegram.py whoami | test | updates | token")

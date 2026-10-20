@@ -3,7 +3,7 @@ name: Telegram bot check (README step 5)
 on:
   workflow_dispatch:
     inputs:
-      job: { description: "whoami (print your chat id) | test (send the test message) | updates (show waiting taps)", default: "test" }
+      job: { description: "whoami (print your chat id) | test (send the test message) | updates (show waiting taps) | token (check the saved token's format)", default: "test" }
 
 permissions:
   contents: read
@@ -20,4 +20,4 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scripts/telegram.py ${{ contains(fromJSON('["whoami","updates"]'), github.event.inputs.job) && github.event.inputs.job || 'test' }}
+        run: python scripts/telegram.py ${{ contains(fromJSON('["whoami","updates","token"]'), github.event.inputs.job) && github.event.inputs.job || 'test' }}
