@@ -61,7 +61,7 @@ slides:
   seconds: 6.8
   voice: Pi times point seven five squared times twelve. Twenty one point two cubic
     feet.
-  formula_size: 56
+  formula_size: 48
 - title: 'Answer: ==B=='
   formula: 21.2 ÷ 27 = 0.785 yd³
   result: 'Metric: **0.60 m³**'
