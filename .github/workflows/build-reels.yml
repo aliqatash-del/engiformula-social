@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       post_id:
-        description: "Build only this post id (forces a rebuild). Empty = every reel that needs one."
+        description: "Rebuild only these post ids (space-separated, forces a rebuild). Empty = every reel that needs one."
         required: false
         default: ""
 

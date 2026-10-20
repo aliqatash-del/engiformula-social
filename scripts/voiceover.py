@@ -43,7 +43,7 @@ def speak(pipeline, text: str):
     for result in pipeline(text, voice=VOICE["name"], speed=VOICE.get("speed", 1.0), split_pattern=None):
         samples = result.audio.numpy()
         for t in result.tokens or []:
-            if t.start_ts is None:  # punctuation: glue onto the previous word
+            if t.start_ts is None or not re.search(r"\w", t.text):  # punctuation: glue onto the previous word
                 if words:
                     words[-1][0] += t.text
                 continue
