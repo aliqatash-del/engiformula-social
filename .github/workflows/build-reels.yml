@@ -1,0 +1,91 @@
+name: Build reels (Kokoro voice + captions)
+
+# Builds every reel in content/queue whose slides have `voice:` text but no reel.mp4,
+# or whose slides changed since the last build (post.yaml `reel_built_from`).
+# Kokoro needs huggingface.co, so this runs here, not on the laptop. No secrets needed.
+on:
+  push:
+    paths: ["content/queue/**/post.yaml"]
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Build only this post id (forces a rebuild). Empty = every reel that needs one."
+        required: false
+        default: ""
+
+concurrency:
+  group: build-reels-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write              # commits the frames, voice, captions and reel.mp4 back to the branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"   # kokoro supports Python 3.10–3.12
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            .github/workflows/build-reels.yml
+      - run: pip install -r requirements.txt
+      - name: Find reels to build
+        id: todo
+        env:
+          POST_ID: ${{ inputs.post_id }}
+        run: |
+          if [ -n "$POST_ID" ]; then ids="$POST_ID"; else ids=$(python scripts/voiceover.py --pending | xargs); fi
+          echo "ids=$ids" >> "$GITHUB_OUTPUT"
+          echo "To build: ${ids:-nothing}"
+      - name: Install ffmpeg, espeak-ng, Kokoro, Chromium
+        if: steps.todo.outputs.ids != ''
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q espeak-ng ffmpeg
+          pip install torch --index-url https://download.pytorch.org/whl/cpu   # CPU wheel: no 2 GB of CUDA
+          pip install kokoro soundfile -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - uses: actions/cache@v4
+        if: steps.todo.outputs.ids != ''
+        with:
+          path: ~/.cache/huggingface
+          key: hf-kokoro-82m-v1
+      - name: Render, voice, assemble, validate
+        if: steps.todo.outputs.ids != ''
+        env:
+          IDS: ${{ steps.todo.outputs.ids }}
+        run: |
+          failed=""; built=""
+          for id in $IDS; do
+            echo "::group::$id"
+            if python scripts/render.py "$id" && python scripts/voiceover.py "$id" \
+               && python scripts/make_reel.py "$id" && python scripts/validate.py "$id"; then
+              ffprobe -v error -show_entries stream=codec_name,width,height -show_entries format=duration \
+                -of compact "content/queue/$id/reel.mp4"
+              built="$built $id"
+            else
+              failed="$failed $id"
+            fi
+            echo "::endgroup::"
+          done
+          echo "BUILT=$built" >> "$GITHUB_ENV"
+          [ -z "$failed" ] || { echo "::error::failed:$failed"; echo "FAILED=1" >> "$GITHUB_ENV"; }
+      - name: Commit built reels
+        if: env.BUILT != ''
+        run: |
+          git config user.name "engiformula-bot"
+          git config user.email "bot@users.noreply.github.com"
+          for id in $BUILT; do git add "content/queue/$id"; done
+          git diff --cached --quiet && exit 0
+          git commit -m "build-reels: voice, captions and reel.mp4 for$BUILT"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            sleep $((i * 5))
+          done
+      - name: Fail if any reel failed
+        if: env.FAILED == '1'
+        run: exit 1

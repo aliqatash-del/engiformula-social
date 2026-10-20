@@ -23,6 +23,15 @@ limits:                        # enforced by validate.py before anything is sent
   instagram_reel_max_seconds: 900
   image_max_mb: 8
 
+voice:                         # Reel voiceover (scripts/voiceover.py, Kokoro TTS — runs in build-reels.yml)
+  name: am_michael             # Kokoro voice: am_michael (US male); alternatives am_fenrir, am_puck, af_heart (US female)
+  lang_code: a                 # a = American English, b = British English (use a b* voice, e.g. bm_george)
+  speed: 1.0                   # 0.9 slower … 1.1 faster
+  lead_seconds: 0.1            # silence before each slide's line
+  pad_seconds: 0.35            # silence after it before the next frame
+  caption_words: 3             # words per burned-in caption chunk
+  max_seconds: 60              # warn if the reel runs longer
+
 brand:
   handle_instagram: "@engiformula"
   website: "engiformula.com"

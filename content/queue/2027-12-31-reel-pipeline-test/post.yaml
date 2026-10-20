@@ -1,0 +1,58 @@
+id: 2027-12-31-reel-pipeline-test
+slot: '2027-12-31T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A #4 bar weighs 0.668 lb per foot (0.994 kg/m). Pipeline test, not for publishing.
+
+
+  Area 0.196 in² × 3.40 lb/ft per in² of steel = 0.668 lb/ft.
+
+
+  Do you check bar weights by hand or from the table?
+
+
+  Save this. Free rebar weight calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#rebar'
+- '#steelfixing'
+- '#engiformula'
+first_comment: 'Free rebar weight calculator: https://engiformula.com/calculators'
+alt_text: 'Reel working out the weight of a number 4 rebar: 0.5 inch diameter, 0.196 square
+  inches, 0.668 pounds per foot.'
+ai_generated: false
+slides:
+- style: block
+  title: What does a ==#4 bar== weigh?
+  body: Two-second formula.
+  voice: What does a number four bar weigh? Here's the two-second formula.
+  seconds: 2.5
+- title: 'Step 1: bar area'
+  formula: π/4 × 0.5² = 0.196 in²
+  legend: '#4 = 4/8 in = 0.5 in diameter (12.7 mm)'
+  formula_size: 56
+  voice: A number four bar is half an inch across, so its area is zero point one nine six square inches.
+  seconds: 3
+- title: 'Step 2: × 3.40'
+  formula: 0.196 × 3.40 = 0.668
+  legend: 'lb/ft. Steel at 490 lb/ft³ ÷ 144 in²/ft² = 3.40 lb/ft per in²'
+  formula_size: 56
+  voice: Multiply by three point four. That's zero point six six eight pounds per foot.
+  seconds: 3
+- title: ==0.668 lb/ft==
+  body: '(0.994 kg/m)
+
+    A 20 ft bar ≈ **13.4 lb** (6.06 kg)'
+  voice: So a twenty foot bar weighs about thirteen point four pounds.
+  seconds: 3
+- style: block
+  title: Free rebar weight calculator
+  cta: LINK IN BIO →
+  voice: Free rebar weight calculator. Link in bio.
+  seconds: 2.5
