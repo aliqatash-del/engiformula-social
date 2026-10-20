@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: pending_approval
+status: approved
 source: https://engiformula.com/calculators
 caption: 'One foot of 12 in pipe holds 5.88 gallons of water. 100 ft holds 588.
 
@@ -48,3 +48,4 @@ slides:
 media:
 - slide-01.jpg
 telegram_message_id: 57
+decided_at: '2026-10-20T10:00:49.308753+00:00'
