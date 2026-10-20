@@ -108,9 +108,15 @@ def process_updates() -> list[str]:
                          reply_markup={"force_reply": True})
             elif post:
                 label = f"already {post.status}"
-            call("answerCallbackQuery", callback_query_id=cb["id"], text=label)
-            call("editMessageReplyMarkup", chat_id=chat_id(), message_id=cb["message"]["message_id"],
-                 reply_markup={"inline_keyboard": [[{"text": label, "callback_data": "noop|"}]]})
+            # The scheduler polls every 30 min, long after Telegram's few-second window to answer a tap,
+            # so these two are best effort: a stale tap must not stop the run (the decision is already saved).
+            for method, args in (("answerCallbackQuery", {"callback_query_id": cb["id"], "text": label}),
+                                 ("editMessageReplyMarkup", {"chat_id": chat_id(), "message_id": cb["message"]["message_id"],
+                                  "reply_markup": {"inline_keyboard": [[{"text": label, "callback_data": "noop|"}]]}})):
+                try:
+                    call(method, **args)
+                except RuntimeError as exc:
+                    log(f"telegram: {method} skipped ({str(exc)[-80:]})")
         msg = update.get("message")
         if msg and str(msg["chat"]["id"]) == str(chat_id()) and msg.get("reply_to_message"):
             quoted = msg["reply_to_message"].get("text", "")
