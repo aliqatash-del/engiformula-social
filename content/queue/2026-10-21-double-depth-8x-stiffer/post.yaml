@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'Double the depth of a beam and it gets 8 times stiffer. Double the width
   and you only get 2 times.
@@ -84,3 +84,4 @@ media:
 - slide-04.jpg
 - slide-05.jpg
 - slide-06.jpg
+telegram_message_id: 20

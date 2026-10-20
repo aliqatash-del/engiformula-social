@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'Five checks before the truck arrives. Every one of them is cheaper now than
   after the pour.
@@ -71,3 +71,4 @@ media:
 - slide-05.jpg
 - slide-06.jpg
 - slide-07.jpg
+telegram_message_id: 55

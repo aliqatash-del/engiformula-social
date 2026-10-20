@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'Answer: B. A 16 mm bar weighs 1.578 kg/m (1.060 lb/ft). A #5 weighs 1.043
   lb/ft (1.552 kg/m).
@@ -47,3 +47,4 @@ slides:
   cta: DID YOU GET IT?
 media:
 - slide-01.jpg
+telegram_message_id: 29

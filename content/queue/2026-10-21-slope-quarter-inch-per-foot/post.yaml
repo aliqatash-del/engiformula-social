@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: '1/4 in per foot is a 2.08% slope, not 2%. Small difference, until it''s
   200 ft of pipe or paving.
@@ -85,3 +85,4 @@ media:
 - slide-04.jpg
 - slide-05.jpg
 - slide-06.jpg
+telegram_message_id: 27

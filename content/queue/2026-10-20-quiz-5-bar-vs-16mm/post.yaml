@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'Quiz: which bar is heavier per foot, a US #5 or a metric 16 mm?
 
@@ -50,3 +50,4 @@ slides:
   cta: NO LOOKING IT UP
 media:
 - slide-01.jpg
+telegram_message_id: 6
