@@ -138,7 +138,19 @@ if __name__ == "__main__":
             m = u.get("message") or {}
             if m:
                 print("chat id:", m["chat"]["id"], "from:", m["chat"].get("first_name"))
+    elif sys.argv[1:] == ["updates"]:
+        # Read-only look at what Telegram is holding for the bot (doesn't move the saved offset).
+        hook = call("getWebhookInfo").get("result", {})
+        print("webhook url:", hook.get("url") or "(none)", "| pending:", hook.get("pending_update_count"))
+        offset = read_state("telegram_offset", 0)
+        print("saved offset:", offset)
+        for u in call("getUpdates", offset=offset, timeout=0).get("result", []):
+            cb, m = u.get("callback_query"), u.get("message") or {}
+            if cb:
+                print(u["update_id"], "tap", cb.get("data"), "chat ok:", str(cb["message"]["chat"]["id"]) == str(chat_id()))
+            else:
+                print(u["update_id"], "message", "chat ok:", str(m.get("chat", {}).get("id")) == str(chat_id()), repr(m.get("text", ""))[:40])
     elif sys.argv[1:2] == ["test"]:
         print(send("EngiFormula bot is connected ✅"))
     else:
-        print("usage: telegram.py whoami | test")
+        print("usage: telegram.py whoami | test | updates")
