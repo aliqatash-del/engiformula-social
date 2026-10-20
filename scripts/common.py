@@ -32,7 +32,7 @@ STATUSES = ["draft", "pending_approval", "approved", "rejected", "published", "f
 
 
 def env(name: str, required: bool = True) -> str:
-    value = os.getenv(name, "")
+    value = os.getenv(name, "").strip()  # a pasted secret often carries a stray space or newline
     if required and not value and not DRY_RUN:
         sys.exit(f"Missing environment variable {name}. See .env.example.")
     return value or f"<{name}>"
