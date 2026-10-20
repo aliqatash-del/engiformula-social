@@ -1,0 +1,78 @@
+id: 2026-10-30-licensed-engineer-routes
+slot: '2026-10-30T15:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: career
+status: draft
+source: https://engiformula.com/calculators
+caption: 'PE, CEng, P.Eng, CPEng: five countries, five routes to the same idea.
+
+
+  US: PE through your state board (FE exam, experience, PE exam). UK: CEng through
+  ICE or IStructE.
+
+  Canada: P.Eng through your provincial regulator. Australia: CPEng through Engineers
+  Australia. Ireland: CEng through Engineers Ireland.
+
+
+  Which one are you working towards?
+
+
+  Send this to someone who keeps putting their application off.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#engineeringcareer'
+- '#peexam'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel summarizing professional engineer routes: PE in the US, CEng in
+  the UK through ICE or IStructE, P.Eng in Canada, CPEng in Australia and CEng in
+  Ireland.'
+ai_generated: false
+slides:
+- style: block
+  title: 'PE, CEng, P.Eng, CPEng: ==which route is yours?=='
+  cta: SWIPE →
+  counter: 1 / 8
+  body: ''
+- title: 'United States: PE'
+  body: 'Licensed by your **state board**. Usual path: FE exam → experience under
+    a PE (often 4 years) → PE exam (NCEES).'
+  counter: 2 / 8
+- title: 'United Kingdom: CEng'
+  body: Chartered through **ICE** or **IStructE**. Training, then a professional review
+    (IStructE also has its Chartered Membership exam).
+  counter: 3 / 8
+- title: 'Canada: P.Eng'
+  body: Licensed by your **provincial regulator**, e.g. PEO in Ontario. Experience
+    plus a law and ethics exam (in most provinces).
+  counter: 4 / 8
+- title: 'Australia: CPEng'
+  body: Chartered through **Engineers Australia**, assessed against its competency
+    standards. Optional listing on the NER.
+  counter: 5 / 8
+- title: 'Ireland: CEng'
+  body: Chartered through **Engineers Ireland**. Initial professional development,
+    then a professional review.
+  counter: 6 / 8
+- title: The common thread
+  body: Accredited degree · supervised experience · ==evidence of competence== · ethics.
+    Start logging your experience now.
+  counter: 7 / 8
+- style: block
+  title: Working towards it?
+  body: Free calculators with formulas and worked examples to study with.
+  cta: Save this · Link in bio
+  counter: 8 / 8
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg
+- slide-07.jpg
+- slide-08.jpg

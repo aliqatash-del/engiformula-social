@@ -1,0 +1,86 @@
+id: 2026-10-26-square-with-3-4-5
+slot: '2026-10-26T15:00:00+03:00'
+type: carousel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A 20 × 30 ft footing is square when the diagonal reads 36 ft 0-11/16 in.
+  No total station needed.
+
+
+  It''s Pythagoras: √(20² + 30²) = 36.06 ft. The 3-4-5 rule is the same idea with
+  whole numbers.
+
+  Scale it up for accuracy: 6-8-10, 9-12-15, 15-20-25 ft (or 3-4-5 m, 6-8-10 m).
+
+
+  What''s the biggest layout you''ve squared with just a tape?
+
+
+  Save this for your next setting-out day.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#surveying'
+- '#constructionsite'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Carousel on squaring a layout with the 3-4-5 rule: multiples 6-8-10, 9-12-15
+  and 15-20-25, and the diagonal of a 20 by 30 foot footing, 36.06 feet or 36 feet
+  11/16 inch.'
+ai_generated: false
+slides:
+- style: block
+  title: Square a corner with ==just a tape==
+  body: The 3-4-5 rule, and how to check any rectangle.
+  cta: SWIPE →
+  counter: 1 / 6
+- title: The rule
+  formula: 3² + 4² = 5²
+  legend: Mark 3 along one line, 4 along the other. If the diagonal is 5, the corner
+    is 90°.
+  counter: 2 / 6
+- title: Scale it up
+  table:
+  - - MULTIPLY BY
+    - SIDES
+    - DIAGONAL
+  - - × 1
+    - 3 + 4
+    - '5'
+  - - × 2
+    - 6 + 8
+    - '10'
+  - - × 3
+    - 9 + 12
+    - '15'
+  - - × 5
+    - 15 + 20
+    - ==25==
+  legend: Works in feet or meters. Longer sides = smaller angle error.
+  counter: 3 / 6
+- title: 'Any rectangle: check the diagonal'
+  formula: d = √(L² + W²)
+  legend: '20 × 30 ft footing: √(400 + 900) = **36.06 ft**'
+  result: = 36 ft 0-11/16 in
+  formula_size: 68
+  counter: 4 / 6
+- title: Then check both diagonals
+  body: Equal diagonals = rectangle. Unequal = parallelogram. Fix before the forms
+    go in.
+  counter: 5 / 6
+- style: block
+  title: Layout done. ==Now the volume.==
+  body: Free calculators with formulas and worked examples.
+  cta: Save this · Free calculators → link in bio
+  counter: 6 / 6
+media:
+- slide-01.jpg
+- slide-02.jpg
+- slide-03.jpg
+- slide-04.jpg
+- slide-05.jpg
+- slide-06.jpg

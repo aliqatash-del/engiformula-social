@@ -1,0 +1,88 @@
+id: 2026-10-29-why-beams-are-i-shaped
+slot: '2026-10-29T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+source: https://engiformula.com/calculators
+caption: 'Same steel, 17 times stiffer. That''s why beams are I-shaped.
+
+
+  8.1 in² of steel (27.6 lb/ft) as a solid 2.85 in square: I = 5.5 in⁴.
+
+  The same area as an 8 in deep I-section (6 × 0.5 in flanges, 0.3 in web): I = 93.1
+  in⁴.
+
+
+  What''s the most over-sized member you''ve seen on a job?
+
+
+  Send this to someone starting structural analysis.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#structuralengineering'
+- '#steelstructures'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Reel comparing the same 8.1 square inches of steel as a solid square bar
+  with moment of inertia 5.5 inches to the fourth and as an 8 inch deep I-section
+  with 93.1 inches to the fourth, 17 times stiffer.
+ai_generated: false
+slides:
+- style: dark
+  title: Same steel. ==17× stiffer.==
+  seconds: 3
+  voice: Same amount of steel. Seventeen times stiffer.
+- title: 'Option A: solid square'
+  table:
+  - - ''
+    - VALUE
+  - - Size
+    - 2.85 × 2.85 in
+  - - Area
+    - 8.1 in²
+  - - I
+    - 5.5 in⁴
+  seconds: 4
+  voice: Take eight point one square inches of steel as a solid square bar. Moment
+    of inertia, five and a half.
+- title: 'Option B: I-section'
+  table:
+  - - ''
+    - VALUE
+  - - Depth
+    - 8 in
+  - - Flanges
+    - 6 × 0.5 in
+  - - Web
+    - 0.3 in
+  - - Area
+    - 8.1 in²
+  seconds: 4
+  voice: Now shape the same area into an eight inch deep I-section.
+- title: Its stiffness
+  formula: I = 93.1 in⁴
+  result: '**17×** the square bar'
+  seconds: 4
+  voice: Moment of inertia, ninety three. Seventeen times the square bar.
+- title: Why it works
+  body: Bending stiffness grows with ==distance squared== from the center. Flanges
+    put the steel far from it.
+  seconds: 5
+  voice: Stiffness grows with the square of the distance from the center. The flanges
+    put the steel where it works hardest.
+- style: block
+  title: Check ==any section==
+  cta: Free moment of inertia calculator → link in bio
+  seconds: 3
+  voice: Check any section with the free moment of inertia calculator. Link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
