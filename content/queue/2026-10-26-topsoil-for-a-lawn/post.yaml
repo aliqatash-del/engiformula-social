@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'A 20 × 30 ft lawn, 4 in of topsoil: 7.4 yd³. That''s 200 one-cubic-foot
   bags.
@@ -95,3 +95,4 @@ captions: captions.srt
 reel_built_from: 2a33de8e2fd8
 media:
 - reel.mp4
+telegram_message_id: 71
