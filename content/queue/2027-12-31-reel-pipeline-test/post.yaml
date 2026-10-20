@@ -24,35 +24,48 @@ hashtags:
 - '#steelfixing'
 - '#engiformula'
 first_comment: 'Free rebar weight calculator: https://engiformula.com/calculators'
-alt_text: 'Reel working out the weight of a number 4 rebar: 0.5 inch diameter, 0.196 square
-  inches, 0.668 pounds per foot.'
+alt_text: 'Reel working out the weight of a number 4 rebar: 0.5 inch diameter, 0.196
+  square inches, 0.668 pounds per foot.'
 ai_generated: false
 slides:
 - style: block
   title: What does a ==#4 bar== weigh?
   body: Two-second formula.
   voice: What does a number four bar weigh? Here's the two-second formula.
-  seconds: 2.5
+  seconds: 5.1
 - title: 'Step 1: bar area'
   formula: π/4 × 0.5² = 0.196 in²
   legend: '#4 = 4/8 in = 0.5 in diameter (12.7 mm)'
   formula_size: 56
-  voice: A number four bar is half an inch across, so its area is zero point one nine six square inches.
-  seconds: 3
+  voice: A number four bar is half an inch across, so its area is zero point one nine
+    six square inches.
+  seconds: 7.62
 - title: 'Step 2: × 3.40'
   formula: 0.196 × 3.40 = 0.668
-  legend: 'lb/ft. Steel at 490 lb/ft³ ÷ 144 in²/ft² = 3.40 lb/ft per in²'
+  legend: lb/ft. Steel at 490 lb/ft³ ÷ 144 in²/ft² = 3.40 lb/ft per in²
   formula_size: 56
-  voice: Multiply by three point four. That's zero point six six eight pounds per foot.
-  seconds: 3
+  voice: Multiply by three point four. That's zero point six six eight pounds per
+    foot.
+  seconds: 6.42
 - title: ==0.668 lb/ft==
   body: '(0.994 kg/m)
 
     A 20 ft bar ≈ **13.4 lb** (6.06 kg)'
   voice: So a twenty foot bar weighs about thirteen point four pounds.
-  seconds: 3
+  seconds: 4.75
 - style: block
   title: Free rebar weight calculator
   cta: LINK IN BIO →
   voice: Free rebar weight calculator. Link in bio.
-  seconds: 2.5
+  seconds: 4.37
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: eb3844cd31c6
+media:
+- reel.mp4

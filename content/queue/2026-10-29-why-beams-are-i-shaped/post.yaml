@@ -34,7 +34,7 @@ ai_generated: false
 slides:
 - style: dark
   title: Same steel. ==17× stiffer.==
-  seconds: 3
+  seconds: 4.4
   voice: Same amount of steel. Seventeen times stiffer.
 - title: 'Option A: solid square'
   table:
@@ -46,7 +46,7 @@ slides:
     - 8.1 in²
   - - I
     - 5.5 in⁴
-  seconds: 4
+  seconds: 7.9
   voice: Take eight point one square inches of steel as a solid square bar. Moment
     of inertia, five and a half.
 - title: 'Option B: I-section'
@@ -61,23 +61,23 @@ slides:
     - 0.3 in
   - - Area
     - 8.1 in²
-  seconds: 4
+  seconds: 4.67
   voice: Now shape the same area into an eight inch deep I-section.
 - title: Its stiffness
   formula: I = 93.1 in⁴
   result: '**17×** the square bar'
-  seconds: 4
+  seconds: 5.7
   voice: Moment of inertia, ninety three. Seventeen times the square bar.
 - title: Why it works
   body: Bending stiffness grows with ==distance squared== from the center. Flanges
     put the steel far from it.
-  seconds: 5
+  seconds: 7.77
   voice: Stiffness grows with the square of the distance from the center. The flanges
     put the steel where it works hardest.
 - style: block
   title: Check ==any section==
   cta: Free moment of inertia calculator → link in bio
-  seconds: 3
+  seconds: 6.07
   voice: Check any section with the free moment of inertia calculator. Link in bio.
 frames:
 - frame-01.jpg
@@ -86,3 +86,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 4dee8116f076
+media:
+- reel.mp4

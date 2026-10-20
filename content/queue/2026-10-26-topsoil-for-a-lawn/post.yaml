@@ -36,22 +36,22 @@ slides:
 - style: dark
   title: Topsoil for a ==20 × 30 ft== lawn?
   body: 4 inches deep.
-  seconds: 3
+  seconds: 5.47
   voice: How much topsoil for a twenty by thirty foot lawn, four inches deep?
 - title: Inches to feet first
   formula: 4 ÷ 12 = 0.333 ft
-  seconds: 3
+  seconds: 5.0
   voice: First, turn four inches into feet. That's a third of a foot.
   formula_size: 56
 - title: Volume
   formula: 20 × 30 × 4/12 = 200 ft³
-  seconds: 4
+  seconds: 5.4
   voice: Twenty times thirty times a third gives two hundred cubic feet.
   formula_size: 56
 - title: To cubic yards
   formula: 200 ÷ 27 = 7.41 yd³
   result: 'Metric: **5.66 m³**'
-  seconds: 4
+  seconds: 7.42
   voice: Divide by twenty seven. Seven point four cubic yards, or five point seven
     cubic meters.
   formula_size: 56
@@ -64,7 +64,7 @@ slides:
   - - 10%
     - ==8.15 yd³==
   legend: Typical practice
-  seconds: 4
+  seconds: 7.17
   voice: Topsoil settles, so most people add about ten percent. Order around eight
     cubic yards.
 - title: Or in bags
@@ -75,12 +75,12 @@ slides:
     - '200'
   - - 0.75 ft³
     - '267'
-  seconds: 4
+  seconds: 6.57
   voice: In bags, that's two hundred one cubic foot bags. At that size, bulk wins.
 - style: block
   title: Any area, ==any depth==
   cta: Free calculator → link in bio
-  seconds: 3
+  seconds: 5.4
   voice: Save this, and use the free topsoil calculator. Link in bio.
 frames:
 - frame-01.jpg
@@ -90,3 +90,8 @@ frames:
 - frame-05.jpg
 - frame-06.jpg
 - frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 2a33de8e2fd8
+media:
+- reel.mp4
