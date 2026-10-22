@@ -86,13 +86,13 @@ def send_preview(post: Post) -> None:
              telegram_message_id=result.get("message_id") if isinstance(result, dict) else None)
 
 
-APPROVE_ALL = "A|all"
 DECISIONS = {"a": "approved", "e": "draft", "r": "rejected"}
 LABELS = {"approved": "✅ Approved", "draft": "✏️ Sent back for edits", "rejected": "❌ Rejected"}
 
 
-def approve_all_keyboard(count: int) -> dict:
-    return {"inline_keyboard": [[{"text": f"✅ Approve all {count}", "callback_data": APPROVE_ALL}]]}
+def approve_all_keyboard(count: int, day: str) -> dict:
+    """One button that approves every post waiting for approval on that day (YYYY-MM-DD)."""
+    return {"inline_keyboard": [[{"text": f"✅ Approve all {count}", "callback_data": f"A|{day}"}]]}
 
 
 def decide(post: Post | None, action: str) -> str | None:
@@ -138,8 +138,9 @@ def process_updates() -> list[str]:
         write_state("telegram_last_update", now().isoformat())  # lets the daily message spot lost taps
         if cb:
             action, _, post_id = cb["data"].partition("|")
-            if cb["data"] == APPROVE_ALL:
-                done = [p.id for p in load_queue() if p.status == "pending_approval" and decide(p, "a")]
+            if action == "A":  # "Approve all" for one day
+                done = [p.id for p in load_queue() if p.status == "pending_approval"
+                        and p.slot.astimezone(TZ).date().isoformat() == post_id and decide(p, "a")]
                 changes += [f"{pid}: approved (approve all)" for pid in done]
                 label = f"✅ Approved {len(done)}" if done else "Nothing left to approve"
             else:

@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: pending_approval
+status: draft
 source: https://engiformula.com/calculators
 caption: '1 m³ = 1.31 yd³. 1 yd³ = 0.765 m³. The cheat sheet for every mixed-units
   concrete order.
@@ -54,4 +54,3 @@ slides:
   cta: SAVE THIS FOR YOUR NEXT ORDER
 media:
 - slide-01.jpg
-telegram_message_id: 61

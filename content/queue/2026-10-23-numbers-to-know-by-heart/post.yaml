@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: career
-status: pending_approval
+status: draft
 source: https://engiformula.com/calculators
 caption: '6 conversions every new site engineer should know without reaching for a
   phone.
@@ -82,4 +82,3 @@ media:
 - slide-06.jpg
 - slide-07.jpg
 - slide-08.jpg
-telegram_message_id: 40
