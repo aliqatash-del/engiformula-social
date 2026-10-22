@@ -122,10 +122,12 @@ def answer_tap(cb: dict, label: str) -> None:
 
 def process_updates() -> list[str]:
     """Read button taps and text replies since last run. Returns a list of what changed."""
-    offset = read_state("telegram_offset", 0)
-    body = call("getUpdates", offset=offset, timeout=0, allowed_updates=["callback_query", "message"])
+    # No saved offset: Telegram keeps every unconfirmed update for 24 h, so read them all, then confirm.
+    # (A saved offset that ran ahead of Telegram's numbering silently threw every tap away from 20 Oct.)
+    body = call("getUpdates", timeout=0, allowed_updates=["callback_query", "message"])
     changes = []
     updates = body.get("result", [])
+    offset = 0
     if updates:
         log(f"telegram: {len(updates)} update(s) received")
     for update in updates:
@@ -166,7 +168,8 @@ def process_updates() -> list[str]:
         elif msg and msg.get("text", "").strip().lower() in ("ping", "/ping", "/start"):
             send("✅ I can hear you. Taps and messages reach the scheduler on its next run (every 30 min).")
             changes.append("ping answered")
-    write_state("telegram_offset", offset)
+    if offset:
+        call("getUpdates", offset=offset, timeout=0, limit=1)  # confirm what we just handled
     return changes
 
 
@@ -181,9 +184,7 @@ if __name__ == "__main__":
         # Read-only look at what Telegram is holding for the bot (doesn't move the saved offset).
         hook = call("getWebhookInfo").get("result", {})
         print("webhook url:", hook.get("url") or "(none)", "| pending:", hook.get("pending_update_count"))
-        offset = read_state("telegram_offset", 0)
-        print("saved offset:", offset)
-        for u in call("getUpdates", offset=offset, timeout=0).get("result", []):
+        for u in call("getUpdates", timeout=0).get("result", []):  # read only: nothing is confirmed
             cb, m = u.get("callback_query"), u.get("message") or {}
             if cb:
                 print(u["update_id"], "tap", cb.get("data"), "chat ok:", str(cb["message"]["chat"]["id"]) == str(chat_id()))
