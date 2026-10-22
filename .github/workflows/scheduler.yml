@@ -57,5 +57,10 @@ jobs:
           git config user.name "engiformula-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A content state data
-          git diff --cached --quiet || git commit -m "scheduler: status update $(date -u +%FT%TZ)"
-          git push
+          git diff --cached --quiet && exit 0      # nothing changed: no commit (no more commit every 30 min)
+          git commit -m "scheduler: status update $(date -u +%FT%TZ)"
+          for i in 1 2 3 4; do                     # main may have moved during the run (a merge, a reel build)
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

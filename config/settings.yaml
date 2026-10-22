@@ -12,7 +12,8 @@ approval:
   send_batch_days_ahead: 2     # posts within this window are sent to Telegram for approval (owner: one week at a time is confusing)
   reminder_daily_at: "09:00"   # daily reminder for anything still pending
   final_reminder_hours: 2      # last reminder this many hours before the slot
-  publish_window_minutes: 120  # GitHub's 30-min cron can run 20+ min late; this keeps an approved post from being skipped
+  late_publish_hours: 24       # approved after its slot? it still goes out on the next run, up to this many hours late
+  tap_alert_hours: 24          # warn in the daily message if posts wait for approval and no tap has arrived for this long
   never_autopublish: true      # unapproved posts are skipped, never published
 
 limits:                        # enforced by validate.py before anything is sent for approval
