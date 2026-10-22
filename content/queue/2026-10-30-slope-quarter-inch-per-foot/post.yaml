@@ -1,11 +1,11 @@
-id: 2026-10-21-slope-quarter-inch-per-foot
-slot: '2026-10-21T20:00:00+03:00'
+id: 2026-10-30-slope-quarter-inch-per-foot
+slot: '2026-10-30T20:00:00+03:00'
 type: carousel
 platforms:
 - instagram
 - facebook
 pillar: calculator
-status: skipped
+status: draft
 source: https://engiformula.com/calculators
 caption: '1/4 in per foot is a 2.08% slope, not 2%. Small difference, until it''s
   200 ft of pipe or paving.
@@ -85,4 +85,3 @@ media:
 - slide-04.jpg
 - slide-05.jpg
 - slide-06.jpg
-telegram_message_id: 27

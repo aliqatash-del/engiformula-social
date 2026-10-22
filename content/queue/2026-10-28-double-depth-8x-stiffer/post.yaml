@@ -1,11 +1,11 @@
-id: 2026-10-21-double-depth-8x-stiffer
-slot: '2026-10-21T15:00:00+03:00'
+id: 2026-10-28-double-depth-8x-stiffer
+slot: '2026-10-28T15:00:00+03:00'
 type: carousel
 platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: skipped
+status: draft
 source: https://engiformula.com/calculators
 caption: 'Double the depth of a beam and it gets 8 times stiffer. Double the width
   and you only get 2 times.
@@ -84,4 +84,3 @@ media:
 - slide-04.jpg
 - slide-05.jpg
 - slide-06.jpg
-telegram_message_id: 20

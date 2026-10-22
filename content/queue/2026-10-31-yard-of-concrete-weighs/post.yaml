@@ -1,11 +1,11 @@
-id: 2026-10-22-yard-of-concrete-weighs
-slot: '2026-10-22T20:00:00+03:00'
+id: 2026-10-31-yard-of-concrete-weighs
+slot: '2026-10-31T15:00:00+03:00'
 type: image
 platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: skipped
+status: draft
 source: https://engiformula.com/calculators
 caption: 'A cubic yard of concrete weighs about 4,000 lb. That''s 2 tons in every
   yard on the truck.
@@ -49,4 +49,3 @@ slides:
   cta: PLAN YOUR FORMWORK FOR IT
 media:
 - slide-01.jpg
-telegram_message_id: 31

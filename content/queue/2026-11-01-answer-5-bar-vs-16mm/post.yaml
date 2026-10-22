@@ -1,11 +1,11 @@
-id: 2026-10-22-answer-5-bar-vs-16mm
-slot: '2026-10-22T15:00:00+03:00'
+id: 2026-11-01-answer-5-bar-vs-16mm
+slot: '2026-11-01T20:00:00+03:00'
 type: image
 platforms:
 - instagram
 - facebook
 pillar: community
-status: skipped
+status: draft
 source: https://engiformula.com/calculators
 caption: 'Answer: B. A 16 mm bar weighs 1.578 kg/m (1.060 lb/ft). A #5 weighs 1.043
   lb/ft (1.552 kg/m).
@@ -47,4 +47,3 @@ slides:
   cta: DID YOU GET IT?
 media:
 - slide-01.jpg
-telegram_message_id: 29
