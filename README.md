@@ -92,7 +92,7 @@ DRY_RUN=1 FAKE_NOW=2026-11-02T20:05:00+03:00 python scripts/scheduler.py   # sho
 - **Claude scheduled task** (Claude app → this repo): every Sunday 10:00 Riyadh → "Run /weekly-review and /plan-week for EngiFormula". Every 1st of the month → "Run /monthly-review".
 
 ## Daily routine for you (~20 minutes)
-1. Telegram previews arrive 2 days ahead → **Approve**, **Needs edit** (then reply with what to change), or **Reject**. The 09:00 message lists everything still waiting and has one **Approve all** button.
+1. Every morning at 09:00 the bot sends that day's 2–3 posts → **Approve**, **Needs edit** (then reply with what to change), or **Reject** under each one, or one **Approve all** button for the day.
    - Taps are picked up on the next run (within 30 min); the buttons then change to ✅ Approved.
    - Approved late? The post still goes out on the next run, up to 24 h after its slot. After that it is skipped.
    - Not sure the bot hears you? Send **ping**; it answers on the next run. If it never answers, another app is reading this bot's messages.

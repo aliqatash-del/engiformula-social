@@ -2,8 +2,8 @@
 
 Each run:
  1. reads your Telegram taps (approve / needs edit / reject) and edit notes
- 2. validates new drafts inside the approval window and sends them to Telegram
- 3. sends the daily reminder and the final reminder before each slot
+ 2. each morning (send_daily_at) validates that day's drafts and sends them to Telegram
+ 3. sends one daily message with an Approve all button, and the final reminder before each slot
  4. publishes approved posts whose slot has arrived (late approvals too, within late_publish_hours);
     skips anything still unapproved after that
 """
@@ -37,10 +37,12 @@ def run() -> None:
 
     posts = load_queue()
 
-    # 2. drafts -> approval
-    window_end = t + dt.timedelta(days=APPROVAL["send_batch_days_ahead"])
+    # 2. each morning, send that day's drafts for approval (later in the day: any new draft for today)
+    h, m = local_hm(APPROVAL["send_daily_at"])
+    day_start = local.replace(hour=h, minute=m, second=0, microsecond=0)
+    todays = lambda p: p.slot.astimezone(TZ).date() == local.date()
     for post in posts:
-        if post.status != "draft" or post.slot > window_end or post.slot < t:
+        if post.status != "draft" or not todays(post) or local < day_start or post.slot < t:
             continue
         if post.data.get("edit_requests") and not post.data.get("edits_done"):
             continue  # waiting for Claude to apply your edit notes
@@ -54,19 +56,17 @@ def run() -> None:
         telegram.send_preview(post)
         log(f"{post.id}: sent for approval")
 
-    # 3a. one daily message: what goes out today, what still needs a tap, and an "Approve all" button
-    h, m = local_hm(APPROVAL["reminder_daily_at"])
+    # 3a. right after the previews, one message for the day with an "Approve all" button
     today_key = f"daily:{local.date()}"
-    reminder_time = local.replace(hour=h, minute=m, second=0, microsecond=0)
-    if today_key not in sent and reminder_time <= local < reminder_time + dt.timedelta(minutes=RUN_EVERY_MIN * 2):
-        pending = [p for p in posts if p.status == "pending_approval"]
-        today = [p for p in posts if p.slot.astimezone(TZ).date() == local.date() and p.status == "approved"]
-        if pending or today:
-            lines = [f"☀️ <b>Today</b>: {len(today)} approved post(s) scheduled."]
-            lines += [f"• {p.slot.astimezone(TZ):%H:%M} <code>{p.id}</code>" for p in today]
+    if today_key not in sent and local >= day_start:
+        today = [p for p in posts if todays(p) and p.status in ("approved", "pending_approval")]
+        pending = [p for p in today if p.status == "pending_approval"]
+        if today:
+            lines = [f"☀️ <b>Today, {local:%a %d %b}</b>: {len(today)} post(s)."]
+            lines += [f"• {p.slot.astimezone(TZ):%H:%M} {'✅' if p.status == 'approved' else '⏳'} <code>{p.id}</code>"
+                      for p in today]
             if pending:
-                lines += ["", f"⏳ {len(pending)} waiting for your approval (previews are above in this chat):"]
-                lines += [f"• {p.slot.astimezone(TZ):%a %H:%M} <code>{p.id}</code>" for p in pending[:15]]
+                lines += ["", f"Tap ✅ under each preview above, or approve all {len(pending)} at once:"]
                 last_tap = read_state("telegram_last_update", None)
                 quiet = dt.timedelta(hours=APPROVAL["tap_alert_hours"])
                 if not last_tap or t - dt.datetime.fromisoformat(last_tap) > quiet:
@@ -74,7 +74,8 @@ def run() -> None:
                              else f"in the last {APPROVAL['tap_alert_hours']} h")
                     lines += ["", f"⚠️ No tap or message from you has reached me {since}. "
                                   "If you have been tapping, another app may be reading this bot: send <b>ping</b> here to test."]
-            telegram.send("\n".join(lines), **({"reply_markup": telegram.approve_all_keyboard(len(pending))} if pending else {}))
+            markup = {"reply_markup": telegram.approve_all_keyboard(len(pending), local.date().isoformat())} if pending else {}
+            telegram.send("\n".join(lines), **markup)
         sent[today_key] = t.isoformat()
 
     # 3b. final reminder before the slot

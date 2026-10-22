@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: pending_approval
+status: draft
 source: https://engiformula.com/calculators
 caption: 'It takes 45 bags of 80 lb premix to make one cubic yard of concrete. That
   is 3,600 lb of bags.
@@ -47,4 +47,3 @@ slides:
   cta: FREE CONCRETE CALCULATOR → LINK IN BIO
 media:
 - slide-01.jpg
-telegram_message_id: 59
