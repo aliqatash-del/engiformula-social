@@ -9,7 +9,7 @@ Claude (plan + write) → content/queue/<post>/post.yaml → render.py / make_re
       → insights.py → data/*.csv → Telegram reports → Claude weekly/monthly review
 ```
 
-Nothing is ever published without your tap. Unapproved posts are skipped.
+Nothing is ever published without your tap. Posts still unapproved 24 h after their slot are skipped.
 
 ## What it costs
 
@@ -92,7 +92,10 @@ DRY_RUN=1 FAKE_NOW=2026-11-02T20:05:00+03:00 python scripts/scheduler.py   # sho
 - **Claude scheduled task** (Claude app → this repo): every Sunday 10:00 Riyadh → "Run /weekly-review and /plan-week for EngiFormula". Every 1st of the month → "Run /monthly-review".
 
 ## Daily routine for you (~20 minutes)
-1. Telegram previews arrive → **Approve**, **Needs edit** (then reply with what to change), or **Reject**.
+1. Telegram previews arrive 2 days ahead → **Approve**, **Needs edit** (then reply with what to change), or **Reject**. The 09:00 message lists everything still waiting and has one **Approve all** button.
+   - Taps are picked up on the next run (within 30 min); the buttons then change to ✅ Approved.
+   - Approved late? The post still goes out on the next run, up to 24 h after its slot. After that it is skipped.
+   - Not sure the bot hears you? Send **ping**; it answers on the next run. If it never answers, another app is reading this bot's messages.
 2. After each publish: reply to comments within the first hour.
 3. Stories: add the poll / link sticker by hand when Telegram asks (the API can't add stickers).
 

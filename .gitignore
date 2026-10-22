@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 .render-*.html
+state/last_run.json
