@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: pending_approval
+status: approved
 source: https://engiformula.com/calculators
 caption: 'A US modular brick wall takes 6.75 bricks per ft². A UK wall takes 59 per
   m². Same idea, different brick.
@@ -76,3 +76,4 @@ media:
 - slide-05.jpg
 - slide-06.jpg
 telegram_message_id: 109
+decided_at: '2026-10-23T08:00:48.555911+00:00'
