@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
+status: published
 source: https://engiformula.com/calculators
 caption: '1 m³ = 1.31 yd³. 1 yd³ = 0.765 m³. The cheat sheet for every mixed-units
   concrete order.
@@ -56,4 +56,10 @@ media:
 - slide-01.jpg
 telegram_message_id: 129
 decided_at: '2026-10-26T09:46:07.519540+00:00'
-approved_via: owner approved in the project thread on 26 Oct (Telegram taps were not arriving)
+approved_via: owner approved in the project thread on 26 Oct (Telegram taps were not
+  arriving)
+published_at: '2026-10-26T09:47:42.852520+00:00'
+published_ids:
+  instagram: '18153018292469555'
+  facebook: '133344266715154_1555214039970418'
+publish_errors: null
