@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
+status: published
 source: https://engiformula.com/calculators
 caption: 'A 20 × 30 ft footing is square when the diagonal reads 36 ft 0-11/16 in.
   No total station needed.
@@ -86,4 +86,10 @@ media:
 - slide-06.jpg
 telegram_message_id: 140
 decided_at: '2026-10-26T10:56:47.959862+00:00'
-approved_via: owner approved in the project thread on 26 Oct (Telegram taps were not arriving)
+approved_via: owner approved in the project thread on 26 Oct (Telegram taps were not
+  arriving)
+published_at: '2026-10-26T12:01:49.285838+00:00'
+published_ids:
+  instagram: '18116683307104179'
+  facebook: '133344266715154_1555314426627046'
+publish_errors: null
