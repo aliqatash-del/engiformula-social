@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: approved
-approved_via: owner approved in the project thread on 27 Oct (no Telegram message arrived)
+status: published
+approved_via: owner approved in the project thread on 27 Oct (no Telegram message
+  arrived)
 source: https://engiformula.com/calculators
 caption: 'The slump test in 30 seconds: 3 layers, 25 rods each, lift in about 5 seconds.
 
@@ -92,3 +93,8 @@ reel_built_from: d4755dc0e6d6
 media:
 - reel.mp4
 telegram_message_id: 151
+published_at: '2026-10-27T17:02:14.514504+00:00'
+published_ids:
+  instagram: '18641400697015648'
+  facebook: '1976796193700762'
+publish_errors: null
