@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: draft
+status: pending_approval
 source: https://engiformula.com/calculators
 caption: 'The slump test in 30 seconds: 3 layers, 25 rods each, lift in about 5 seconds.
 
@@ -90,3 +90,4 @@ captions: captions.srt
 reel_built_from: d4755dc0e6d6
 media:
 - reel.mp4
+telegram_message_id: 151
