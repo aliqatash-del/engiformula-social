@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
+status: published
 approved_via: owner approved all in the project thread on 28 Oct
 source: https://engiformula.com/calculators
 caption: 'Same steel, 17 times stiffer. That''s why beams are I-shaped.
@@ -92,3 +92,8 @@ captions: captions.srt
 reel_built_from: 4dee8116f076
 media:
 - reel.mp4
+published_at: '2026-10-29T17:02:05.362858+00:00'
+published_ids:
+  instagram: '17955220113268423'
+  facebook: '1815840519539410'
+publish_errors: null
