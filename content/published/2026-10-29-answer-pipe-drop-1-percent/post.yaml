@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: approved
+status: published
 approved_via: owner approved all in the project thread on 28 Oct
 source: https://engiformula.com/calculators
 caption: 'Answer: C, 12 in. 1% of 100 ft is 1 ft.
@@ -48,3 +48,8 @@ slides:
   formula_size: 56
 media:
 - slide-01.jpg
+published_at: '2026-10-29T12:01:15.696218+00:00'
+published_ids:
+  instagram: '18010729709779134'
+  facebook: '133344266715154_1558586052966550'
+publish_errors: null
