@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: approved
+status: published
 approved_via: owner approved all in the project thread on 28 Oct
 source: https://engiformula.com/calculators
 caption: 'Guess before the answer: how much concrete is in an 18 in round column,
@@ -87,3 +87,8 @@ captions: captions.srt
 reel_built_from: 55a5e1f48073
 media:
 - reel.mp4
+published_at: '2026-10-31T17:01:37.832049+00:00'
+published_ids:
+  instagram: '18597990919071740'
+  facebook: '2938703689831523'
+publish_errors: null
