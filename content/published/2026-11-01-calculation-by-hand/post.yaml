@@ -4,17 +4,17 @@ type: text
 platforms:
 - facebook
 pillar: community
-status: approved
+status: published
 approved_via: owner approved all in the project thread on 28 Oct
 caption: 'What''s the one calculation you still do by hand on site?
 
 
-  Mine is concrete volume. Length × width × thickness in feet, divide by 27, add a bit. I check the software
-  with it every time.
+  Mine is concrete volume. Length × width × thickness in feet, divide by 27, add a
+  bit. I check the software with it every time.
 
 
-  Drop yours below: the formula, or the rule of thumb you trust most. I''ll turn the best ones into a
-  cheat sheet.'
+  Drop yours below: the formula, or the rule of thumb you trust most. I''ll turn the
+  best ones into a cheat sheet.'
 hashtags:
 - '#civilengineering'
 - '#construction'
@@ -23,3 +23,7 @@ hashtags:
 first_comment: 'All the formulas in one place, with worked examples: https://engiformula.com/calculators'
 alt_text: Text post asking engineers which calculation they still do by hand on site.
 ai_generated: false
+published_at: '2026-11-01T12:00:48.332883+00:00'
+published_ids:
+  facebook: '133344266715154_1561777252647430'
+publish_errors: null
