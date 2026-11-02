@@ -32,34 +32,34 @@ ai_generated: false
 slides:
 - style: dark
   title: Bags for a ==12 in pier==, 4 ft deep?
-  seconds: 4
+  seconds: 5.22
   voice: How many bags of concrete for a twelve inch pier, four feet deep?
 - title: Volume of the hole
   formula: π × 0.5² × 4 = 3.14 ft³
   legend: 12 in diameter = 0.5 ft radius
   formula_size: 52
-  seconds: 6
+  seconds: 6.05
   voice: Pi times point five squared times four. Three point one four cubic feet.
 - title: What one bag makes
   formula: 80 lb bag ≈ 0.6 ft³
   legend: Typical yield printed on the bag
   formula_size: 56
-  seconds: 5
+  seconds: 5.0
   voice: An eighty pound bag makes about point six cubic feet.
 - title: Divide
   formula: 3.14 ÷ 0.6 = 5.2
   formula_size: 68
-  seconds: 4
+  seconds: 5.17
   voice: Three point one four divided by point six. Five point two.
 - title: 'Answer: ==6 bags=='
   body: Always round up. A short bag means a cold joint.
   result: 'Metric: **0.089 m³**'
-  seconds: 5
+  seconds: 5.0
   voice: Round up. Six bags per pier.
 - style: block
   title: Every pier, ==every size==
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 5.3
   voice: Every pier, every size. Free calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -68,3 +68,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: f72e9876bf37
+media:
+- reel.mp4

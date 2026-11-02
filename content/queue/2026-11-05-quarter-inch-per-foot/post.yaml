@@ -33,19 +33,19 @@ ai_generated: false
 slides:
 - style: dark
   title: 1/4 in per foot is ==not 2%==
-  seconds: 4
+  seconds: 4.0
   voice: A quarter inch per foot is not two percent.
 - title: The formula
   formula: '% = rise ÷ run × 100'
   legend: Same units for rise and run
   formula_size: 56
-  seconds: 5
+  seconds: 5.0
   voice: Percent slope is rise over run, times a hundred.
 - title: 1/4 in per foot
   formula: 0.25 ÷ 12 × 100 = 2.08%
   result: 'Metric: **20.8 mm per m**'
   formula_size: 52
-  seconds: 6
+  seconds: 6.0
   voice: Point two five over twelve, times a hundred. Two point oh eight percent.
 - title: Over 200 ft
   table:
@@ -55,7 +55,7 @@ slides:
     - 48 in
   - - 1/4 in/ft
     - ==50 in==
-  seconds: 6
+  seconds: 6.0
   voice: Over two hundred feet, that is fifty inches of fall, not forty eight.
 - title: Cheat sheet
   table:
@@ -67,12 +67,12 @@ slides:
     - '2.08'
   - - 1/2
     - '4.17'
-  seconds: 5
+  seconds: 5.72
   voice: One eighth is one point oh four. One half is four point one seven.
 - style: block
   title: Rise, run, ==done==
   cta: Save this · link in bio
-  seconds: 4
+  seconds: 4.82
   voice: Save this one. Free slope calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -81,3 +81,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 6b632d1c5865
+media:
+- reel.mp4

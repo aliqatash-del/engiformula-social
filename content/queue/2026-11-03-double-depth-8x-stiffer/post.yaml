@@ -37,14 +37,14 @@ slides:
 - style: dark
   title: Double the depth. ==8× stiffer.==
   body: Double the width? Only 2×.
-  seconds: 5
+  seconds: 7.12
   voice: Double the depth of a beam and it gets eight times stiffer. Double the width?
     Only two times.
 - title: Moment of inertia
   formula: I = b · h³ / 12
   legend: b = width · h = depth
   formula_size: 68
-  seconds: 5
+  seconds: 5.35
   voice: For a rectangle, I equals b times h cubed, over twelve.
 - title: Depth is ==cubed==
   table:
@@ -56,7 +56,7 @@ slides:
     - ==8 × I==
   - - Depth × 1.5
     - 3.4 × I
-  seconds: 6
+  seconds: 6.9
   voice: Width counts once. Depth is cubed. So double the depth and I goes up eight
     times.
 - title: Same 2×12, two ways
@@ -68,16 +68,16 @@ slides:
   - - Flat
     - 3.16 in⁴
   legend: 1.5 × 11.25 in actual size
-  seconds: 6
+  seconds: 6.0
   voice: 'A two by twelve on edge: one seventy eight. Laid flat: about three.'
 - title: ==56×== less stiff
   body: Same wood. Same weight. Just turned the wrong way.
-  seconds: 5
+  seconds: 5.55
   voice: Same board, fifty six times less stiff. Just turned the wrong way.
 - style: block
   title: Add ==depth== before width
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 6.0
   voice: Need less deflection? Add depth first. Free calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -86,3 +86,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 8c0994462677
+media:
+- reel.mp4

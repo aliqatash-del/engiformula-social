@@ -35,34 +35,34 @@ ai_generated: false
 slides:
 - style: dark
   title: How much does ==1 yd³== of concrete weigh?
-  seconds: 4
+  seconds: 4.08
   voice: How much does one cubic yard of concrete weigh?
 - title: Start with density
   formula: ≈ 150 lb/ft³
   legend: Normal-weight concrete, typical 145–150 lb/ft³
   formula_size: 68
-  seconds: 5
+  seconds: 5.95
   voice: Normal weight concrete is about a hundred and fifty pounds per cubic foot.
 - title: 27 ft³ in a yard
   formula: 150 × 27 = 4,050 lb
   formula_size: 56
-  seconds: 5
+  seconds: 6.52
   voice: A cubic yard is twenty seven cubic feet. That is four thousand and fifty
     pounds.
 - title: That's ==2 tons==
   result: 'Metric: **1,837 kg** (2,400 kg/m³ × 0.765 m³)'
-  seconds: 5
+  seconds: 5.65
   voice: Two tons, in every single yard. About eighteen hundred kilos.
 - title: A 10 yd³ truck
   formula: 40,500 lb
   legend: Concrete alone, before the truck
   formula_size: 68
-  seconds: 5
+  seconds: 5.32
   voice: A ten yard truck carries over forty thousand pounds of concrete.
 - style: block
   title: Plan your ==formwork== for it
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 5.07
   voice: Plan your formwork for it. Free calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -71,3 +71,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 2254bebff009
+media:
+- reel.mp4
