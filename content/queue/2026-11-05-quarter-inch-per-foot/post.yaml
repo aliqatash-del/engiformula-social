@@ -1,0 +1,83 @@
+id: 2026-11-05-quarter-inch-per-foot
+slot: '2026-11-05T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: '1/4 in per foot is a 2.08% slope, not 2%. Small difference, until it''s
+  200 ft of pipe.
+
+
+  Percent slope = rise ÷ run × 100. 0.25 ÷ 12 × 100 = 2.08% (20.8 mm per m).
+
+  Over 200 ft that''s 50 in of fall, not 48 in. Two inches you didn''t plan for.
+
+
+  Which do you specify most: in/ft, % or 1:x?
+
+
+  Save this. Free percent slope calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#plumbing'
+- '#drainage'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Reel showing that a quarter inch per foot slope is 2.08 percent, not 2 percent,
+  which adds 2 inches of fall over 200 feet of pipe.
+ai_generated: false
+slides:
+- style: dark
+  title: 1/4 in per foot is ==not 2%==
+  seconds: 4
+  voice: A quarter inch per foot is not two percent.
+- title: The formula
+  formula: '% = rise ÷ run × 100'
+  legend: Same units for rise and run
+  formula_size: 56
+  seconds: 5
+  voice: Percent slope is rise over run, times a hundred.
+- title: 1/4 in per foot
+  formula: 0.25 ÷ 12 × 100 = 2.08%
+  result: 'Metric: **20.8 mm per m**'
+  formula_size: 52
+  seconds: 6
+  voice: Point two five over twelve, times a hundred. Two point oh eight percent.
+- title: Over 200 ft
+  table:
+  - - SLOPE
+    - FALL
+  - - 2%
+    - 48 in
+  - - 1/4 in/ft
+    - ==50 in==
+  seconds: 6
+  voice: Over two hundred feet, that is fifty inches of fall, not forty eight.
+- title: Cheat sheet
+  table:
+  - - IN/FT
+    - '%'
+  - - 1/8
+    - '1.04'
+  - - 1/4
+    - '2.08'
+  - - 1/2
+    - '4.17'
+  seconds: 5
+  voice: One eighth is one point oh four. One half is four point one seven.
+- style: block
+  title: Rise, run, ==done==
+  cta: Save this · link in bio
+  seconds: 4
+  voice: Save this one. Free slope calculator, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg

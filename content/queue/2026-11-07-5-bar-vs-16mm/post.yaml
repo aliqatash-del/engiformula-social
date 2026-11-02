@@ -1,0 +1,89 @@
+id: 2026-11-07-5-bar-vs-16mm
+slot: '2026-11-07T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+source: https://engiformula.com/calculators
+caption: '#5 bar or 16 mm bar: which one is heavier? They look identical on site.
+
+
+  #5: 1.043 lb/ft (1.552 kg/m), 15.9 mm diameter.
+
+  16 mm: 1.578 kg/m (1.060 lb/ft). About 1.7% heavier, or 17 lb more per 1,000 ft.
+
+
+  Did you guess right? Be honest.
+
+
+  Save this for the next mixed-units job. Free rebar weight calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#rebar'
+- '#structuralengineering'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Reel comparing a US number 5 bar at 1.043 pounds per foot with a 16 millimeter
+  bar at 1.060 pounds per foot; the 16 millimeter bar is about 1.7 percent heavier.
+ai_generated: false
+slides:
+- style: dark
+  title: '==#5 bar== or ==16 mm==: which is heavier?'
+  seconds: 5
+  voice: Number five bar or sixteen millimeter bar. Which one is heavier?
+- title: Your options
+  table:
+  - - ''
+    - ANSWER
+  - - A
+    - '#5 bar'
+  - - B
+    - 16 mm bar
+  - - C
+    - Same weight
+  body: Comment before the answer.
+  seconds: 5
+  voice: A, the number five. B, the sixteen. Or C, the same. Pick one.
+- title: The diameters
+  table:
+  - - BAR
+    - DIAMETER
+  - - '#5'
+    - 15.9 mm
+  - - 16 mm
+    - 16.0 mm
+  seconds: 5
+  voice: A number five is fifteen point nine millimeters. The sixteen is a hair fatter.
+- title: The weights
+  table:
+  - - BAR
+    - lb/ft
+    - kg/m
+  - - '#5'
+    - '1.043'
+    - '1.552'
+  - - 16 mm
+    - ==1.060==
+    - '1.578'
+  seconds: 6
+  voice: Number five, one point oh four three pounds per foot. Sixteen millimeter,
+    one point oh six oh.
+- title: 'Answer: ==B=='
+  body: 'About 1.7% heavier: **17 lb** more per 1,000 ft.'
+  seconds: 5
+  voice: The answer is B. Seventeen pounds more on every thousand feet.
+- style: block
+  title: Did you ==get it==?
+  cta: Free calculator → link in bio
+  seconds: 4
+  voice: Did you get it? Comment below.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
