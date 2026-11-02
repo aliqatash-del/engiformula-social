@@ -1,0 +1,76 @@
+id: 2026-11-06-asphalt-for-a-driveway
+slot: '2026-11-06T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+source: https://engiformula.com/calculators
+caption: 'A 12 × 50 ft driveway at 3 in thick takes about 11 tons of asphalt.
+
+
+  12 × 50 × 0.25 ft = 150 ft³. At a typical 145 lb/ft³ compacted, that''s 21,750 lb
+  = 10.9 tons.
+
+  Metric: 4.25 m³ × 2.32 t/m³ = 9.9 t. Order a little extra for waste and edges.
+
+
+  How thick do you lay a residential driveway where you are?
+
+
+  Save this. Free asphalt calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#asphalt'
+- '#paving'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: 'Reel calculating asphalt for a 12 by 50 foot driveway at 3 inches thick:
+  150 cubic feet, about 10.9 tons at 145 pounds per cubic foot.'
+ai_generated: false
+slides:
+- style: dark
+  title: Asphalt for a ==12 × 50 ft== driveway?
+  body: 3 in thick.
+  seconds: 5.75
+  voice: How much asphalt for a twelve by fifty foot driveway, three inches thick?
+- title: Volume first
+  formula: 12 × 50 × 0.25 = 150 ft³
+  legend: 3 in = 0.25 ft
+  formula_size: 52
+  seconds: 6.15
+  voice: Twelve times fifty times a quarter foot. A hundred and fifty cubic feet.
+- title: Times density
+  formula: 150 × 145 = 21,750 lb
+  legend: Compacted hot mix, typical 145 lb/ft³
+  formula_size: 52
+  seconds: 8.0
+  voice: Times a hundred and forty five pounds per cubic foot. Twenty one thousand
+    seven hundred fifty pounds.
+- title: 'Answer: ==10.9 tons=='
+  result: 'Metric: **9.9 t**'
+  seconds: 5.0
+  voice: Divide by two thousand. About eleven tons.
+- title: Order a bit extra
+  body: Edges, low spots and waste. Most crews add 5–10%.
+  seconds: 5.0
+  voice: Order a little extra for edges and low spots.
+- style: block
+  title: Any size, ==any thickness==
+  cta: Free calculator → link in bio
+  seconds: 5.25
+  voice: Any size, any thickness. Free calculator, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 58fdb2433db9
+media:
+- reel.mp4
