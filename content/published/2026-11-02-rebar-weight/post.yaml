@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
+status: published
 approved_via: owner approved all in the project thread on 28 Oct
 source: https://engiformula.com/calculators
 caption: 'A 12 mm bar weighs 0.888 kg/m — and you can work that out in 2 seconds.
@@ -82,3 +82,12 @@ media:
 - slide-02.jpg
 - slide-03.jpg
 - slide-04.jpg
+published_at: '2026-11-02T17:01:25.290397+00:00'
+published_ids:
+  facebook: '133344266715154_1563092519182570'
+publish_errors:
+  instagram: 'POST https://graph.facebook.com/v24.0/17841428038563794/media_publish
+    failed (400): {''error'': {''message'': ''Media ID is not available'', ''type'':
+    ''OAuthException'', ''code'': 9007, ''error_subcode'': 2207027, ''is_transient'':
+    False, ''error_user_title'': ''Cannot Publish'', ''error_user_msg'': ''The media
+    is not ready for publishing, please wait for a moment'', ''fbtrace_id'': ''AyDChKkMJn8htN27Zdw_5gV''}}'
