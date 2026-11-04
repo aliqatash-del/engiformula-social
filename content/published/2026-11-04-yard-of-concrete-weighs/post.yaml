@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
+status: published
 approved_via: owner approved in the project thread on 3 Nov
 source: https://engiformula.com/calculators
 caption: 'One cubic yard of concrete weighs about 4,000 lb. That''s 2 tons in every
@@ -77,3 +77,8 @@ captions: captions.srt
 reel_built_from: 2254bebff009
 media:
 - reel.mp4
+published_at: '2026-11-04T17:01:51.037730+00:00'
+published_ids:
+  instagram: '18079025852438148'
+  facebook: '942492358740480'
+publish_errors: null
