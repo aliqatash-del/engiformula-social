@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
+status: published
 approved_via: owner approved in the project thread on 3 Nov
 source: https://engiformula.com/calculators
 caption: 'A 12 × 50 ft driveway at 3 in thick takes about 11 tons of asphalt.
@@ -75,3 +75,8 @@ captions: captions.srt
 reel_built_from: 58fdb2433db9
 media:
 - reel.mp4
+published_at: '2026-11-06T17:01:49.537423+00:00'
+published_ids:
+  instagram: '18104982923039800'
+  facebook: '2599140850598546'
+publish_errors: null
