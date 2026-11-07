@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: approved
+status: published
 approved_via: owner approved in the project thread on 3 Nov
 source: https://engiformula.com/calculators
 caption: '#5 bar or 16 mm bar: which one is heavier? They look identical on site.
@@ -93,3 +93,14 @@ captions: captions.srt
 reel_built_from: 4cdbc36e2d0a
 media:
 - reel.mp4
+published_at: '2026-11-07T17:01:29.689024+00:00'
+published_ids:
+  instagram: '17972126343187649'
+  facebook: '1388329803377819'
+publish_errors:
+  facebook: 'POST https://graph.facebook.com/v24.0/1388329803377819/comments failed
+    (400): {''error'': {''message'': "Unsupported post request. Object with ID ''1388329803377819''
+    does not exist, cannot be loaded due to missing permissions, or does not support
+    this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    ''type'': ''GraphMethodException'', ''code'': 100, ''error_subcode'': 33, ''fbtrace_id'':
+    ''AZV2a5bmG65bGA_3T86sViW''}}'
