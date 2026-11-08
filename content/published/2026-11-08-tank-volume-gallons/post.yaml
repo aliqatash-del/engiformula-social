@@ -5,7 +5,7 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
+status: published
 approved_via: owner approved in the project thread on 3 Nov
 source: https://engiformula.com/calculators
 caption: 'A round tank 6 ft across and 8 ft tall holds about 1,690 gallons.
@@ -76,3 +76,8 @@ captions: captions.srt
 reel_built_from: d82b5b34ac7d
 media:
 - reel.mp4
+published_at: '2026-11-08T17:02:31.297946+00:00'
+published_ids:
+  instagram: '18209301121374775'
+  facebook: '1655492029387248'
+publish_errors: null
