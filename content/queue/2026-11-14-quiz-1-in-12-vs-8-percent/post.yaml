@@ -34,24 +34,24 @@ slides:
 - style: dark
   title: Which slope is ==steeper?==
   body: A 1:12 · B 8% · C the same
-  seconds: 4
+  seconds: 6.87
   voice: Which slope is steeper? A, one in twelve. B, eight percent. Or C, exactly
     the same.
 - title: 5 seconds
-  seconds: 5
+  seconds: 5.0
   voice: You've got five seconds.
 - title: 'Answer: ==A, 1:12=='
-  seconds: 3
+  seconds: 3.0
   voice: It's A. One in twelve.
 - title: 1 ÷ 12 = ==8.33%==
   body: Steeper than 8%, by a third of a point.
-  seconds: 4
+  seconds: 6.25
   voice: One divided by twelve is eight point three three percent. Just steeper than
     eight.
 - style: block
   title: Ratio, percent or ==degrees?==
   cta: Free slope calculator → link in bio
-  seconds: 4
+  seconds: 5.85
   voice: Ratio, percent, or degrees? Free slope calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -59,3 +59,8 @@ frames:
 - frame-03.jpg
 - frame-04.jpg
 - frame-05.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: c9b662a192f3
+media:
+- reel.mp4

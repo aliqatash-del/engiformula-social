@@ -35,26 +35,26 @@ ai_generated: false
 slides:
 - style: dark
   title: Why retaining walls have ==weep holes==
-  seconds: 4
+  seconds: 4.52
   voice: Why do retaining walls have little holes at the bottom?
 - title: Soil behind, rain on top
-  seconds: 4
+  seconds: 4.0
   voice: The wall holds back soil, and then it rains.
 - title: Trapped water ==pushes==
   body: Water pressure adds to the soil load.
-  seconds: 4
+  seconds: 6.5
   voice: If the water can't get out, it builds up and pushes on the wall, on top of
     the soil.
 - title: Drain + ==weep holes==
-  seconds: 4
+  seconds: 5.67
   voice: A drainage layer and weep holes let the water out, and the pressure drops.
 - title: A row along the wall
-  seconds: 4
+  seconds: 4.87
   voice: That's why you see a row of them along the bottom of the wall.
 - style: block
   title: Blocked? ==Clear them.==
   cta: Send this to your site team
-  seconds: 4
+  seconds: 4.72
   voice: Blocked weep holes? Clear them. Send this to your site team.
 frames:
 - frame-01.jpg
@@ -63,3 +63,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 0ef6bfd92dcb
+media:
+- reel.mp4

@@ -32,26 +32,26 @@ ai_generated: false
 slides:
 - style: dark
   title: Cubic yard vs ==cubic metre==
-  seconds: 4
+  seconds: 4.77
   voice: A cubic yard and a cubic metre. Same thing? Not quite.
 - title: 3 ft = 0.914 m
-  seconds: 4
+  seconds: 4.55
   voice: A yard is three feet, or point nine one four metres.
 - title: 1 m = 3.28 ft
-  seconds: 4
+  seconds: 4.0
   voice: A metre is three point two eight feet.
 - title: The metre cube is ==31% bigger==
-  seconds: 4
+  seconds: 5.42
   voice: Put them together, and the cubic metre is thirty one percent bigger.
 - title: 1 m³ = ==1.308 yd³==
   body: 1 yd³ = 0.765 m³ · 10 m³ = 13.1 yd³
-  seconds: 4
+  seconds: 8.22
   voice: One cubic metre is one point three one cubic yards. Ten cubic metres is thirteen
     point one yards.
 - style: block
   title: Ordering from ==the other side?==
   cta: Free converter → link in bio
-  seconds: 4
+  seconds: 5.1
   voice: Ordering from the other side? Free converter, link in bio.
 frames:
 - frame-01.jpg
@@ -60,3 +60,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 9637d1ad0a51
+media:
+- reel.mp4

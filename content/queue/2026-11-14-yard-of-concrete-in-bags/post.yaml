@@ -32,27 +32,27 @@ ai_generated: false
 slides:
 - style: dark
   title: 1 yd³ in ==80 lb bags==
-  seconds: 4
+  seconds: 4.92
   voice: How many eighty pound bags make one cubic yard of concrete?
 - title: 3 × 3 × 3 ft = ==27 ft³==
-  seconds: 4
+  seconds: 5.87
   voice: A cubic yard is three by three by three feet. Twenty seven cubic feet.
 - title: One bag ≈ ==0.6 ft³==
   body: Check the yield printed on your bag.
-  seconds: 4
+  seconds: 4.57
   voice: One eighty pound bag makes about point six cubic feet.
 - title: Fill the yard
-  seconds: 4
+  seconds: 4.0
   voice: Now fill the cube, bag by bag.
 - title: 27 ÷ 0.6 = ==45 bags==
   body: 45 × 80 lb = 3,600 lb of dry mix.
-  seconds: 4
+  seconds: 7.8
   voice: Twenty seven divided by point six. Forty five bags. That's thirty six hundred
     pounds to lift.
 - style: block
   title: Bags or ==a truck?==
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 5.87
   voice: Bags or a truck? Free concrete bag calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -61,3 +61,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: f9291a8b1e04
+media:
+- reel.mp4
