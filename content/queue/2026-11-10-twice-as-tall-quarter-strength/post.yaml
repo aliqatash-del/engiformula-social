@@ -1,0 +1,71 @@
+id: 2026-11-10-twice-as-tall-quarter-strength
+slot: '2026-11-10T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+motion: column-buckling
+source: https://engiformula.com/calculators
+caption: 'Make a column twice as tall and it carries a quarter of the load.
+
+
+  Euler: P = π²EI / (KL)². Length is squared, so 2L gives 1 / 2² = 0.25 of the buckling
+  load. Same section, same material. Design codes then cut this further for real-world
+  imperfections.
+
+
+  What is the most slender column you have had to brace on site?
+
+
+  Send this to someone sizing columns this week. Free calculators — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#steelstructures'
+- '#buckling'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Animation of two pinned columns, one twice as tall as the other. Under load
+  the tall one buckles sideways; Euler's formula shows its buckling load is 0.25 of
+  the short column's because length is squared.
+ai_generated: false
+slides:
+- style: dark
+  title: Twice as tall, ==a quarter as strong==
+  seconds: 4
+  voice: Make a column twice as tall, and it carries only a quarter of the load.
+- title: Same section, same material
+  body: One column is twice as long as the other.
+  seconds: 4
+  voice: Two columns. Same section, same material. One is twice as long.
+- title: The long one ==buckles==
+  body: It bows out sideways before the short one does.
+  seconds: 4
+  voice: Load them up. The long one bows out sideways first. That's buckling.
+- title: Euler buckling load
+  formula: P = π²EI / (KL)²
+  legend: K = effective length factor · L = length
+  formula_size: 56
+  seconds: 4
+  voice: Euler's formula. The buckling load is pi squared E I, over K L, squared.
+- title: Length is ==squared==
+  formula: 1 / 2² = 0.25
+  formula_size: 68
+  seconds: 4
+  voice: Length is squared. Double it, and you get one over four. A quarter of the
+    capacity.
+- style: block
+  title: Tall and slender? ==Brace it.==
+  cta: Save this for your next column check
+  seconds: 4
+  voice: Tall and slender? Brace it, or go bigger. Save this for your next column
+    check.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg

@@ -21,6 +21,23 @@
     await Promise.all(['500 20px Inter', '600 20px Inter', '700 20px "Space Grotesk"', '600 20px "JetBrains Mono"'].map(f => document.fonts.load(f)));
     return window.SCENES[name].duration;
   })();
-  window.frame = (t, q = 0.92) => { ctx.save(); window.SCENES[name].draw(ctx, t); ctx.restore(); return document.getElementById('c').toDataURL('image/jpeg', q); };
+  // Optional time warp: ?beats=5.2,6.1,... (seconds per voiceover slide). A scene that declares
+  // `beats` (its own beat boundaries, n+1 values) is stretched piecewise so each beat lasts as long
+  // as its narration. Without ?beats the scene plays at its native timing.
+  const actual = (new URLSearchParams(location.search).get('beats') || '').split(',').filter(Boolean).map(Number);
+  window.warp = t => {
+    const sc = window.SCENES[name];
+    if (!actual.length || !sc.beats) return t;
+    if (actual.length !== sc.beats.length - 1) throw new Error(`scene ${name} has ${sc.beats.length - 1} beats, post has ${actual.length} slides`);
+    let a0 = 0;
+    for (let i = 0; i < actual.length; i++) {
+      const a1 = a0 + actual[i];
+      if (t < a1 || i === actual.length - 1) return sc.beats[i] + (sc.beats[i + 1] - sc.beats[i]) * Math.min(1, (t - a0) / actual[i]);
+      a0 = a1;
+    }
+    return t;
+  };
+  window.total = () => (actual.length && window.SCENES[name].beats) ? actual.reduce((s, v) => s + v, 0) : window.SCENES[name].duration;
+  window.frame = (t, q = 0.92) => { ctx.save(); window.SCENES[name].draw(ctx, window.warp(t)); ctx.restore(); return document.getElementById('c').toDataURL('image/jpeg', q); };
 </script>
 </body></html>

@@ -3,6 +3,7 @@
 // 3 in = 76 mm, 8 in = 203 mm, 12 in = 305 mm, total 23 in = 584 mm (recomputed in Python). Vertical scale x3.
 SCENES['pavement-explode'] = {
   duration: 10.5,
+  beats: [0, 1.6, 2.6, 5.0, 7.0, 8.4, 10.5], // hook | layers | 3D | explode | why | CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
@@ -17,7 +18,7 @@ SCENES['pavement-explode'] = {
     const ex = E.ramp(t, 5.0, 6.6, E.back);
     const P = E.camera({
       yaw: E.lerp(0, -0.55, k) - 0.15 * E.seg(t, 4.8, 10.5), pitch: E.lerp(0, 0.42, k), dist: 1800,
-      scale: E.lerp(6.6, 3.3, k), cx: E.lerp(540, 380, k), cy: E.lerp(900, 880, k), target: [0, E.lerp(0, D / 2, k), 0],
+      scale: E.lerp(6.6, 3.3, k), cx: E.lerp(540, 380, k), cy: E.lerp(820, 720, k), target: [0, E.lerp(0, D / 2, k), 0],
     });
     const S = E.scene3d();
     const len = Math.max(0.5, D * E.ramp(t, 3.0, 4.8));
@@ -32,7 +33,7 @@ SCENES['pavement-explode'] = {
     const mid = (tops[0][1] + tops[3][0]) / 2;
     layers.forEach((L, i) => {
       const [z0, z1] = tops[i];
-      const appear = E.ramp(t, 0.4 + i * 0.35, 1.0 + i * 0.35, E.out);
+      const appear = E.ramp(t, 0.05 + i * 0.2, 0.4 + i * 0.2, E.out);
       if (appear <= 0) return;
       const zz0 = z0 - mid, zz1 = z0 - mid + (z1 - z0) * appear;
       E.box(S, P, [-W, 0, zz0], [W, len, zz1], L.col, { edge: 'rgba(255,255,255,0.35)', lw: 2 });
@@ -42,7 +43,7 @@ SCENES['pavement-explode'] = {
     layers.forEach((L, i) => {
       const [z0, z1] = tops[i];
       const zc = (z0 + z1) / 2 - mid;
-      const a2 = E.seg(t, 0.8 + i * 0.35, 1.2 + i * 0.35) * (1 - E.seg(t, 2.6, 3.0));
+      const a2 = E.seg(t, 0.3 + i * 0.2, 0.6 + i * 0.2) * (1 - E.seg(t, 2.6, 3.0));
       if (a2 > 0) {
         const q = P([W, 0, zc]);
         E.text(ctx, L.d, q[0] - 20, q[1] + 10, { fam: 'mono', size: 26, color: '#FFFFFF', align: 'right', alpha: a2 });
@@ -57,15 +58,16 @@ SCENES['pavement-explode'] = {
         E.text(ctx, L.d, lx, ly + 24, { fam: 'mono', size: 26, color: C.yellow, alpha: a3 });
       }
     });
-    E.text(ctx, 'SECTION', 540, 1300, { fam: 'mono', size: 30, color: C.line, align: 'center', alpha: E.seg(t, 0.4, 0.8) * (1 - E.seg(t, 2.6, 3.0)) });
-    const r = E.ramp(t, 8.4, 8.9, E.out);
+    E.text(ctx, 'SECTION', 540, 1150, { fam: 'mono', size: 30, color: C.line, align: 'center', alpha: E.seg(t, 0.2, 0.5) * (1 - E.seg(t, 2.6, 3.0)) });
+    const r = E.fade(t, 7.0, 7.5, 8.4, 8.8);
     if (r > 0) {
       ctx.save(); ctx.globalAlpha = r;
-      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1300, 952, 110, 16); ctx.fill();
-      E.text(ctx, 'Only the top 3 in is asphalt.', 100, 1352, { size: 38, weight: 600, color: C.ink });
-      E.text(ctx, 'Typical build-up · your design governs', 100, 1392, { size: 28, weight: 500, color: C.muted });
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1050, 952, 120, 16); ctx.fill();
+      E.text(ctx, 'Weak base = cracked surface', 100, 1104, { size: 38, weight: 600, color: C.ink });
+      E.text(ctx, 'Typical build-up · your design governs', 100, 1146, { size: 28, weight: 500, color: C.muted });
       ctx.restore();
     }
-    E.chrome(ctx, t, { pillar: 'site', series: 'EXPLODED VIEW', title: ["What's under", 'the asphalt'] });
+    E.ctaCard(ctx, E.ramp(t, 8.6, 9.1, E.out), 'Asphalt + road base', 'Free calculators → link in bio');
+    E.chrome(ctx, t, { pillar: 'site', series: 'EXPLODED VIEW', title: ["What's under", 'the asphalt'], tag: 'ENGIFORMULA' });
   },
 };

@@ -7,7 +7,8 @@ Reads from post.yaml:
   voiceover: voice.mp3                    optional — your recording or a TTS file
   captions:  captions.srt                 optional — burned in with the bundled Inter (voiceover.py writes both)
 Writes reel.mp4 (H.264 + AAC, 1080x1920, 30 fps, moov atom at the front as Meta requires).
-For motion graphics, build the reel in Remotion instead and drop the MP4 in the post folder.
+motion:   <scene>                          optional — render motion/scenes/<scene>.js instead of the frames,
+                                          its beats stretched to the slide seconds (one slide per beat)
 """
 from __future__ import annotations
 
@@ -28,16 +29,21 @@ def main(post_id: str) -> None:
     slides = d.get("slides", [])
     durations = [float(slides[i].get("seconds", 4)) if i < len(slides) else 4.0 for i in range(len(frames))]
 
-    concat = post.folder / "frames.txt"
-    lines = []
-    for name, secs in zip(frames, durations):
-        lines += [f"file '{name}'", f"duration {secs}"]
-    lines.append(f"file '{frames[-1]}'")  # concat demuxer needs the last file repeated
-    concat.write_text("\n".join(lines) + "\n")
-
     out = post.folder / "reel.mp4"
     total = sum(durations)
-    cmd = ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", concat.name]
+    concat = post.folder / "frames.txt"
+    if d.get("motion"):
+        # Motion reel: render the motion-kit scene, its beats stretched to the voiced slide lengths.
+        from render_motion import render
+        render(d["motion"], post.folder / "motion.mp4", beats=durations)
+        cmd = ["ffmpeg", "-y", "-i", "motion.mp4"]
+    else:
+        lines = []
+        for name, secs in zip(frames, durations):
+            lines += [f"file '{name}'", f"duration {secs}"]
+        lines.append(f"file '{frames[-1]}'")  # concat demuxer needs the last file repeated
+        concat.write_text("\n".join(lines) + "\n")
+        cmd = ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", concat.name]
     voice = d.get("voiceover")
     if voice:
         cmd += ["-i", voice]
@@ -58,7 +64,8 @@ def main(post_id: str) -> None:
     run = subprocess.run(cmd, cwd=post.folder, capture_output=True, text=True)
     if run.returncode:
         sys.exit(f"ffmpeg failed:\n{run.stderr[-2000:]}")
-    concat.unlink()
+    concat.unlink(missing_ok=True)
+    (post.folder / "motion.mp4").unlink(missing_ok=True)
     post.set(media=["reel.mp4"])
     log(f"{post.id}: reel.mp4 built ({total:.0f} s)")
 

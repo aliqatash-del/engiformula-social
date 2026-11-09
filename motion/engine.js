@@ -98,6 +98,15 @@
     E.text(ctx, o.tag || 'MOTION KIT MOCKUP', 1016, 1490, { fam: 'mono', size: 22, color: dark ? 'rgba(207,224,255,0.6)' : E.C.muted, align: 'right' });
     ctx.restore();
   };
+  // CTA card for the last beat, kept above the caption band (captions sit at y 1220-1300).
+  E.ctaCard = (ctx, a, line1, line2 = 'Free calculator → link in bio') => {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = a;
+    ctx.fillStyle = E.C.blue; E.rrect(ctx, 64, 1010 + 20 * (1 - a), 952, 170, 16); ctx.fill();
+    E.text(ctx, line1, 100, 1076 + 20 * (1 - a), { fam: 'title', weight: 700, size: 46, color: '#FFFFFF' });
+    E.text(ctx, line2, 100, 1144 + 20 * (1 - a), { size: 38, weight: 600, color: '#FFFFFF' });
+    ctx.restore();
+  };
   // Burned-in caption chunk (mock of the voiceover captions), bottom edge above the 420 px UI zone.
   E.caption = (ctx, t, cues) => {
     const c = cues.find(q => t >= q[0] && t < q[1]);
