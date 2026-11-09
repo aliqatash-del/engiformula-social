@@ -33,27 +33,27 @@ ai_generated: false
 slides:
 - style: dark
   title: Read contours ==in 3D==
-  seconds: 4
+  seconds: 4.7
   voice: A contour map is the ground in three D, drawn flat.
 - title: One line, ==one level==
   body: Here every 2 m.
-  seconds: 4
+  seconds: 5.57
   voice: Each line joins points at the same level. Here, every two metres.
 - title: Lift each line ==to its level==
-  seconds: 4
+  seconds: 4.62
   voice: Lift every line to its own height, and the hill appears.
 - title: Close lines = ==steep==
   body: Far apart = gentle.
-  seconds: 4
+  seconds: 5.47
   voice: Lines close together mean steep ground. Far apart means gentle.
 - title: Cut a ==section==
   body: The ground profile falls out of the contours.
-  seconds: 4
+  seconds: 5.27
   voice: Cut a section across them, and the ground profile falls straight out.
 - style: block
   title: Read the map, ==see the ground==
   cta: Free slope calculator → link in bio
-  seconds: 4
+  seconds: 5.67
   voice: Read the map, see the ground. Free slope calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -62,3 +62,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 3c0addf4d8ac
+media:
+- reel.mp4

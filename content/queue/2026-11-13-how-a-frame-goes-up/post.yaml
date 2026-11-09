@@ -34,27 +34,27 @@ slides:
 - style: dark
   title: How a frame ==goes up==
   body: 1 Excavate
-  seconds: 4
+  seconds: 6.22
   voice: Here's how a concrete frame goes up. First, excavate and level the pad.
 - title: 2 Footings
-  seconds: 4
+  seconds: 4.0
   voice: Then the footings, one under every column.
 - title: 3 Columns
-  seconds: 4
+  seconds: 4.0
   voice: Columns go up off the footings.
 - title: 4 Slab
-  seconds: 4
+  seconds: 4.0
   voice: The first slab sits on the columns.
 - title: 5 Next level
-  seconds: 4
+  seconds: 4.0
   voice: Then the next level of columns.
 - title: 6 Roof
-  seconds: 4
+  seconds: 6.42
   voice: And the roof closes it in. One late stage pushes back every stage after it.
 - style: block
   title: Which stage ==runs late?==
   cta: Comment below · follow for more
-  seconds: 4
+  seconds: 4.85
   voice: Which stage runs late on your jobs? Tell me in the comments.
 frames:
 - frame-01.jpg
@@ -64,3 +64,8 @@ frames:
 - frame-05.jpg
 - frame-06.jpg
 - frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: adb140bcb3c3
+media:
+- reel.mp4

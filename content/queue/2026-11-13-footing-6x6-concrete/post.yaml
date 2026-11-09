@@ -33,32 +33,32 @@ ai_generated: false
 slides:
 - style: dark
   title: Concrete for a ==6 × 6 ft== footing
-  seconds: 4
+  seconds: 4.0
   voice: How much concrete for a six by six foot footing?
 - title: 6 × 6 ft plan
   body: Column in the middle.
-  seconds: 4
+  seconds: 5.05
   voice: Six feet by six feet in plan, with the column in the middle.
 - title: Rebar mat
   body: Both ways, near the bottom.
-  seconds: 4
+  seconds: 4.22
   voice: A rebar mat runs both ways near the bottom.
 - title: 18 in ==thick==
-  seconds: 4
+  seconds: 4.0
   voice: Make it eighteen inches thick.
 - title: Pour it
   formula: 6 × 6 × 1.5 = 54 ft³
   formula_size: 56
-  seconds: 4
+  seconds: 5.32
   voice: Six times six times one and a half. Fifty four cubic feet.
 - title: ÷ 27 = ==2.00 yd³==
   result: 'Metric: **1.53 m³**'
-  seconds: 4
+  seconds: 4.95
   voice: Divide by twenty seven. Exactly two cubic yards.
 - style: block
   title: Any footing, ==any size==
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 5.42
   voice: Any footing, any size. Free footing calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -68,3 +68,8 @@ frames:
 - frame-05.jpg
 - frame-06.jpg
 - frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 79e0d9d76c4b
+media:
+- reel.mp4
