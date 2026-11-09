@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: "Inter"; font-weight: 500; src: url("../templates/fonts/inter-latin-500-normal.woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 600; src: url("../templates/fonts/inter-latin-600-normal.woff2"); }
+  @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("../templates/fonts/space-grotesk-latin-700-normal.woff2"); }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 600; src: url("../templates/fonts/jetbrains-mono-latin-600-normal.woff2"); }
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="engine.js"></script>
+<script>
+  // Scenes register themselves in window.SCENES; ?scene=<name> picks one.
+  const name = new URLSearchParams(location.search).get('scene');
+  document.write(`<script src="scenes/${name}.js"><\/script>`);
+</script>
+<script>
+  const ctx = document.getElementById('c').getContext('2d');
+  window.ready = (async () => {
+    await Promise.all(['500 20px Inter', '600 20px Inter', '700 20px "Space Grotesk"', '600 20px "JetBrains Mono"'].map(f => document.fonts.load(f)));
+    return window.SCENES[name].duration;
+  })();
+  // Optional time warp: ?beats=5.2,6.1,... (seconds per voiceover slide). A scene that declares
+  // `beats` (its own beat boundaries, n+1 values) is stretched piecewise so each beat lasts as long
+  // as its narration. Without ?beats the scene plays at its native timing.
+  const actual = (new URLSearchParams(location.search).get('beats') || '').split(',').filter(Boolean).map(Number);
+  window.warp = t => {
+    const sc = window.SCENES[name];
+    if (!actual.length || !sc.beats) return t;
+    if (actual.length !== sc.beats.length - 1) throw new Error(`scene ${name} has ${sc.beats.length - 1} beats, post has ${actual.length} slides`);
+    let a0 = 0;
+    for (let i = 0; i < actual.length; i++) {
+      const a1 = a0 + actual[i];
+      if (t < a1 || i === actual.length - 1) return sc.beats[i] + (sc.beats[i + 1] - sc.beats[i]) * Math.min(1, (t - a0) / actual[i]);
+      a0 = a1;
+    }
+    return t;
+  };
+  window.total = () => (actual.length && window.SCENES[name].beats) ? actual.reduce((s, v) => s + v, 0) : window.SCENES[name].duration;
+  window.frame = (t, q = 0.92) => { ctx.save(); window.SCENES[name].draw(ctx, window.warp(t)); ctx.restore(); return document.getElementById('c').toDataURL('image/jpeg', q); };
+</script>
+</body></html>

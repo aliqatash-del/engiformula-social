@@ -1,0 +1,67 @@
+id: 2026-11-12-what-1-percent-slope-means
+slot: '2026-11-12T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+motion: pipe-slope
+source: https://engiformula.com/calculators
+caption: 'A 1% slope drops 1 ft for every 100 ft of pipe.
+
+
+  1% = 0.01 × 100 ft = 1 ft of fall. Per foot, that is 12 in ÷ 100 = 0.12 in, so about
+  1/8 in per ft (10 mm per metre). The required slope for a pipe depends on its size
+  and your local code.
+
+
+  What slope do you most often set for a 4 in drain?
+
+
+  Save this. Free slope and pipe calculators — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#drainage'
+- '#plumbing'
+- '#engiformula'
+first_comment: 'Free percent slope and pipe calculators: https://engiformula.com/calculators'
+alt_text: Animation of a half-full pipe section that extends into a sloped pipe run
+  with flowing water, showing 1 foot of fall over 100 feet, which is a 1 percent slope.
+ai_generated: false
+slides:
+- style: dark
+  title: What 1% slope ==really means==
+  seconds: 4
+  voice: What does a one percent slope actually look like?
+- title: A pipe, ==half full==
+  seconds: 4
+  voice: Start with a drain pipe, running half full.
+- title: Stretch it ==100 ft==
+  seconds: 4
+  voice: Now stretch it out a hundred feet.
+- title: 1 ft of ==fall==
+  body: Slope exaggerated so you can see it.
+  seconds: 4
+  voice: One percent means it drops one foot over that run. Exaggerated here so you
+    can see it.
+- title: 0.01 × 100 ft = ==1 ft==
+  formula: 12 in ÷ 100 = 0.12 in/ft
+  legend: about 1/8 in per ft (10 mm per m)
+  formula_size: 52
+  seconds: 4
+  voice: Point zero one times a hundred feet is one foot. That's about an eighth of
+    an inch per foot.
+- style: block
+  title: Percent, ratio or ==in per ft?==
+  cta: Free slope calculator → link in bio
+  seconds: 4
+  voice: Percent, ratio, or inches per foot? Free slope calculator, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg

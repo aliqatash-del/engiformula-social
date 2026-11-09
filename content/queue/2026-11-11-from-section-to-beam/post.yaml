@@ -1,0 +1,77 @@
+id: 2026-11-11-from-section-to-beam
+slot: '2026-11-11T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+motion: section-to-beam
+source: https://engiformula.com/calculators
+caption: 'A 12 × 24 in concrete beam, 20 ft long, is 1.48 yd³ of concrete.
+
+
+  1 ft × 2 ft × 20 ft = 40 ft³, and 40 ÷ 27 = 1.48 yd³ (1.13 m³). Inside it: 3 #8
+  bottom bars, 2 #5 top bars and 30 #4 stirrups at 8 in. Example layout only; your
+  design governs.
+
+
+  Do you order the concrete before or after the rebar inspection?
+
+
+  Save this. Free concrete calculator — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#reinforcedconcrete'
+- '#rebar'
+- '#engiformula'
+first_comment: 'Free concrete volume calculator: https://engiformula.com/calculators'
+alt_text: Animation of a 12 by 24 inch beam section drawing itself with rebar, then
+  extruding into a 20 foot beam, filling with stirrups and concrete. Volume is 40
+  cubic feet, or 1.48 cubic yards.
+ai_generated: false
+slides:
+- style: dark
+  title: From section ==to beam==
+  seconds: 4.33
+  voice: Every concrete beam starts as a drawing like this.
+- title: 12 × 24 in section
+  body: 3
+  seconds: 7.32
+  voice: Twelve by twenty four inches. Three number eight bars at the bottom, two
+    number five at the top.
+- title: Extrude it ==20 ft==
+  seconds: 4.0
+  voice: Now pull that section out twenty feet.
+- title: 30 stirrups at 8 in
+  seconds: 4.67
+  voice: Thirty stirrups at eight inch spacing hold the cage together.
+- title: Then the ==pour==
+  seconds: 4.05
+  voice: Then the concrete goes in, and hides all of it.
+- title: 40 ft³ = ==1.48 yd³==
+  formula: 1 × 2 × 20 = 40 ft³
+  legend: 40 ÷ 27 = 1.48 yd³ (1.13 m³)
+  formula_size: 56
+  seconds: 8.6
+  voice: One by two by twenty is forty cubic feet. Divide by twenty seven, one point
+    four eight cubic yards.
+- style: block
+  title: Section first, ==then volume==
+  cta: Free calculator → link in bio
+  seconds: 6.2
+  voice: Section first, then volume. Free concrete calculator, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 2fdf994ef0bd
+media:
+- reel.mp4
