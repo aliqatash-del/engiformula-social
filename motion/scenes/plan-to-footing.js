@@ -1,7 +1,8 @@
 // Format: PLAN TO SOLID + LIVE CALCULATOR (plan view tilts up, footing extrudes, rebar mat drops, concrete pours, counter runs).
 // Example: 6 x 6 ft footing, 18 in thick: 6 x 6 x 1.5 = 54 ft3 = 2.00 yd3 (1.53 m3), recomputed in Python.
 SCENES['plan-to-footing'] = {
-  duration: 11,
+  duration: 11.5,
+  beats: [0, 1.3, 2.6, 5.4, 6.6, 8.4, 9.8, 11.5], // plan | column+dims | mat | extrude | pour | volume | CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
@@ -19,7 +20,7 @@ SCENES['plan-to-footing'] = {
     if (a2d > 0) {
       ctx.save(); ctx.globalAlpha = a2d;
       const sq = [[-B, -B, T], [B, -B, T], [B, B, T], [-B, B, T]].map(P);
-      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 5; E.path(ctx, sq, E.ramp(t, 0.4, 1.8), true);
+      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 5; E.path(ctx, sq, E.ramp(t, 0.05, 0.9), true);
       const col = [[-c, -c, T], [c, -c, T], [c, c, T], [-c, c, T]].map(P);
       const ck = E.ramp(t, 1.4, 2.0);
       ctx.fillStyle = E.alpha(C.line, 0.25 * ck); ctx.beginPath(); col.forEach((p, i) => (i ? ctx.lineTo(...p) : ctx.moveTo(...p))); ctx.fill();
@@ -65,18 +66,19 @@ SCENES['plan-to-footing'] = {
     E.flush(ctx, S);
 
     // live calculator card
-    const r = E.ramp(t, 6.6, 7.1, E.out);
+    const r = E.ramp(t, 6.6, 7.1, E.out) * (1 - E.seg(t, 9.9, 10.2));
     if (r > 0) {
       ctx.save(); ctx.globalAlpha = r;
-      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1170, 952, 170, 16); ctx.fill();
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1010, 952, 170, 16); ctx.fill();
       const steps = ['6 ft', '6 ft × 6 ft', '6 × 6 × 1.5 ft', '6 × 6 × 1.5 = 54 ft³'];
       const si = Math.min(3, Math.floor(E.seg(t, 6.8, 8.4) * 4));
-      E.text(ctx, steps[si], 100, 1236, { fam: 'mono', size: 38, color: C.muted });
+      E.text(ctx, steps[si], 100, 1076, { fam: 'mono', size: 38, color: C.muted });
       const v = E.seg(t, 8.4, 9.6);
-      E.text(ctx, `÷ 27 = ${E.count(2.0, v, 2)} yd³`, 100, 1306, { fam: 'mono', size: 52, color: C.blue, alpha: E.clamp(v * 4) });
-      E.text(ctx, '(1.53 m³)', 980, 1306, { fam: 'mono', size: 30, color: C.muted, align: 'right', alpha: E.seg(t, 9.6, 10) });
+      E.text(ctx, `÷ 27 = ${E.count(2.0, v, 2)} yd³`, 100, 1146, { fam: 'mono', size: 52, color: C.blue, alpha: E.clamp(v * 4) });
+      E.text(ctx, '(1.53 m³)', 980, 1146, { fam: 'mono', size: 30, color: C.muted, align: 'right', alpha: E.seg(t, 9.6, 10) });
       ctx.restore();
     }
-    E.chrome(ctx, t, { pillar: 'calculator', series: 'PLAN → SOLID', title: ['Concrete for a', '6 × 6 ft footing'] });
+    E.ctaCard(ctx, E.ramp(t, 10.0, 10.5, E.out), 'Any footing, any size', 'Free footing calculator → link in bio');
+    E.chrome(ctx, t, { pillar: 'calculator', series: 'PLAN → SOLID', title: ['Concrete for a', '6 × 6 ft footing'], tag: 'ENGIFORMULA' });
   },
 };

@@ -1,0 +1,66 @@
+id: 2026-11-13-how-a-frame-goes-up
+slot: '2026-11-13T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: site
+status: draft
+motion: build-sequence
+source: https://engiformula.com/calculators
+caption: 'Six stages take a frame from bare ground to a roof.
+
+
+  Excavate, footings, columns, slab, next level, roof. Each stage waits on the one
+  before it, so one late pour pushes everything after it. Simplified sequence; every
+  job has its own programme.
+
+
+  Which stage runs late most often on your jobs?
+
+
+  Comment below and send this to your site team.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#constructionmanagement'
+- '#sitelife'
+- '#engiformula'
+first_comment: 'Free construction calculators: https://engiformula.com/calculators'
+alt_text: Stylized animation of a two-level concrete frame being built in six stages,
+  from excavation and footings to columns, slab, the next level and the roof.
+ai_generated: false
+slides:
+- style: dark
+  title: How a frame ==goes up==
+  body: 1 Excavate
+  seconds: 4
+  voice: Here's how a concrete frame goes up. First, excavate and level the pad.
+- title: 2 Footings
+  seconds: 4
+  voice: Then the footings, one under every column.
+- title: 3 Columns
+  seconds: 4
+  voice: Columns go up off the footings.
+- title: 4 Slab
+  seconds: 4
+  voice: The first slab sits on the columns.
+- title: 5 Next level
+  seconds: 4
+  voice: Then the next level of columns.
+- title: 6 Roof
+  seconds: 4
+  voice: And the roof closes it in. One late stage pushes back every stage after it.
+- style: block
+  title: Which stage ==runs late?==
+  cta: Comment below · follow for more
+  seconds: 4
+  voice: Which stage runs late on your jobs? Tell me in the comments.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg

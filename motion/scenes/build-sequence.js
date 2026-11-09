@@ -1,10 +1,11 @@
 // Format: BUILD SEQUENCE (stylized time-lapse: each stage drops in with a label; no photos, no real site).
 SCENES['build-sequence'] = {
   duration: 10,
+  beats: [0, 1.93, 3.26, 4.59, 5.92, 7.25, 8.6, 10], // one stage per slide, then CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
-    const P = E.camera({ yaw: -0.7 - 0.25 * E.seg(t, 0, 10), pitch: 0.5, dist: 2400, scale: 3.0, cx: 540, cy: 860, target: [0, 0, 60] });
+    const P = E.camera({ yaw: -0.7 - 0.25 * E.seg(t, 0, 10), pitch: 0.5, dist: 2400, scale: 2.6, cx: 650, cy: 820, target: [0, 0, 60] });
     const S = E.scene3d();
     E.ground(S, P, -120, 120, -120, 120, 24, 0.3, 0);
     const stages = ['Excavate', 'Footings', 'Columns', 'Slab', 'Next level', 'Roof'];
@@ -28,9 +29,10 @@ SCENES['build-sequence'] = {
     // stage ticker
     stages.forEach((s, i) => {
       const on = i <= st && t > 0.6;
-      const y = 1330 + Math.floor(i / 3) * 64, x = 64 + (i % 3) * 320;
+      const y = 620 + i * 58, x = 64;
       E.text(ctx, `${i + 1} ${s}`, x, y, { fam: 'mono', size: 30, color: on ? (i === st ? C.yellow : '#FFFFFF') : 'rgba(207,224,255,0.3)' });
     });
-    E.chrome(ctx, t, { pillar: 'site', series: 'BUILD SEQUENCE', title: ['How a frame', 'goes up'] });
+    E.ctaCard(ctx, E.ramp(t, 8.7, 9.2, E.out), 'Which stage runs late on your jobs?', 'Comment below · follow for more');
+    E.chrome(ctx, t, { pillar: 'site', series: 'BUILD SEQUENCE', title: ['How a frame', 'goes up'], tag: 'ENGIFORMULA' });
   },
 };
