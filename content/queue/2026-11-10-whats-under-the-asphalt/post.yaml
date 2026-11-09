@@ -35,7 +35,7 @@ slides:
 - style: dark
   title: What's under ==the asphalt==
   body: Only the top 3 in.
-  seconds: 4
+  seconds: 5.85
   voice: Only the top three inches of this road is asphalt. Here's what's under it.
 - title: A typical build-up
   table:
@@ -47,26 +47,26 @@ slides:
     - 8 in (203 mm)
   - - Granular subbase
     - 12 in (305 mm)
-  seconds: 4
+  seconds: 7.27
   voice: Three inches of asphalt. Eight inches of crushed stone base. Twelve inches
     of subbase.
 - title: Each layer ==spreads the load==
   body: The soil at the bottom sees far less pressure than the tire.
-  seconds: 4
+  seconds: 6.87
   voice: Each layer spreads the wheel load wider, so the soil at the bottom sees far
     less pressure.
 - title: Asphalt is the ==thinnest== layer
   body: 3 in of 23 in total.
-  seconds: 4
+  seconds: 5.17
   voice: Pull them apart, and the asphalt is the thinnest layer in the stack.
 - title: Weak base, ==cracked surface==
   body: Typical build-up only. Your design governs.
-  seconds: 4
+  seconds: 4.42
   voice: That's why a weak base shows up as cracks in the surface.
 - style: block
   title: Asphalt + road base
   cta: Free calculators → link in bio
-  seconds: 4
+  seconds: 8.12
   voice: Typical build-up only, your design governs. Free asphalt and road base calculators,
     link in bio.
 frames:
@@ -76,3 +76,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 173925e02e94
+media:
+- reel.mp4

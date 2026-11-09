@@ -34,32 +34,32 @@ ai_generated: false
 slides:
 - style: dark
   title: Twice as tall, ==a quarter as strong==
-  seconds: 4
+  seconds: 5.6
   voice: Make a column twice as tall, and it carries only a quarter of the load.
 - title: Same section, same material
   body: One column is twice as long as the other.
-  seconds: 4
+  seconds: 5.75
   voice: Two columns. Same section, same material. One is twice as long.
 - title: The long one ==buckles==
   body: It bows out sideways before the short one does.
-  seconds: 4
+  seconds: 5.72
   voice: Load them up. The long one bows out sideways first. That's buckling.
 - title: Euler buckling load
   formula: P = π²EI / (KL)²
   legend: K = effective length factor · L = length
   formula_size: 56
-  seconds: 4
+  seconds: 6.47
   voice: Euler's formula. The buckling load is pi squared E I, over K L, squared.
 - title: Length is ==squared==
   formula: 1 / 2² = 0.25
   formula_size: 68
-  seconds: 4
+  seconds: 6.52
   voice: Length is squared. Double it, and you get one over four. A quarter of the
     capacity.
 - style: block
   title: Tall and slender? ==Brace it.==
   cta: Save this for your next column check
-  seconds: 4
+  seconds: 6.2
   voice: Tall and slender? Brace it, or go bigger. Save this for your next column
     check.
 frames:
@@ -69,3 +69,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 75b639fd2ab3
+media:
+- reel.mp4
