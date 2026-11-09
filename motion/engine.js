@@ -250,6 +250,47 @@
     for (let y = y0; y <= y1 + 1e-6; y += step) E.line3(S, P, [[x0, y, z0], [x1, y, z0]], color, 1.5, { alpha, layer: -1 });
   };
 
+  // QUIZ COUNTDOWN factory: question in the title, 3 options, 5-count ring, reveal, two lines of why, CTA.
+  // Beats: [0, 1.8 question+options, 6.0 countdown, 7.0 reveal, 8.6 why, 10 CTA].
+  E.quiz = (cfg) => ({
+    duration: 10,
+    beats: [0, 1.8, 6.0, 7.0, 8.6, 10],
+    draw(ctx, t) {
+      const C = E.C;
+      E.bg(ctx, 'paper');
+      const reveal = E.seg(t, 6.0, 6.4);
+      cfg.options.forEach((o, i) => {
+        const a = E.ramp(t, 0.5 + i * 0.25, 0.9 + i * 0.25, E.back);
+        if (a <= 0) return;
+        const y = 560 + i * 140, right = i === cfg.correct;
+        ctx.save(); ctx.globalAlpha = E.clamp(a); ctx.translate(0, 30 * (1 - a));
+        ctx.fillStyle = reveal > 0 ? (right ? E.alpha(C.green, 0.12 + 0.88 * reveal) : E.alpha('#FFFFFF', 1 - 0.5 * reveal)) : '#FFFFFF';
+        E.rrect(ctx, 64, y, 952, 112, 16); ctx.fill();
+        ctx.strokeStyle = reveal > 0 && right ? C.green : C.grid; ctx.lineWidth = 3; ctx.stroke();
+        E.text(ctx, String.fromCharCode(65 + i), 110, y + 72, { fam: 'mono', size: 40, color: reveal > 0 && right ? '#FFFFFF' : C.blue });
+        E.text(ctx, o, 170, y + 72, { size: 40, weight: 600, color: reveal > 0 && right ? '#FFFFFF' : C.ink, alpha: reveal > 0 && !right ? 0.5 : 1 });
+        ctx.restore();
+      });
+      const tk = E.seg(t, 1.8, 6.0);
+      if (t > 1.6 && t < 6.4) {
+        ctx.save(); ctx.globalAlpha = E.seg(t, 1.6, 1.8) * (1 - E.seg(t, 6.0, 6.4));
+        ctx.lineWidth = 14; ctx.strokeStyle = C.grid; ctx.beginPath(); ctx.arc(540, 1080, 70, 0, 7); ctx.stroke();
+        ctx.strokeStyle = C.yellow; ctx.lineCap = 'round'; ctx.beginPath(); ctx.arc(540, 1080, 70, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - tk)); ctx.stroke();
+        E.text(ctx, String(Math.max(1, Math.ceil(5 * (1 - tk)))), 540, 1100, { fam: 'mono', size: 60, color: C.ink, align: 'center' });
+        ctx.restore();
+      }
+      const w = E.ramp(t, 6.6, 7.2, E.out) * (1 - E.seg(t, 8.6, 8.9));
+      if (w > 0) {
+        ctx.save(); ctx.globalAlpha = w;
+        E.text(ctx, cfg.why[0], 64, 1040, { fam: 'mono', size: 40, color: C.ink });
+        E.text(ctx, cfg.why[1], 64, 1100, { size: 34, weight: 500, color: C.muted });
+        ctx.restore();
+      }
+      E.ctaCard(ctx, E.ramp(t, 8.7, 9.2, E.out), cfg.cta[0], cfg.cta[1]);
+      E.chrome(ctx, t, { pillar: 'community', series: 'QUIZ · 5 SECONDS', title: cfg.title, dark: false, tag: 'ENGIFORMULA' });
+    },
+  });
+
   window.E = E;
   window.SCENES = window.SCENES || {};
 })();

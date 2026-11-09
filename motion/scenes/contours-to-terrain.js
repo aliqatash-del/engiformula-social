@@ -62,7 +62,7 @@ SCENES['contours-to-terrain'] = {
     E.flush(ctx, S);
     if (t < 3.4) {
       const a = E.seg(t, 1.0, 1.5) * (1 - E.seg(t, 3.0, 3.4));
-      E.text(ctx, 'PLAN · contours every 2 m', 540, 1290, { fam: 'mono', size: 30, color: C.line, align: 'center', alpha: a });
+      E.text(ctx, 'PLAN · contours every 2 m', 540, 1150, { fam: 'mono', size: 30, color: C.line, align: 'center', alpha: a });
       [['120 m', 12, 8]].forEach(([lv, x, y]) => {
         const q = P([x, y, 0]); E.text(ctx, String(lv), q[0], q[1], { fam: 'mono', size: 26, color: C.yellow, align: 'center', alpha: a, bg: C.navy, pad: 6 });
       });
