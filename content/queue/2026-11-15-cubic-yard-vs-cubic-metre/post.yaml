@@ -1,0 +1,62 @@
+id: 2026-11-15-cubic-yard-vs-cubic-metre
+slot: '2026-11-15T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+motion: yard-vs-metre
+source: https://engiformula.com/calculators
+caption: 'A cubic metre is 31% bigger than a cubic yard.
+
+
+  1 yd = 0.9144 m, so 1 m³ = 1.308 yd³ and 1 yd³ = 0.765 m³. Order 10 m³ of concrete
+  from a US-units plant and you need 13.1 yd³, not 10.
+
+
+  Have you ever been caught by a units mix-up on an order?
+
+
+  Save this. Free yd³ to m³ converter — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#concrete'
+- '#unitconversion'
+- '#engiformula'
+first_comment: 'Free cubic yards to cubic meters converter: https://engiformula.com/calculators'
+alt_text: Animation of a 1 cubic yard cube next to a 1 cubic metre cube, which then
+  overlap. A cubic metre is 1.308 cubic yards; a cubic yard is 0.765 cubic metres.
+ai_generated: false
+slides:
+- style: dark
+  title: Cubic yard vs ==cubic metre==
+  seconds: 4
+  voice: A cubic yard and a cubic metre. Same thing? Not quite.
+- title: 3 ft = 0.914 m
+  seconds: 4
+  voice: A yard is three feet, or point nine one four metres.
+- title: 1 m = 3.28 ft
+  seconds: 4
+  voice: A metre is three point two eight feet.
+- title: The metre cube is ==31% bigger==
+  seconds: 4
+  voice: Put them together, and the cubic metre is thirty one percent bigger.
+- title: 1 m³ = ==1.308 yd³==
+  body: 1 yd³ = 0.765 m³ · 10 m³ = 13.1 yd³
+  seconds: 4
+  voice: One cubic metre is one point three one cubic yards. Ten cubic metres is thirteen
+    point one yards.
+- style: block
+  title: Ordering from ==the other side?==
+  cta: Free converter → link in bio
+  seconds: 4
+  voice: Ordering from the other side? Free converter, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg

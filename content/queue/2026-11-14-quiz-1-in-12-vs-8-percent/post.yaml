@@ -1,0 +1,61 @@
+id: 2026-11-14-quiz-1-in-12-vs-8-percent
+slot: '2026-11-14T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: community
+status: draft
+motion: quiz-slope
+source: https://engiformula.com/calculators
+caption: 'Quick one: which is steeper, 1:12 or 8%?
+
+
+  1:12 means 1 up for every 12 across. 1 ÷ 12 = 8.33%, so 1:12 is steeper than 8%,
+  by a third of a percentage point.
+
+
+  Did you get it in 5 seconds? Comment A, B or C before you watch the answer.
+
+
+  Send this to the colleague who mixes up ratios and percent. Free slope calculator
+  — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#engineeringstudent'
+- '#surveying'
+- '#engineeringquiz'
+- '#engiformula'
+first_comment: 'Free percent slope calculator: https://engiformula.com/calculators'
+alt_text: Quiz reel asking which slope is steeper, 1 to 12 or 8 percent, with a 5-second
+  countdown. The answer is 1 to 12, which equals 8.33 percent.
+ai_generated: false
+slides:
+- style: dark
+  title: Which slope is ==steeper?==
+  body: A 1:12 · B 8% · C the same
+  seconds: 4
+  voice: Which slope is steeper? A, one in twelve. B, eight percent. Or C, exactly
+    the same.
+- title: 5 seconds
+  seconds: 5
+  voice: You've got five seconds.
+- title: 'Answer: ==A, 1:12=='
+  seconds: 3
+  voice: It's A. One in twelve.
+- title: 1 ÷ 12 = ==8.33%==
+  body: Steeper than 8%, by a third of a point.
+  seconds: 4
+  voice: One divided by twelve is eight point three three percent. Just steeper than
+    eight.
+- style: block
+  title: Ratio, percent or ==degrees?==
+  cta: Free slope calculator → link in bio
+  seconds: 4
+  voice: Ratio, percent, or degrees? Free slope calculator, link in bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
