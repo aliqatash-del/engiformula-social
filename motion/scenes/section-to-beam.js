@@ -1,7 +1,8 @@
 // Format: BLUEPRINT TO BUILD (2D section draws itself, extrudes into a 3D member, cage fills, concrete pours).
 // Example: 12 x 24 in beam, 20 ft long. Volume 1 x 2 x 20 = 40 ft3 = 1.48 yd3 (1.13 m3), recomputed in Python.
 SCENES['section-to-beam'] = {
-  duration: 11,
+  duration: 12.5,
+  beats: [0, 1.8, 3.4, 6.4, 7.9, 9.6, 11.0, 12.5], // section | bars | extrude | stirrups | pour | volume | CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
@@ -13,7 +14,7 @@ SCENES['section-to-beam'] = {
     const ext = L * E.ramp(t, 3.9, 6.6);       // extrusion length
     const P = E.camera({
       yaw: E.lerp(0, -0.55, k) - 0.18 * E.seg(t, 6.4, 11), pitch: E.lerp(0, 0.36, k) + 0.08 * E.seg(t, 6.4, 11), dist: 2600,
-      scale: E.lerp(20, 4.1, k), cx: E.lerp(540, 600, k), cy: E.lerp(930, 900, k),
+      scale: E.lerp(20, 4.7, k), cx: E.lerp(540, 600, k), cy: E.lerp(850, 800, k),
       target: [0, E.lerp(0, L / 2, k), h / 2],
     });
     const S = E.scene3d();
@@ -24,7 +25,7 @@ SCENES['section-to-beam'] = {
     const outline = [[-b / 2, 0, 0], [b / 2, 0, 0], [b / 2, 0, h], [-b / 2, 0, h]].map(P);
     if (a2d > 0) {
       ctx.save(); ctx.globalAlpha = a2d;
-      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 5; E.path(ctx, outline, E.ramp(t, 0.4, 2.0), true);
+      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 5; E.path(ctx, outline, E.ramp(t, 0.05, 0.9), true);
       ctx.strokeStyle = C.orange; ctx.lineWidth = 4;
       E.path(ctx, [[-b / 2 + si, 0, si], [b / 2 - si, 0, si], [b / 2 - si, 0, h - si], [-b / 2 + si, 0, h - si]].map(P), E.ramp(t, 2.3, 3.2), true);
       bars.forEach(([x, z, r], i) => {
@@ -32,8 +33,8 @@ SCENES['section-to-beam'] = {
         if (pk <= 0) return; const q = P([x, 0, z]);
         ctx.fillStyle = C.orange; ctx.beginPath(); ctx.arc(q[0], q[1], r * 20 * pk, 0, 7); ctx.fill();
       });
-      E.dim(ctx, outline[0], outline[1], 70, '12 in', E.ramp(t, 1.5, 2.3));
-      E.dim(ctx, outline[1], outline[2], 70, '24 in', E.ramp(t, 1.8, 2.6));
+      E.dim(ctx, outline[0], outline[1], 70, '12 in', E.ramp(t, 0.8, 1.4));
+      E.dim(ctx, outline[1], outline[2], 70, '24 in', E.ramp(t, 1.0, 1.6));
       const la = E.seg(t, 3.0, 3.4);
       E.text(ctx, '2 #5 top', outline[3][0] - 26, outline[3][1] + 70, { fam: 'mono', size: 28, color: C.yellow, align: 'right', alpha: la });
       E.text(ctx, '3 #8 bottom', outline[0][0] - 26, outline[0][1] - 40, { fam: 'mono', size: 28, color: C.yellow, align: 'right', alpha: la });
@@ -73,17 +74,18 @@ SCENES['section-to-beam'] = {
     // labels + result
     const dl = E.fade(t, 6.4, 6.8, 7.8, 8.0);
     if (dl > 0) {
-      E.text(ctx, '20 ft', 820, 1150, { fam: 'mono', size: 34, color: C.line, alpha: dl, bg: C.navy });
-      E.text(ctx, '30 stirrups @ 8 in', 140, 1150, { fam: 'mono', size: 30, color: C.orange, alpha: dl, bg: C.navy });
+      E.text(ctx, '20 ft', 820, 1090, { fam: 'mono', size: 34, color: C.line, alpha: dl, bg: C.navy });
+      E.text(ctx, '30 stirrups @ 8 in', 140, 1090, { fam: 'mono', size: 30, color: C.orange, alpha: dl, bg: C.navy });
     }
-    const r = E.ramp(t, 9.0, 9.6, E.out);
+    const r = E.ramp(t, 9.0, 9.6, E.out) * (1 - E.seg(t, 11.0, 11.3));
     if (r > 0) {
       ctx.save(); ctx.globalAlpha = r;
-      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1110, 952, 150, 16); ctx.fill();
-      E.text(ctx, '1 × 2 × 20 ft = 40 ft³', 100, 1172, { fam: 'mono', size: 36, color: C.muted });
-      E.text(ctx, `= ${E.count(1.48, E.seg(t, 9.0, 9.9), 2)} yd³  (1.13 m³)`, 100, 1230, { fam: 'mono', size: 46, color: C.blue });
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1010, 952, 150, 16); ctx.fill();
+      E.text(ctx, '1 × 2 × 20 ft = 40 ft³', 100, 1072, { fam: 'mono', size: 36, color: C.muted });
+      E.text(ctx, `= ${E.count(1.48, E.seg(t, 9.0, 9.9), 2)} yd³  (1.13 m³)`, 100, 1130, { fam: 'mono', size: 46, color: C.blue });
       ctx.restore();
     }
-    E.chrome(ctx, t, { pillar: 'knowledge', series: 'BLUEPRINT → BUILD', title: ['From section', 'to beam'] });
+    E.ctaCard(ctx, E.ramp(t, 11.1, 11.6, E.out), 'Section first, then volume', 'Free concrete calculator → link in bio');
+    E.chrome(ctx, t, { pillar: 'knowledge', series: 'BLUEPRINT → BUILD', title: ['From section', 'to beam'], tag: 'ENGIFORMULA' });
   },
 };

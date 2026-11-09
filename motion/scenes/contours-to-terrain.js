@@ -2,6 +2,7 @@
 // Illustrative terrain (no site data): contour interval 2 m, vertical exaggeration 2x.
 SCENES['contours-to-terrain'] = {
   duration: 11,
+  beats: [0, 1.5, 3.0, 6.0, 7.4, 9.0, 11.0], // hook | labels | lift | steep vs flat | section | CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
@@ -12,14 +13,14 @@ SCENES['contours-to-terrain'] = {
     const k = E.ramp(t, 3.0, 5.6);
     const P = E.camera({
       yaw: E.lerp(0, -0.7, k) - 0.35 * E.seg(t, 5.6, 11), pitch: E.lerp(Math.PI / 2, 0.62, k), dist: 900,
-      scale: E.lerp(9.0, 8.4, k), cx: 540, cy: E.lerp(840, 880, k), target: [0, 0, E.lerp(0, 12, k)],
+      scale: E.lerp(7.6, 8.4, k), cx: 540, cy: E.lerp(900, 860, k), target: [0, 0, E.lerp(0, 12, k)],
     });
     const S = E.scene3d();
     const Z = h => (h - 100) * vex * lift;
     // grid samples
     const H = []; for (let i = 0; i <= N; i++) { H[i] = []; for (let j = 0; j <= N; j++) H[i][j] = hf(-R + i * st, -R + j * st); }
     // marching squares per level
-    const drawK = E.ramp(t, 0.4, 2.8);
+    const drawK = E.ramp(t, 0.05, 1.4);
     for (let lev = 100; lev <= 120; lev += 2) {
       const idx = (lev - 100) / 2, appear = E.clamp(drawK * 11 - idx);
       if (appear <= 0) continue;
@@ -60,20 +61,29 @@ SCENES['contours-to-terrain'] = {
     }
     E.flush(ctx, S);
     if (t < 3.4) {
-      const a = E.seg(t, 1.5, 2.0) * (1 - E.seg(t, 3.0, 3.4));
+      const a = E.seg(t, 1.0, 1.5) * (1 - E.seg(t, 3.0, 3.4));
       E.text(ctx, 'PLAN · contours every 2 m', 540, 1290, { fam: 'mono', size: 30, color: C.line, align: 'center', alpha: a });
       [['120 m', 12, 8]].forEach(([lv, x, y]) => {
         const q = P([x, y, 0]); E.text(ctx, String(lv), q[0], q[1], { fam: 'mono', size: 26, color: C.yellow, align: 'center', alpha: a, bg: C.navy, pad: 6 });
       });
     }
-    const sa = E.seg(t, 8.6, 9.0);
+    const sa = E.seg(t, 8.6, 9.0) * (1 - E.seg(t, 9.0, 9.3));
     if (sa > 0) {
       ctx.save(); ctx.globalAlpha = sa;
-      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1150, 952, 120, 16); ctx.fill();
-      E.text(ctx, 'Section A–A: the ground profile', 100, 1206, { size: 38, weight: 600, color: C.ink });
-      E.text(ctx, 'falls out of the contours', 100, 1250, { size: 32, weight: 500, color: C.muted });
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1030, 952, 120, 16); ctx.fill();
+      E.text(ctx, 'Section A–A: the ground profile', 100, 1086, { size: 38, weight: 600, color: C.ink });
+      E.text(ctx, 'falls out of the contours', 100, 1130, { size: 32, weight: 500, color: C.muted });
       ctx.restore();
     }
-    E.chrome(ctx, t, { pillar: 'knowledge', series: 'MAP → TERRAIN', title: ['Read contours', 'in 3D'] });
+    const sf = E.fade(t, 6.1, 6.5, 7.2, 7.4);
+    if (sf > 0) {
+      ctx.save(); ctx.globalAlpha = sf;
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1030, 952, 120, 16); ctx.fill();
+      E.text(ctx, 'Lines close together = steep', 100, 1086, { size: 38, weight: 600, color: C.ink });
+      E.text(ctx, 'Lines far apart = gentle', 100, 1130, { size: 32, weight: 500, color: C.muted });
+      ctx.restore();
+    }
+    E.ctaCard(ctx, E.ramp(t, 9.2, 9.7, E.out), 'Read the map, see the ground', 'Free percent slope calculator → link in bio');
+    E.chrome(ctx, t, { pillar: 'knowledge', series: 'MAP → TERRAIN', title: ['Read contours', 'in 3D'], tag: 'ENGIFORMULA' });
   },
 };

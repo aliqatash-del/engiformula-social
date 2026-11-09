@@ -2,6 +2,7 @@
 // 1% slope: 0.01 x 100 ft = 1.00 ft = 12 in of fall (recomputed in Python). Slope exaggerated x8 for visibility.
 SCENES['pipe-slope'] = {
   duration: 10,
+  beats: [0, 1.2, 2.6, 4.8, 6.2, 7.8, 10], // hook | fill | extrude | run + fall | calc | CTA
   draw(ctx, t) {
     const { C } = E;
     E.bg(ctx, 'blueprint');
@@ -11,7 +12,7 @@ SCENES['pipe-slope'] = {
     const S = E.scene3d();
     const zc = y => -fall * (y / Lp);
     const len = Math.max(0.5, Lp * E.ramp(t, 3.0, 4.8));
-    const fill = E.ramp(t, 1.0, 2.2);
+    const fill = E.ramp(t, 1.2, 2.4);
     // 2D section: circle + water segment
     const a2 = 1 - E.seg(t, 3.0, 3.6);
     if (a2 > 0) {
@@ -21,7 +22,7 @@ SCENES['pipe-slope'] = {
       const h = -R + 2 * R * d, ang = Math.acos(Math.max(-1, Math.min(1, -h / R)));
       ctx.fillStyle = E.alpha(C.blue, 0.85); ctx.beginPath();
       ctx.arc(c[0], c[1], R, Math.PI / 2 - ang, Math.PI / 2 + ang); ctx.closePath(); ctx.fill();
-      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(c[0], c[1], R, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * E.ramp(t, 0.2, 1.0)); ctx.stroke();
+      ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 6; ctx.beginPath(); ctx.arc(c[0], c[1], R, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * E.ramp(t, 0.05, 0.6)); ctx.stroke();
       E.text(ctx, 'half full', c[0], c[1] + R + 70, { fam: 'mono', size: 32, color: C.line, align: 'center', alpha: E.seg(t, 1.6, 2.0) });
       ctx.restore();
     }
@@ -53,14 +54,15 @@ SCENES['pipe-slope'] = {
       E.text(ctx, 'slope exaggerated', 540, 1120, { fam: 'mono', size: 24, color: C.line, alpha: d1 * 0.7, align: 'center' });
       E.text(ctx, '100 ft run', (a[0] + b0[0]) / 2, (a[1] + b0[1]) / 2 - 24, { fam: 'mono', size: 32, color: C.yellow, alpha: d1, align: 'center' });
     }
-    const f = E.ramp(t, 6.6, 7.2, E.out);
+    const f = E.ramp(t, 6.3, 6.8, E.out) * (1 - E.seg(t, 7.8, 8.1));
     if (f > 0) {
       ctx.save(); ctx.globalAlpha = f;
-      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1200, 952, 140, 16); ctx.fill();
-      E.text(ctx, '1% = 0.01 × 100 ft', 100, 1258, { fam: 'mono', size: 38, color: C.muted });
-      E.text(ctx, '= 1 ft (12 in) of fall', 100, 1316, { fam: 'mono', size: 46, color: C.blue });
+      ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1010, 952, 160, 16); ctx.fill();
+      E.text(ctx, '1% = 0.01 × 100 ft', 100, 1070, { fam: 'mono', size: 38, color: C.muted });
+      E.text(ctx, '= 1 ft of fall (≈ 1/8 in per ft)', 100, 1138, { fam: 'mono', size: 46, color: C.blue });
       ctx.restore();
     }
-    E.chrome(ctx, t, { pillar: 'calculator', series: 'FLOW', title: ['What 1% slope', 'really means'] });
+    E.ctaCard(ctx, E.ramp(t, 8.0, 8.5, E.out), 'Percent, ratio or in per ft?', 'Free slope calculator → link in bio');
+    E.chrome(ctx, t, { pillar: 'calculator', series: 'FLOW', title: ['What 1% slope', 'really means'], tag: 'ENGIFORMULA' });
   },
 };

@@ -1,0 +1,70 @@
+id: 2026-11-11-where-a-beam-works-hardest
+slot: '2026-11-11T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+motion: load-to-moment
+source: https://engiformula.com/calculators
+caption: 'A 6 m beam carrying 20 kN/m works hardest at mid-span: 90 kN·m.
+
+
+  For a simply supported beam with a uniform load, M = wL²/8 = 20 × 6² / 8 = 90 kN·m
+  (66.4 kip·ft). The moment is zero at the supports and peaks in the middle, which
+  is why typical practice keeps bottom-bar splices away from mid-span.
+
+
+  Where do you lap your bottom bars on a simple span?
+
+
+  Save this. Free calculators with worked examples — link in bio.'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#beamdesign'
+- '#bendingmoment'
+- '#engiformula'
+first_comment: 'Free calculators with formulas and worked examples: https://engiformula.com/calculators'
+alt_text: Animation of a simply supported 6 metre beam under a uniform load of 20
+  kN per metre. It deflects, and the bending moment diagram draws as a parabola peaking
+  at mid-span at 90 kN m.
+ai_generated: false
+slides:
+- style: dark
+  title: Where a beam ==works hardest==
+  seconds: 4
+  voice: Where does a beam work hardest? Not where you might think.
+- title: A 6 m beam, 20 kN/m
+  body: Simply supported, uniform load.
+  seconds: 4
+  voice: A six metre beam, simply supported, carrying twenty kilonewtons per metre.
+- title: It ==sags== in the middle
+  body: Deflection peaks at mid-span.
+  seconds: 4
+  voice: It sags most in the middle, and that's a clue.
+- title: The moment is a ==parabola==
+  body: Zero at the supports, maximum at mid-span.
+  seconds: 4
+  voice: The bending moment is zero at each support and peaks at mid-span.
+- title: M = wL²/8
+  formula: 20 × 6² / 8 = 90 kN·m
+  legend: (66.4 kip·ft)
+  formula_size: 56
+  seconds: 4
+  voice: M equals w L squared over eight. Twenty times six squared, over eight. Ninety
+    kilonewton metres.
+- style: block
+  title: Check ==mid-span== first
+  cta: Free calculators → link in bio
+  seconds: 4
+  voice: So check mid-span first. Save this, and grab the free calculators, link in
+    bio.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
