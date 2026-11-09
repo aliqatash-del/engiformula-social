@@ -34,33 +34,33 @@ ai_generated: false
 slides:
 - style: dark
   title: From section ==to beam==
-  seconds: 4
+  seconds: 4.33
   voice: Every concrete beam starts as a drawing like this.
 - title: 12 × 24 in section
   body: 3
-  seconds: 4
+  seconds: 7.32
   voice: Twelve by twenty four inches. Three number eight bars at the bottom, two
     number five at the top.
 - title: Extrude it ==20 ft==
-  seconds: 4
+  seconds: 4.0
   voice: Now pull that section out twenty feet.
 - title: 30 stirrups at 8 in
-  seconds: 4
+  seconds: 4.67
   voice: Thirty stirrups at eight inch spacing hold the cage together.
 - title: Then the ==pour==
-  seconds: 4
+  seconds: 4.05
   voice: Then the concrete goes in, and hides all of it.
 - title: 40 ft³ = ==1.48 yd³==
   formula: 1 × 2 × 20 = 40 ft³
   legend: 40 ÷ 27 = 1.48 yd³ (1.13 m³)
   formula_size: 56
-  seconds: 4
+  seconds: 8.6
   voice: One by two by twenty is forty cubic feet. Divide by twenty seven, one point
     four eight cubic yards.
 - style: block
   title: Section first, ==then volume==
   cta: Free calculator → link in bio
-  seconds: 4
+  seconds: 6.2
   voice: Section first, then volume. Free concrete calculator, link in bio.
 frames:
 - frame-01.jpg
@@ -70,3 +70,8 @@ frames:
 - frame-05.jpg
 - frame-06.jpg
 - frame-07.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 2fdf994ef0bd
+media:
+- reel.mp4

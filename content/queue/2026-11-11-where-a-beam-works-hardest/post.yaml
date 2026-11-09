@@ -34,31 +34,31 @@ ai_generated: false
 slides:
 - style: dark
   title: Where a beam ==works hardest==
-  seconds: 4
+  seconds: 4.33
   voice: Where does a beam work hardest? Not where you might think.
 - title: A 6 m beam, 20 kN/m
   body: Simply supported, uniform load.
-  seconds: 4
+  seconds: 6.2
   voice: A six metre beam, simply supported, carrying twenty kilonewtons per metre.
 - title: It ==sags== in the middle
   body: Deflection peaks at mid-span.
-  seconds: 4
+  seconds: 4.05
   voice: It sags most in the middle, and that's a clue.
 - title: The moment is a ==parabola==
   body: Zero at the supports, maximum at mid-span.
-  seconds: 4
+  seconds: 5.12
   voice: The bending moment is zero at each support and peaks at mid-span.
 - title: M = wL²/8
   formula: 20 × 6² / 8 = 90 kN·m
   legend: (66.4 kip·ft)
   formula_size: 56
-  seconds: 4
+  seconds: 8.4
   voice: M equals w L squared over eight. Twenty times six squared, over eight. Ninety
     kilonewton metres.
 - style: block
   title: Check ==mid-span== first
   cta: Free calculators → link in bio
-  seconds: 4
+  seconds: 6.7
   voice: So check mid-span first. Save this, and grab the free calculators, link in
     bio.
 frames:
@@ -68,3 +68,8 @@ frames:
 - frame-04.jpg
 - frame-05.jpg
 - frame-06.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 735d7cf73f10
+media:
+- reel.mp4
