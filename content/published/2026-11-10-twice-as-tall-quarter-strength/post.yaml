@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved for the attached reels")
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved for the attached
+  reels")
 motion: column-buckling
 source: https://engiformula.com/calculators
 caption: 'Make a column twice as tall and it carries a quarter of the load.
@@ -75,3 +76,14 @@ captions: captions.srt
 reel_built_from: 75b639fd2ab3
 media:
 - reel.mp4
+published_at: '2026-11-10T12:01:49.982737+00:00'
+published_ids:
+  instagram: '18110353730249386'
+  facebook: '4633621980201959'
+publish_errors:
+  facebook: 'POST https://graph.facebook.com/v24.0/4633621980201959/comments failed
+    (400): {''error'': {''message'': "Unsupported post request. Object with ID ''4633621980201959''
+    does not exist, cannot be loaded due to missing permissions, or does not support
+    this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    ''type'': ''GraphMethodException'', ''code'': 100, ''error_subcode'': 33, ''fbtrace_id'':
+    ''AbXNwuasCH1rlozVluGW_B-''}}'
