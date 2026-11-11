@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed 11 to Fri 13 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed
+  11 to Fri 13 Nov reels)
 motion: load-to-moment
 source: https://engiformula.com/calculators
 caption: 'A 6 m beam carrying 20 kN/m works hardest at mid-span: 90 kN·m.
@@ -74,3 +75,8 @@ captions: captions.srt
 reel_built_from: 735d7cf73f10
 media:
 - reel.mp4
+published_at: '2026-11-11T12:02:12.707892+00:00'
+published_ids:
+  instagram: '18639743476034741'
+  facebook: '1124654680573149'
+publish_errors: null
