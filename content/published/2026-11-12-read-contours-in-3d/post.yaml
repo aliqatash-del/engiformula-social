@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed 11 to Fri 13 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed
+  11 to Fri 13 Nov reels)
 motion: contours-to-terrain
 source: https://engiformula.com/calculators
 caption: 'A contour map is the ground in 3D, drawn flat.
@@ -68,3 +69,14 @@ captions: captions.srt
 reel_built_from: 3c0addf4d8ac
 media:
 - reel.mp4
+published_at: '2026-11-12T12:01:38.690867+00:00'
+published_ids:
+  instagram: '18648943285063046'
+  facebook: '2322339951933470'
+publish_errors:
+  facebook: 'POST https://graph.facebook.com/v24.0/2322339951933470/comments failed
+    (400): {''error'': {''message'': "Unsupported post request. Object with ID ''2322339951933470''
+    does not exist, cannot be loaded due to missing permissions, or does not support
+    this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    ''type'': ''GraphMethodException'', ''code'': 100, ''error_subcode'': 33, ''fbtrace_id'':
+    ''AjiLW8V1GRccCvLy9QNHEal''}}'
