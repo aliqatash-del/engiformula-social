@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed 11 to Fri 13 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed
+  11 to Fri 13 Nov reels)
 motion: build-sequence
 source: https://engiformula.com/calculators
 caption: 'Six stages take a frame from bare ground to a roof.
@@ -70,3 +71,8 @@ captions: captions.srt
 reel_built_from: adb140bcb3c3
 media:
 - reel.mp4
+published_at: '2026-11-13T12:02:09.761019+00:00'
+published_ids:
+  instagram: '17983355463126902'
+  facebook: '1472328144844036'
+publish_errors: null
