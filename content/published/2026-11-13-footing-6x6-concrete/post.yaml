@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed 11 to Fri 13 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Wed
+  11 to Fri 13 Nov reels)
 motion: plan-to-footing
 source: https://engiformula.com/calculators
 caption: 'A 6 × 6 ft footing, 18 in thick, takes exactly 2 yd³ of concrete.
@@ -74,3 +75,8 @@ captions: captions.srt
 reel_built_from: 79e0d9d76c4b
 media:
 - reel.mp4
+published_at: '2026-11-13T17:02:58.703298+00:00'
+published_ids:
+  instagram: '17925813765444045'
+  facebook: '1436629478557032'
+publish_errors: null
