@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: community
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat 14 and Sun 15 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat
+  14 and Sun 15 Nov reels)
 motion: quiz-slope
 source: https://engiformula.com/calculators
 caption: 'Quick one: which is steeper, 1:12 or 8%?
@@ -65,3 +66,8 @@ captions: captions.srt
 reel_built_from: c9b662a192f3
 media:
 - reel.mp4
+published_at: '2026-11-14T12:01:43.483363+00:00'
+published_ids:
+  instagram: '18173589652461219'
+  facebook: '1147068997873110'
+publish_errors: null
