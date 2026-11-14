@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat 14 and Sun 15 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat
+  14 and Sun 15 Nov reels)
 motion: yard-in-bags
 source: https://engiformula.com/calculators
 caption: 'One cubic yard of concrete is 45 bags of 80 lb mix.
@@ -67,3 +68,8 @@ captions: captions.srt
 reel_built_from: f9291a8b1e04
 media:
 - reel.mp4
+published_at: '2026-11-14T17:02:00.638795+00:00'
+published_ids:
+  instagram: '18389249551235323'
+  facebook: '1967371424240670'
+publish_errors: null
