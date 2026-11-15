@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat 14 and Sun 15 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat
+  14 and Sun 15 Nov reels)
 motion: yard-vs-metre
 source: https://engiformula.com/calculators
 caption: 'A cubic metre is 31% bigger than a cubic yard.
@@ -66,3 +67,8 @@ captions: captions.srt
 reel_built_from: 9637d1ad0a51
 media:
 - reel.mp4
+published_at: '2026-11-15T17:01:56.906126+00:00'
+published_ids:
+  instagram: '18169829878469003'
+  facebook: '1160052733137201'
+publish_errors: null
