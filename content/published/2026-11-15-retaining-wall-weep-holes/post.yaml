@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: approved
-approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat 14 and Sun 15 Nov reels)
+status: published
+approved_via: owner approved in the project thread on 9 Nov ("approved" for the Sat
+  14 and Sun 15 Nov reels)
 motion: retaining-wall-drain
 source: https://engiformula.com/calculators
 caption: 'Those little holes at the bottom of a retaining wall are doing a big job.
@@ -69,3 +70,8 @@ captions: captions.srt
 reel_built_from: 0ef6bfd92dcb
 media:
 - reel.mp4
+published_at: '2026-11-15T12:01:58.821968+00:00'
+published_ids:
+  instagram: '18111788933225933'
+  facebook: '1857528325402924'
+publish_errors: null
