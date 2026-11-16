@@ -8,20 +8,21 @@ pillar: knowledge
 status: draft
 motion: beam-supports
 source: https://engiformula.com/calculators
-caption: 'Same 6 m beam, same load. The supports alone move the bending moment from 30 to 180
-  kN·m.
+caption: 'Same 6 m beam, same load. The supports alone move the bending moment from
+  30 to 180 kN·m.
 
 
-  10 kN/m on 6 m (0.685 kip/ft on 19.7 ft): simply supported wL²/8 = 45 kN·m (33.2 kip-ft).
-  Fix both ends and it drops to 30 at the supports and 15 at mid-span. Make it a cantilever
-  and it jumps to wL²/2 = 180 kN·m (132.8 kip-ft), and the tip sags 48× more than the fixed
-  beam.
+  10 kN/m on 6 m (0.685 kip/ft on 19.7 ft): simply supported wL²/8 = 45 kN·m (33.2
+  kip-ft). Fix both ends and it drops to 30 at the supports and 15 at mid-span. Make
+  it a cantilever and it jumps to wL²/2 = 180 kN·m (132.8 kip-ft), and the tip sags
+  48× more than the fixed beam.
 
 
   Which support condition do you trust least on site?
 
 
-  Part 1 of 3. Follow for Part 2: where the steel goes. Free beam calculators — link in bio.'
+  Part 1 of 3. Follow for Part 2: where the steel goes. Free beam calculators — link
+  in bio.'
 hashtags:
 - '#civilengineering'
 - '#structuralengineering'
@@ -29,39 +30,57 @@ hashtags:
 - '#bendingmoment'
 - '#engiformula'
 first_comment: 'Free structural calculators: https://engiformula.com/calculators'
-alt_text: Animation of one 6 metre beam under 10 kN per metre. With pinned supports the bending
-  moment peaks at 45 kN·m; with both ends fixed it is 30 at the supports and 15 mid-span; as
-  a cantilever it is 180. A bar chart shows the cantilever deflects 48 times the fixed beam.
+alt_text: Animation of one 6 metre beam under 10 kN per metre. With pinned supports
+  the bending moment peaks at 45 kN·m; with both ends fixed it is 30 at the supports
+  and 15 mid-span; as a cantilever it is 180. A bar chart shows the cantilever deflects
+  48 times the fixed beam.
 ai_generated: false
 slides:
 - style: dark
   title: Same beam, ==four supports==
-  seconds: 4.7
+  seconds: 5.32
   voice: Same beam, same load. Watch the moment jump six times over.
 - title: 10 kN/m on 6 m
-  seconds: 3.9
+  seconds: 4.62
   voice: Ten kilonewtons per metre, on a six metre span.
 - title: 'Simple: **45 kN·m**'
-  seconds: 4.7
+  seconds: 6.65
   voice: 'Simply supported: w L squared over eight. Forty five kilonewton metres.'
 - title: Clamp both ends
-  seconds: 2.2
+  seconds: 2.68
   voice: Now clamp both ends.
 - title: 'Fixed: **30** and **15**'
-  seconds: 8.1
-  voice: The peak drops to thirty, and moves to the supports, bending the beam the other way.
-    Mid-span is only fifteen.
+  seconds: 8.52
+  voice: The peak drops to thirty, and moves to the supports, bending the beam the
+    other way. Mid-span is only fifteen.
 - title: Remove a support
-  seconds: 2.4
+  seconds: 2.83
   voice: Now remove one support.
 - title: 'Cantilever: **180 kN·m**'
-  seconds: 6.6
-  voice: 'A cantilever: w L squared over two. One hundred and eighty. Six times the fixed beam.'
+  seconds: 7.72
+  voice: 'A cantilever: w L squared over two. One hundred and eighty. Six times the
+    fixed beam.'
 - title: 'Sag: ==48×=='
-  seconds: 5.8
-  voice: And the sag? The cantilever deflects forty eight times more than the fixed beam.
+  seconds: 6.22
+  voice: And the sag? The cantilever deflects forty eight times more than the fixed
+    beam.
 - style: block
   title: 'Part 2: ==where the steel goes=='
   seconds: 7.0
-  voice: Fixed ends bend the beam upward over the supports. So where does the steel go? Part
-    two.
+  voice: Fixed ends bend the beam upward over the supports. So where does the steel
+    go? Part two.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 7447d93d439c
+media:
+- reel.mp4

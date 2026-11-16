@@ -8,14 +8,15 @@ pillar: knowledge
 status: draft
 motion: footing-punch
 source: https://engiformula.com/calculators
-caption: 'A footing can pass bearing and still fail: the column punches through it like a cookie
-  cutter.
+caption: 'A footing can pass bearing and still fail: the column punches through it
+  like a cookie cutter.
 
 
-  Three checks: bending at the column face, one-way shear at d from the face, and two-way (punching)
-  shear on a perimeter d/2 from the face (ACI 318-19 §22.5 and §22.6). Our 4''-6" footing, 12
-  in thick, d = 8.5 in, 3,000 psi, under an assumed 60 kip factored load: b0 = 82 in, φVc =
-  114 kips (509 kN) vs Vu = 51 kips (229 kN), 45% used. At 10 in thick it is 67%.
+  Three checks: bending at the column face, one-way shear at d from the face, and
+  two-way (punching) shear on a perimeter d/2 from the face (ACI 318-19 §22.5 and
+  §22.6). Our 4''-6" footing, 12 in thick, d = 8.5 in, 3,000 psi, under an assumed
+  60 kip factored load: b0 = 82 in, φVc = 114 kips (509 kN) vs Vu = 51 kips (229 kN),
+  45% used. At 10 in thick it is 67%.
 
 
   Which check governs your footings most often?
@@ -29,41 +30,57 @@ hashtags:
 - '#punchingshear'
 - '#engiformula'
 first_comment: 'Free concrete footing calculator: https://engiformula.com/calculators'
-alt_text: 'Animation of a column punching a cone out of a square footing. A section then shows
-  three failure modes: a bending crack at the column face, a one-way shear crack at distance
-  d, and a punching cone checked at d over 2. A usage bar shows 45 percent at 12 inches thick
-  and 67 percent at 10 inches.'
+alt_text: 'Animation of a column punching a cone out of a square footing. A section
+  then shows three failure modes: a bending crack at the column face, a one-way shear
+  crack at distance d, and a punching cone checked at d over 2. A usage bar shows
+  45 percent at 12 inches thick and 67 percent at 10 inches.'
 ai_generated: false
 slides:
 - style: dark
   title: It punches ==right through==
   seconds: 7.0
-  voice: A footing can pass bearing and still fail. The column punches through it like a cookie
-    cutter.
+  voice: A footing can pass bearing and still fail. The column punches through it
+    like a cookie cutter.
 - title: Three ways to break
   seconds: 3.2
   voice: There are three ways it can break.
 - title: 1 · Bending
-  seconds: 2.8
+  seconds: 3.2
   voice: Bending, right at the column face.
 - title: 2 · One-way shear
-  seconds: 6.2
-  voice: 'One way shear: a crack across the full width, one depth from the column face.'
+  seconds: 6.32
+  voice: 'One way shear: a crack across the full width, one depth from the column
+    face.'
 - title: 3 · ==Punching==
   seconds: 5.8
   voice: 'And punching: a cone around the column, checked half a depth from the face.'
 - title: Perimeter **82 in**
   seconds: 8.5
-  voice: Our four foot six footing, twelve inches thick, eight and a half to the steel. The
-    perimeter is eighty two inches.
+  voice: Our four foot six footing, twelve inches thick, eight and a half to the steel.
+    The perimeter is eighty two inches.
 - title: '**45%** used'
-  seconds: 7.4
-  voice: Under a sixty kip factored load, capacity is one hundred fourteen kips, demand fifty
-    one. Forty five percent.
+  seconds: 9.22
+  voice: Under a sixty kip factored load, capacity is one hundred fourteen kips, demand
+    fifty one. Forty five percent.
 - title: '10 in thick: **67%**'
-  seconds: 5.5
+  seconds: 5.67
   voice: Shave it to ten inches thick, and that jumps to sixty seven percent.
 - style: block
   title: 'Part 3: ==the steel=='
-  seconds: 4.7
+  seconds: 6.02
   voice: Thickness handles shear. Bending needs steel. Top or bottom? Part three.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: fe03c4d083f0
+media:
+- reel.mp4

@@ -11,16 +11,17 @@ source: https://engiformula.com/calculators
 caption: 'This column presses on the ground 20× harder than the soil can take.
 
 
-  40 kips (178 kN) on a 12 × 12 in column base is 40,000 psf. Sand allows about 2,000 psf (IBC
-  2021 Table 1806.2 presumptive value), so you need 20 ft²: a 4''-6" square footing (1.37 m).
-  On clay at 1,500 psf it grows to 5''-2"; on gravel at 3,000 psf, 3''-8" is enough.
+  40 kips (178 kN) on a 12 × 12 in column base is 40,000 psf. Sand allows about 2,000
+  psf (IBC 2021 Table 1806.2 presumptive value), so you need 20 ft²: a 4''-6" square
+  footing (1.37 m). On clay at 1,500 psf it grows to 5''-2"; on gravel at 3,000 psf,
+  3''-8" is enough.
 
 
   What bearing value do you usually see on your soil reports?
 
 
-  Part 1 of 3. Follow for Part 2: how a footing actually fails. Free footing calculator — link
-  in bio.'
+  Part 1 of 3. Follow for Part 2: how a footing actually fails. Free footing calculator
+  — link in bio.'
 hashtags:
 - '#civilengineering'
 - '#construction'
@@ -28,39 +29,57 @@ hashtags:
 - '#geotechnical'
 - '#engiformula'
 first_comment: 'Free concrete footing calculator: https://engiformula.com/calculators'
-alt_text: Animation of a 40 kip load on a 12 inch column. A pressure meter shows 40,000 psf
-  against 2,000 psf allowed. The footing grows to 4 foot 6 square, then 5 foot 2 on clay and
-  3 foot 8 on gravel, and a section shows the stress bulb under narrow and wide footings.
+alt_text: Animation of a 40 kip load on a 12 inch column. A pressure meter shows 40,000
+  psf against 2,000 psf allowed. The footing grows to 4 foot 6 square, then 5 foot
+  2 on clay and 3 foot 8 on gravel, and a section shows the stress bulb under narrow
+  and wide footings.
 ai_generated: false
 slides:
 - style: dark
   title: ==20×== too much pressure
-  seconds: 5.8
+  seconds: 5.87
   voice: This column pushes on the ground twenty times harder than the soil can take.
 - title: 40 kips on 1 ft²
-  seconds: 6.2
-  voice: Forty kips on a twelve inch square column. That is forty thousand pounds per square
-    foot.
+  seconds: 6.8
+  voice: Forty kips on a twelve inch square column. That is forty thousand pounds
+    per square foot.
 - title: 'Sand: **2,000 psf**'
-  seconds: 5.8
-  voice: The building code's presumptive value for sand is two thousand pounds per square foot.
+  seconds: 6.52
+  voice: The building code's presumptive value for sand is two thousand pounds per
+    square foot.
 - title: So spread it
-  seconds: 5.5
+  seconds: 6.2
   voice: So spread it. Forty thousand divided by two thousand is twenty square feet.
 - title: '**4''-6"** square'
-  seconds: 4.7
+  seconds: 5.05
   voice: A footing four foot six square. About one point four metres.
 - title: 'Clay: **5''-2"**'
-  seconds: 5.1
+  seconds: 5.82
   voice: Same column on clay? Fifteen hundred allowed. Now it's five foot two.
 - title: 'Gravel: **3''-8"**'
-  seconds: 3.9
+  seconds: 4.47
   voice: On gravel, three thousand. Three foot eight is enough.
 - title: The pressure ==bulb==
-  seconds: 7.0
-  voice: Below the footing, the pressure spreads out like a bulb. A wider footing stresses the
-    soil deeper.
+  seconds: 7.05
+  voice: Below the footing, the pressure spreads out like a bulb. A wider footing
+    stresses the soil deeper.
 - style: block
   title: 'Part 2: ==how it fails=='
-  seconds: 5.8
-  voice: Bearing solved. But the column can still punch straight through the footing. Part two.
+  seconds: 6.17
+  voice: Bearing solved. But the column can still punch straight through the footing.
+    Part two.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 55a367d85841
+media:
+- reel.mp4
