@@ -1,0 +1,69 @@
+id: 2026-11-19-concrete-1-slab-order-short
+slot: '2026-11-19T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+motion: slab-volume
+source: https://engiformula.com/calculators
+caption: 'A 20 × 20 ft slab at 4 in is 4.94 yd³. Forget the thickened edge and you are short
+  almost 2 yards.
+
+
+  20 × 20 × 4/12 = 133.3 ft³ = 4.94 yd³ (3.78 m³). A 12 in wide edge, 8 in deeper, around the
+  76 ft centerline adds 50.7 ft³ = 1.88 yd³ (+38%). Half an inch low on the subgrade adds another
+  12.5%. Total 6.81 yd³; with 10% waste, order 7.5 yd³.
+
+
+  What waste factor do you add for slabs on grade?
+
+
+  Part 1 of 3. Follow for Part 2: a whole basement in yards. Free concrete calculator — link
+  in bio.'
+hashtags:
+- '#construction'
+- '#concrete'
+- '#concreteslab'
+- '#estimating'
+- '#engiformula'
+first_comment: 'Free concrete calculator: https://engiformula.com/calculators'
+alt_text: Animation of a 20 by 20 foot slab, 4 inches thick, worked out to 4.94 cubic yards.
+  The camera flips under the slab to show a thickened edge adding 1.88 cubic yards, then a section
+  shows a half inch low subgrade adding 12.5 percent. The order comes to 7.5 cubic yards.
+ai_generated: false
+slides:
+- style: dark
+  title: Your slab order ==is short==
+  seconds: 6.2
+  voice: This slab order is almost two yards short. And you can't see why from the top.
+- title: 20 × 20 ft, 4 in
+  seconds: 3.2
+  voice: Twenty by twenty feet, four inches thick.
+- title: L × W × T, ==in feet==
+  seconds: 6.2
+  voice: Length times width times thickness, all in feet. Four inches is a third of a foot.
+- title: '**4.94 yd³**'
+  seconds: 5.8
+  voice: 'One hundred thirty three cubic feet. Divide by twenty seven: four point nine four
+    yards.'
+- title: Flip it over
+  seconds: 2.2
+  voice: Now flip it over.
+- title: 'Thickened edge: **+1.88 yd³**'
+  seconds: 8.9
+  voice: A thickened edge, twelve inches wide and eight inches deeper, all the way round. One
+    point eight eight yards. Thirty eight percent more.
+- title: 'Subgrade: **+12.5%**'
+  seconds: 7.4
+  voice: And the subgrade. Half an inch low, under a four inch slab, is twelve and a half percent
+    extra.
+- title: Order **7.5 yd³**
+  seconds: 5.5
+  voice: 'Total: six point eight one yards. Add ten percent, and order seven and a half.'
+- style: block
+  title: 'Part 2: ==a whole basement=='
+  seconds: 6.6
+  voice: That's one slab. A basement has three shapes, and the biggest isn't the floor. Part
+    two.

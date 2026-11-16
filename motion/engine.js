@@ -291,6 +291,64 @@
     },
   });
 
+
+  // ---------- series helpers (Nov 2026 series reels) ----------
+  // Local beat progress: k = progress through beat i of B (array of beat boundaries).
+  E.bk = (t, B, i, a = 0, b = 1) => E.seg(t, E.lerp(B[i], B[i + 1], a), E.lerp(B[i], B[i + 1], b));
+  E.beatOf = (t, B) => { let i = 0; while (i < B.length - 2 && t >= B[i + 1]) i++; return i; };
+  E.beats = D => D.reduce((a, d) => (a.push(a[a.length - 1] + d), a), [0]);
+  // Re-hook pop: a yellow pill under the title that springs in at t0 and leaves after dur seconds.
+  E.rehook = (ctx, t, t0, s, dur = 2.4) => {
+    const a = E.ramp(t, t0, t0 + 0.35, E.back) * (1 - E.seg(t, t0 + dur, t0 + dur + 0.3));
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = E.clamp(a);
+    ctx.translate(64, 540); ctx.scale(E.lerp(0.7, 1, E.clamp(a)), E.lerp(0.7, 1, E.clamp(a)));
+    E.text(ctx, s, 14, 0, { fam: 'title', weight: 700, size: 44, color: E.C.navy, bg: E.C.yellow, pad: 18, radius: 10 });
+    ctx.restore();
+  };
+  // Part indicator: three segments top-right, the current part filled.
+  E.parts = (ctx, t, part, dark = false) => {
+    const a = E.ramp(t, 0, 0.5, E.out);
+    ctx.save(); ctx.globalAlpha = a;
+    for (let i = 0; i < 3; i++) {
+      ctx.fillStyle = i + 1 === part ? E.C.orange : (dark ? 'rgba(207,224,255,0.25)' : 'rgba(14,42,71,0.15)');
+      E.rrect(ctx, 856 + i * 56, 250, 48, 14, 7); ctx.fill();
+    }
+    ctx.restore();
+  };
+  // White working card at the caption-safe position (y 1010-1180).
+  E.card = (ctx, a, l1, l2, o = {}) => {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = E.clamp(a);
+    ctx.fillStyle = '#FFFFFF'; E.rrect(ctx, 64, 1010, 952, 170, 16); ctx.fill();
+    ctx.strokeStyle = E.C.grid; ctx.lineWidth = 2; ctx.stroke();
+    E.text(ctx, l1, 100, 1072, { fam: 'mono', size: o.s1 || 34, color: E.C.muted });
+    E.text(ctx, l2, 100, 1146, { fam: 'mono', size: o.s2 || 50, color: o.c2 || E.C.blue, alpha: o.a2 ?? 1 });
+    if (o.note) E.text(ctx, o.note, 980, 1146, { fam: 'mono', size: 30, color: E.C.muted, align: 'right', alpha: o.an ?? 1 });
+    ctx.restore();
+  };
+  // Cliffhanger card: what the next part is, in the caption-safe zone.
+  E.nextCard = (ctx, a, label, title, sub) => {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = E.clamp(a);
+    const y = 1010 + 20 * (1 - a);
+    ctx.fillStyle = E.C.orange; E.rrect(ctx, 64, y, 952, 170, 16); ctx.fill();
+    E.text(ctx, label, 100, y + 52, { fam: 'mono', size: 28, color: '#FFFFFF' });
+    E.text(ctx, title, 100, y + 112, { fam: 'title', weight: 700, size: 50, color: '#FFFFFF' });
+    if (sub) E.text(ctx, sub, 100, y + 152, { size: 28, weight: 500, color: '#FFFFFF' });
+    ctx.restore();
+  };
+  // Hatched fixed support (wall) drawn as a block at x (w wide) between y0 and y1.
+  E.wall = (ctx, x, y0, y1, w, side, a = 1) => {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha *= a;
+    ctx.fillStyle = E.C.steel; ctx.fillRect(side < 0 ? x - w : x, y0, w, y1 - y0);
+    ctx.strokeStyle = E.C.navy; ctx.lineWidth = 2; ctx.beginPath();
+    ctx.rect(side < 0 ? x - w : x, y0, w, y1 - y0); ctx.clip();
+    for (let y = y0 - w; y < y1 + w; y += 16) { ctx.moveTo(side < 0 ? x - w : x, y + w); ctx.lineTo(side < 0 ? x : x + w, y); }
+    ctx.stroke(); ctx.restore();
+  };
+
   window.E = E;
   window.SCENES = window.SCENES || {};
 })();

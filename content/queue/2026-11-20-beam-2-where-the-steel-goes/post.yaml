@@ -1,0 +1,71 @@
+id: 2026-11-20-beam-2-where-the-steel-goes
+slot: '2026-11-20T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+motion: beam-steel
+source: https://engiformula.com/calculators
+caption: 'Concrete is about 10× weaker in tension than in compression, so the steel goes wherever
+  the beam stretches.
+
+
+  C30/37: fctm 2.9 MPa vs fck 30 MPa (EN 1992-1-1 Table 3.1). Simply supported: bottom bars
+  at mid-span. Fixed ends: top bars over the supports, running past where the moment changes
+  sign at 0.21L. Near the supports, 45° shear cracks need stirrups packed closer. For 45 kN·m
+  with d = 450 mm: As = M / (fyd × 0.9d) = 256 mm² → 3H12 (339 mm²); in US bars, 2 #4 = 0.40
+  in².
+
+
+  Where do you see bars cut off too early most often?
+
+
+  Part 2 of 3. Follow for Part 3: how deep should a beam be?'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#reinforcedconcrete'
+- '#rebar'
+- '#engiformula'
+first_comment: 'Free rebar and structural calculators: https://engiformula.com/calculators'
+alt_text: Animation of a see-through concrete beam. The tension zone glows orange at the bottom
+  of a simply supported beam and at the top over the supports of a fixed beam. Cracks open,
+  bottom and top bars slide in, 45 degree shear cracks appear and stirrups are added, closer
+  near the supports. The working gives 256 square millimetres, so 3 bars of 12 mm.
+ai_generated: false
+slides:
+- style: dark
+  title: Where the ==steel goes==
+  seconds: 6.6
+  voice: Concrete is about ten times weaker in tension. So the steel goes wherever the beam
+    stretches.
+- title: The bottom stretches
+  seconds: 3.9
+  voice: Load a simply supported beam, and the bottom stretches.
+- title: Bottom bars
+  seconds: 6.2
+  voice: Cracks open from the bottom at mid-span, so the main bars go in the bottom.
+- title: The fixed beam
+  seconds: 3.2
+  voice: Now the fixed beam from part one.
+- title: Top bars ==over supports==
+  seconds: 7.8
+  voice: Over the supports the top stretches. Top bars go there, and run past the point where
+    the moment flips.
+- title: 45° ==shear== cracks
+  seconds: 4.7
+  voice: Near the supports, the cracks turn to forty five degrees. That's shear.
+- title: Stirrups, tighter at the ends
+  seconds: 3.9
+  voice: Stirrups stitch across them, packed tighter toward the supports.
+- title: '**256 mm²** → 3H12'
+  seconds: 8.1
+  voice: How much bottom steel? Moment, over steel strength times the lever arm. Two hundred
+    fifty six square millimetres. Three twelve millimetre bars.
+- style: block
+  title: 'Part 3: ==how deep?=='
+  seconds: 7.0
+  voice: Steel stops the cracks. It doesn't stop the sag. How deep should the beam be? Part
+    three.

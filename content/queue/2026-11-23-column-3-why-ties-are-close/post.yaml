@@ -1,0 +1,69 @@
+id: 2026-11-23-column-3-why-ties-are-close
+slot: '2026-11-23T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: site
+status: draft
+motion: column-ties
+source: https://engiformula.com/calculators
+caption: 'Column bars do not snap. They buckle out sideways, and ties are what stop them.
+
+
+  ACI 318-19 25.7.2.1: tie spacing is the least of 16 bar diameters, 48 tie diameters and the
+  least column side → 12 in for #8 bars in a 12 in column. EN 1992-1-1 9.5.3: least of 20φ,
+  b and 400 mm → 300 mm for 16 mm bars in a 300 mm column, × 0.6 = 180 mm near beams, slabs
+  and laps. Total steel: 1–8% in ACI (10.6.1.1), max 4% outside laps in EC2; 4H16 in 300 × 300
+  is 0.89%.
+
+
+  Where do you see tie spacing go wrong on site?
+
+
+  Part 3 of 3. Save the column series and rewatch from Part 1.'
+hashtags:
+- '#civilengineering'
+- '#construction'
+- '#columns'
+- '#rebar'
+- '#engiformula'
+first_comment: 'Free rebar calculators: https://engiformula.com/calculators'
+alt_text: Animation of a see-through column under load. Without ties the vertical bars bow out
+  and the cover spalls off; with ties they stay straight. Panels show the ACI rule giving 12
+  inches, the Eurocode rule giving 300 mm and 180 mm near slabs, then a cross section with 4
+  bars at 0.89 percent and the 1 to 8 percent and 4 percent limits.
+ai_generated: false
+slides:
+- style: dark
+  title: Bars buckle, ==ties stop them==
+  seconds: 5.8
+  voice: Column bars don't snap. They buckle out sideways, and this is what stops them.
+- title: Squeeze it
+  seconds: 6.2
+  voice: Squeeze a column, and the vertical bars want to bow out and push the cover off.
+- title: Ties hold them in
+  seconds: 5.1
+  voice: Ties hold them in. Each bar can only buckle between two ties.
+- title: How close?
+  seconds: 4.3
+  voice: So how close? A C I takes the least of three numbers.
+- title: 'ACI: **12 in**'
+  seconds: 8.9
+  voice: 'Sixteen bar diameters, forty eight tie diameters, or the smallest column side. Number
+    eight bars in a twelve inch column: twelve inches.'
+- title: 'EC2: **300 mm**'
+  seconds: 6.2
+  voice: 'Eurocode: twenty bar diameters, the column width, or four hundred millimetres. Three
+    hundred millimetres here.'
+- title: 'Near slabs: **180 mm**'
+  seconds: 6.6
+  voice: Near a beam or slab, and at laps, it tightens to point six. One eighty millimetres.
+- title: 1–8% · max 4%
+  seconds: 6.2
+  voice: 'Total steel: one to eight percent in A C I. Four percent max in Eurocode, outside
+    laps.'
+- style: block
+  title: Series ==complete==
+  seconds: 3.9
+  voice: That's the column series. Start again at part one.

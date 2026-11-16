@@ -1,0 +1,69 @@
+id: 2026-11-22-beam-3-how-deep
+slot: '2026-11-22T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: draft
+motion: beam-depth
+source: https://engiformula.com/calculators
+caption: 'A 6 m beam needs about 375 mm of depth, and one ratio gets you there.
+
+
+  ACI 318-19 Table 9.3.1.1 minimum depth: simply supported L/16 = 375 mm (14.8 in), one end
+  continuous L/18.5, both ends continuous L/21, cantilever L/8 = 750 mm. Eurocode 2 (EN 1992-1-1:2004
+  Table 7.4N) asks how much steel you used: L/d 14 for heavily reinforced, 20 for lightly, so
+  d = 300–429 mm, and only 0.4 of that for a cantilever.
+
+
+  Do you start sizing beams from span/depth or from the moment?
+
+
+  Part 3 of 3. Save the beam series and rewatch from Part 1.'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#beamdesign'
+- '#eurocode'
+- '#engiformula'
+first_comment: 'Free structural calculators: https://engiformula.com/calculators'
+alt_text: 'Animation of a 6 metre beam drawn to scale whose depth changes with the rule: L over
+  16 gives 375 mm, then L over 18.5, L over 21 and L over 8 for a cantilever. A slider shows
+  the Eurocode span to effective depth ratio moving from 20 to 14, and the cantilever factor
+  of 0.4.'
+ai_generated: false
+slides:
+- style: dark
+  title: How deep ==should it be?==
+  seconds: 7.4
+  voice: A six metre beam needs about three hundred seventy five millimetres of depth, and one
+    ratio gets you there.
+- title: 'ACI: L / 16'
+  seconds: 3.9
+  voice: 'A C I''s minimum depth table. Simply supported: span over sixteen.'
+- title: '**375 mm**'
+  seconds: 4.7
+  voice: 'Six thousand over sixteen: three seventy five millimetres, about fifteen inches.'
+- title: L/18.5 · L/21 · L/8
+  seconds: 6.6
+  voice: 'One end continuous: over eighteen and a half. Both ends: over twenty one. Cantilever:
+    over eight.'
+- title: Eurocode asks ==about steel==
+  seconds: 4.7
+  voice: 'Eurocode asks a different question: how much steel did you use?'
+- title: L/d **14 to 20**
+  seconds: 7.8
+  voice: 'Heavily reinforced: span over effective depth of fourteen. Lightly reinforced: twenty.
+    A depth of three hundred to four thirty.'
+- title: 'Cantilever: ==× 0.4=='
+  seconds: 3.5
+  voice: The cantilever only gets point four of that.
+- title: 'Part 1: 48× the sag'
+  seconds: 4.7
+  voice: That's part one's forty eight times sag, written as a ratio.
+- style: block
+  title: Why the fixed beam ==won==
+  seconds: 9.3
+  voice: 'Meet the ratio, and in most cases deflection is covered. Fix both ends: span over
+    twenty one. That''s why the fixed beam won.'

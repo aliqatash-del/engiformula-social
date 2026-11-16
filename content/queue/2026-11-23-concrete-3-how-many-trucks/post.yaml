@@ -1,0 +1,69 @@
+id: 2026-11-23-concrete-3-how-many-trucks
+slot: '2026-11-23T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: draft
+motion: truck-order
+source: https://engiformula.com/calculators
+caption: 'Order 52 yards and you pay for a 2-yard truck. Order 50 and you might run short.
+
+
+  The Part 2 basement is 47.88 yd³ net: +5% = 50.3, +10% = 52.7. At about 10 yd³ a truck (check
+  your supplier), 52 is five full trucks plus a 2-yard short load, which usually costs extra;
+  50 is exactly five trucks with 4.4% spare. Each 10 yd³ truck carries about 20 tons (39,000–40,500
+  lb) and ASTM C94 asks for discharge within 90 minutes, so space trucks to your pour rate.
+  Pro move: call the last truck after you measure what is left.
+
+
+  Do you hold the last truck or order it all up front?
+
+
+  Part 3 of 3. Save the concrete series. Free concrete calculator — link in bio.'
+hashtags:
+- '#construction'
+- '#concrete'
+- '#readymix'
+- '#estimating'
+- '#engiformula'
+first_comment: 'Free concrete calculator: https://engiformula.com/calculators'
+alt_text: 'Animation of concrete trucks: six trucks for a 52 cubic yard order with the last
+  carrying only 2 yards and a short-load fee tag, then five full trucks for 50 yards. Bars show
+  47.9 net, 50.3 with 5 percent and 52.7 with 10 percent. A big truck shows about 20 tons, and
+  a 90 minute clock sweeps round.'
+ai_generated: false
+slides:
+- style: dark
+  title: 52 or 50 ==yards?==
+  seconds: 7.8
+  voice: Order fifty two yards, and you pay for a two yard truck. Order fifty, and you might
+    run short.
+- title: '**47.9 yd³** net'
+  seconds: 4.7
+  voice: 'Our basement from part two: forty seven point nine yards net.'
+- title: +5% · +10%
+  seconds: 5.1
+  voice: 'Add five percent: fifty point three. Add ten: fifty two point seven.'
+- title: Here's ==the catch==
+  seconds: 4.7
+  voice: Here's the catch. Trucks typically carry up to about ten yards.
+- title: 52 = ==6 trucks==
+  seconds: 7.4
+  voice: Fifty two is five full trucks, plus a two yard short load. And short loads usually
+    cost extra.
+- title: 50 = **5 trucks**
+  seconds: 4.7
+  voice: Fifty is exactly five trucks, with four point four percent spare.
+- title: ≈ **20 tons** each
+  seconds: 4.7
+  voice: Each truck is about twenty tons of concrete. And a clock.
+- title: '**90 min**'
+  seconds: 6.2
+  voice: 'A S T M C ninety four: discharge within ninety minutes. Space the trucks to your pour
+    rate.'
+- style: block
+  title: Call the ==last truck== late
+  seconds: 5.8
+  voice: 'Pro move: call the last truck after you''ve measured what''s left. Save the series.'
