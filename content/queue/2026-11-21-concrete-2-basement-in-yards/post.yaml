@@ -1,0 +1,86 @@
+id: 2026-11-21-concrete-2-basement-in-yards
+slot: '2026-11-21T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: calculator
+status: approved
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+motion: basement-volume
+source: https://engiformula.com/calculators
+caption: 'A 30 × 40 ft basement takes about 48 yd³ of concrete, and over half of it
+  is the walls.
+
+
+  On the 137.3 ft centerline: footing 20 × 10 in = 7.06 yd³, walls 8 in × 8 ft = 27.13
+  yd³, slab 4 in = 13.68 yd³. Total 47.88 yd³ (36.6 m³), walls 57%. Measure the outside
+  instead of the centerline and you count every corner twice: +0.53 yd³.
+
+
+  Do you take off foundations on the centerline or the outside face?
+
+
+  Part 2 of 3. Follow for Part 3: how many trucks. Free concrete calculator — link
+  in bio.'
+hashtags:
+- '#construction'
+- '#concrete'
+- '#foundations'
+- '#estimating'
+- '#engiformula'
+first_comment: 'Free concrete calculator: https://engiformula.com/calculators'
+alt_text: 'Animation of a 30 by 40 foot basement built up in 3D: the footing ring,
+  8 foot walls and the slab, while a stacked bar fills to 47.9 cubic yards with the
+  walls taking 57 percent. Red corner blocks show the overlap counted twice when measuring
+  the outside perimeter.'
+ai_generated: false
+slides:
+- style: dark
+  title: 48 yd³, ==57% walls==
+  seconds: 8.22
+  voice: A thirty by forty basement takes about forty eight cubic yards of concrete.
+    Over half of it is the walls.
+- title: Footing 20 × 10 in
+  seconds: 4.45
+  voice: 'Start with the footing: twenty inches wide, ten deep.'
+- title: 'Centerline: **7.06 yd³**'
+  seconds: 6.95
+  voice: Run it along the centerline, a hundred thirty seven feet. Seven point oh
+    six yards.
+- title: The big one
+  seconds: 3.68
+  voice: Now the walls. This is the big one.
+- title: 'Walls: **27.1 yd³**'
+  seconds: 5.45
+  voice: Eight inches thick, eight feet tall. Twenty seven point one yards.
+- title: 'Slab: **13.7 yd³**'
+  seconds: 5.65
+  voice: Then the slab, four inches, inside the walls. Thirteen point seven.
+- title: Total **47.9 yd³**
+  seconds: 6.42
+  voice: 'Total: forty seven point nine yards. About thirty six and a half cubic metres.'
+- title: Corners ==twice==
+  seconds: 7.85
+  voice: Measure the outside instead of the centerline, and you pay for every corner
+    twice. Half a yard extra.
+- style: block
+  title: 'Part 3: ==how many trucks?=='
+  seconds: 7.47
+  voice: Forty eight yards is five trucks, or six. The last truck is where the money
+    goes. Part three.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 7ffc0486170c
+media:
+- reel.mp4

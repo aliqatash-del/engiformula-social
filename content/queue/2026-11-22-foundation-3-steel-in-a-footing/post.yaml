@@ -1,0 +1,88 @@
+id: 2026-11-22-foundation-3-steel-in-a-footing
+slot: '2026-11-22T20:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: site
+status: approved
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+motion: footing-steel
+source: https://engiformula.com/calculators
+caption: 'The math says this footing needs 0.59 in² of steel. The code minimum says
+  double.
+
+
+  Soil pushes up and the column holds it down, so the footing is a cantilever off
+  the column face with tension at the bottom. Mu = 2.963 ksf × 4.5 ft × 1.75² / 2
+  = 20.4 kip-ft (27.7 kN·m) → 0.59 in² (383 mm²). The Grade 60 minimum, 0.0018 × 54
+  × 12 = 1.17 in² (752 mm²), governs: 6 #4 each way, about 9½ in apart. Keep 3 in
+  of cover cast against earth (ACI 318-19 Table 20.5.1.3.1; 75 mm in Eurocode 2).
+
+
+  What do your crews use to hold the mat at 3 in?
+
+
+  Part 3 of 3. Save the foundation series. Free footing calculator — link in bio.'
+hashtags:
+- '#construction'
+- '#civilengineering'
+- '#foundations'
+- '#rebar'
+- '#engiformula'
+first_comment: 'Free concrete footing calculator: https://engiformula.com/calculators'
+alt_text: Animation of a footing section under soil pressure. It flips upside down
+  to show two cantilevers, then flips back with the tension zone at the bottom. Six
+  bars drop into the bottom mat with a 3 inch cover dimension, and dowels rise from
+  the mat into the column.
+ai_generated: false
+slides:
+- style: dark
+  title: 0.59 in²? ==Code says double==
+  seconds: 7.12
+  voice: The math says this footing needs point five nine square inches of steel.
+    The code says double.
+- title: Flip it over
+  seconds: 5.5
+  voice: Flip it over. The soil pushes up, and the column holds it down.
+- title: Tension at ==the bottom==
+  seconds: 5.85
+  voice: It's a cantilever off the column face, so the tension is at the bottom.
+- title: '**20.4 kip·ft** → 0.59 in²'
+  seconds: 7.07
+  voice: 'Moment at the face: twenty point four kip feet. That needs point five nine
+    square inches.'
+- title: Minimum 0.0018 bh
+  seconds: 5.85
+  voice: But the code minimum is point zero zero one eight, times the gross area.
+- title: '6 #4 ==each way=='
+  seconds: 8.4
+  voice: One point one seven square inches. Six number four bars each way, about nine
+    and a half inches apart.
+- title: '**3 in** cover'
+  seconds: 8.6
+  voice: 'And the number site crews forget: three inches of cover against the ground.
+    Seventy five millimetres in Eurocode.'
+- title: Dowels
+  seconds: 4.7
+  voice: Then the dowels go in, standing up out of the footing.
+- style: block
+  title: Where the ==column starts==
+  seconds: 6.15
+  voice: That's where the column starts. Save the series, and watch the column series
+    next.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: a09fc0814420
+media:
+- reel.mp4

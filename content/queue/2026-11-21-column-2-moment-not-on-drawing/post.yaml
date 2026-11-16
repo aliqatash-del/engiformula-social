@@ -1,0 +1,89 @@
+id: 2026-11-21-column-2-moment-not-on-drawing
+slot: '2026-11-21T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: approved
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+motion: column-pdelta
+source: https://engiformula.com/calculators
+caption: 'This column has zero moment on the drawing. It still gets designed for 20
+  kN·m.
+
+
+  No column is straight: EC2 5.2(9) allows an imperfection of l0/400, 7.5 mm on 3
+  m, so 1,000 kN (225 kips) already gives 7.5 kN·m. P-delta grows it by 1/(1 − N/Ncr):
+  1.33× at 25% of the buckling load, 2× at 50%, 5× at 80%. So codes set a floor: EC2
+  6.1(4) e0 = max(h/30, 20 mm) → 20 kN·m (14.8 kip-ft); ACI 318-19 6.6.4.5.4 uses
+  0.6 + 0.03h in → 0.96 in for a 12 in column.
+
+
+  Do you check minimum eccentricity by hand or trust the software?
+
+
+  Part 2 of 3. Follow for Part 3: why ties are so close.'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#columns'
+- '#pdelta'
+- '#engiformula'
+first_comment: 'Free structural calculators: https://engiformula.com/calculators'
+alt_text: Animation of a column under 1,000 kN. A drawing says the moment is zero,
+  then a stamp says design moment 20 kN·m. The column bows by its 7.5 mm imperfection,
+  a feedback loop of load, bend, offset and moment spins, bars show the moment growing
+  1.33, 2 and 5 times, and the Eurocode and ACI minimum eccentricity rules appear.
+ai_generated: false
+slides:
+- style: dark
+  title: Zero moment? ==20 kN·m==
+  seconds: 7.4
+  voice: This column has zero moment on the drawing. It still gets designed for twenty
+    kilonewton metres.
+- title: Nothing is straight
+  seconds: 3.28
+  voice: No column is perfectly straight.
+- title: l0 / 400 = **7.5 mm**
+  seconds: 7.75
+  voice: 'Eurocode assumes it''s out by length over four hundred. Three metres: seven
+    and a half millimetres.'
+- title: '**7.5 kN·m** already'
+  seconds: 6.87
+  voice: Under a thousand kilonewtons, that offset is already seven and a half kilonewton
+    metres.
+- title: It ==snowballs==
+  seconds: 7.02
+  voice: And it snowballs. The moment bends it, the bend adds offset, and the offset
+    adds moment.
+- title: ×1.33 · ×2 · ==×5==
+  seconds: 8.9
+  voice: At a quarter of the buckling load, the moment grows by a third. At half,
+    it doubles. At eighty percent, five times.
+- title: Codes set a floor
+  seconds: 2.75
+  voice: So codes set a floor.
+- title: e0 = **20 mm**
+  seconds: 12.0
+  voice: 'Eurocode: at least twenty millimetres, or h over thirty. That''s twenty
+    kilonewton metres. A C I: point six plus point zero three h, in inches.'
+- style: block
+  title: 'Part 3: ==ties=='
+  seconds: 5.2
+  voice: So what stops the bars inside from bursting out? Part three.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: c985ac61723a
+media:
+- reel.mp4

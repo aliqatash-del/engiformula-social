@@ -1,0 +1,87 @@
+id: 2026-11-19-column-1-same-column-16x
+slot: '2026-11-19T15:00:00+03:00'
+type: reel
+platforms:
+- instagram
+- facebook
+pillar: knowledge
+status: approved
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+motion: column-ends
+source: https://engiformula.com/calculators
+caption: 'Same column, same concrete. Change how the ends are held and it carries
+  16× more.
+
+
+  Euler: P = π²EI/(kL)², so capacity goes with 1/k². Flagpole k = 2.0 → 0.25×, pinned
+  1×, fixed–pinned 0.7 → 2×, fixed–fixed 0.5 → 4×. With the recommended design values
+  (2.1 and 0.65, AISC 360-22 Commentary Table C-A-7.1) the gap is still about 10×.
+  A pinned 3 m, 300 mm (12 in) column has slenderness 3000 / 86.6 = 35.
+
+
+  Which end condition do you assume for a precast column?
+
+
+  Part 1 of 3. Follow for Part 2: the moment that is not on the drawing.'
+hashtags:
+- '#civilengineering'
+- '#structuralengineering'
+- '#columns'
+- '#buckling'
+- '#engiformula'
+first_comment: 'Free structural calculators: https://engiformula.com/calculators'
+alt_text: 'Animation of four identical columns: a flagpole, pinned at both ends, fixed
+  and pinned, and fixed at both ends. Each buckles into its mode shape with a bracket
+  for the effective length, and capacities of 0.25, 1, 2 and 4 times appear. Then
+  a 300 mm column 3 m tall shows slenderness 34.6.'
+ai_generated: false
+slides:
+- style: dark
+  title: Same column, ==16×==
+  seconds: 7.25
+  voice: Same column, same concrete. Change how the ends are held, and it carries
+    sixteen times more.
+- title: 'Flagpole: k = 2'
+  seconds: 6.92
+  voice: 'A flagpole: fixed at the base, free at the top. It buckles like a column
+    twice its height.'
+- title: 'Pinned: **1×**'
+  seconds: 5.27
+  voice: 'Pin both ends: one half wave. That''s the reference. One times.'
+- title: 'Fixed–pinned: **2×**'
+  seconds: 6.8
+  voice: Now clamp one end. The effective length drops to point seven. Twice the capacity.
+- title: 'Fixed–fixed: **4×**'
+  seconds: 6.15
+  voice: 'Clamp both: point five. Four times. Flagpole to fixed, sixteen times.'
+- title: Nothing is ==truly fixed==
+  seconds: 8.77
+  voice: But nothing on site is truly fixed. Engineers design with point six five,
+    and two point one for the flagpole.
+- title: Still ==10×==
+  seconds: 2.68
+  voice: Still about ten times.
+- title: Slenderness **λ = 35**
+  seconds: 9.95
+  voice: 'Slenderness is effective length over radius of gyration. A three metre,
+    three hundred millimetre column, pinned: thirty five.'
+- style: block
+  title: 'Part 2: ==the hidden moment=='
+  seconds: 5.95
+  voice: And all of this assumes the column is perfectly straight. None are. Part
+    two.
+frames:
+- frame-01.jpg
+- frame-02.jpg
+- frame-03.jpg
+- frame-04.jpg
+- frame-05.jpg
+- frame-06.jpg
+- frame-07.jpg
+- frame-08.jpg
+- frame-09.jpg
+voiceover: voice.m4a
+captions: captions.srt
+reel_built_from: 4bd0dd6ff432
+media:
+- reel.mp4
