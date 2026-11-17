@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: beam-supports
 source: https://engiformula.com/calculators
 caption: 'Same 6 m beam, same load. The supports alone move the bending moment from
@@ -85,3 +86,8 @@ captions: captions.srt
 reel_built_from: 7447d93d439c
 media:
 - reel.mp4
+published_at: '2026-11-17T12:02:57.098625+00:00'
+published_ids:
+  instagram: '18126986620898205'
+  facebook: '1640370607837617'
+publish_errors: null
