@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: footing-bearing
 source: https://engiformula.com/calculators
 caption: 'This column presses on the ground 20× harder than the soil can take.
@@ -84,3 +85,8 @@ captions: captions.srt
 reel_built_from: 55a367d85841
 media:
 - reel.mp4
+published_at: '2026-11-17T17:18:28.829859+00:00'
+published_ids:
+  instagram: '17932393104181306'
+  facebook: '1474302504894269'
+publish_errors: null
