@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: column-ends
 source: https://engiformula.com/calculators
 caption: 'Same column, same concrete. Change how the ends are held and it carries
@@ -85,3 +86,8 @@ captions: captions.srt
 reel_built_from: 4bd0dd6ff432
 media:
 - reel.mp4
+published_at: '2026-11-18T12:02:27.314876+00:00'
+published_ids:
+  instagram: '18131925637861964'
+  facebook: '1714653050335189'
+publish_errors: null
