@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: footing-punch
 source: https://engiformula.com/calculators
 caption: 'A footing can pass bearing and still fail: the column punches through it
@@ -85,3 +86,8 @@ captions: captions.srt
 reel_built_from: fe03c4d083f0
 media:
 - reel.mp4
+published_at: '2026-11-19T17:02:05.743042+00:00'
+published_ids:
+  instagram: '18139026067788444'
+  facebook: '3625136124311150'
+publish_errors: null
