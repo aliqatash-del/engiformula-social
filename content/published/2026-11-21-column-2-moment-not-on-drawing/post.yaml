@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: column-pdelta
 source: https://engiformula.com/calculators
 caption: 'This column has zero moment on the drawing. It still gets designed for 20
@@ -87,3 +88,8 @@ captions: captions.srt
 reel_built_from: c985ac61723a
 media:
 - reel.mp4
+published_at: '2026-11-20T12:02:15.585767+00:00'
+published_ids:
+  instagram: '18119700286816387'
+  facebook: '1114584731387963'
+publish_errors: null
