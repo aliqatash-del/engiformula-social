@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: basement-volume
 source: https://engiformula.com/calculators
 caption: 'A 30 × 40 ft basement takes about 48 yd³ of concrete, and over half of it
@@ -84,3 +85,8 @@ captions: captions.srt
 reel_built_from: 7ffc0486170c
 media:
 - reel.mp4
+published_at: '2026-11-20T17:02:20.330207+00:00'
+published_ids:
+  instagram: '18253600912310800'
+  facebook: '4080877442219096'
+publish_errors: null
