@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: knowledge
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: beam-depth
 source: https://engiformula.com/calculators
 caption: 'A 6 m beam needs about 375 mm of depth, and one ratio gets you there.
@@ -84,3 +85,8 @@ captions: captions.srt
 reel_built_from: f46dbf3ececd
 media:
 - reel.mp4
+published_at: '2026-11-21T12:02:05.060170+00:00'
+published_ids:
+  instagram: '18226178647346177'
+  facebook: '3341326902742405'
+publish_errors: null
