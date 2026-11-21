@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: footing-steel
 source: https://engiformula.com/calculators
 caption: 'The math says this footing needs 0.59 in² of steel. The code minimum says
@@ -86,3 +87,8 @@ captions: captions.srt
 reel_built_from: a09fc0814420
 media:
 - reel.mp4
+published_at: '2026-11-21T17:02:08.919247+00:00'
+published_ids:
+  instagram: '18000879845830316'
+  facebook: '30373405122247682'
+publish_errors: null
