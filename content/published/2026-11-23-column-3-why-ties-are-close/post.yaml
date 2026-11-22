@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: site
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: column-ties
 source: https://engiformula.com/calculators
 caption: 'Column bars do not snap. They buckle out sideways, and ties are what stop
@@ -87,3 +88,8 @@ captions: captions.srt
 reel_built_from: 19570c674ef7
 media:
 - reel.mp4
+published_at: '2026-11-22T12:02:02.864647+00:00'
+published_ids:
+  instagram: '18400480093161836'
+  facebook: '1155125193647215'
+publish_errors: null
