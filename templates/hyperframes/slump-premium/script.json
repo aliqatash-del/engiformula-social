@@ -1,0 +1,10 @@
+[
+ {"id":"hook","voice":"Fail this test, and the whole truck goes back. Here's how to run it right."},
+ {"id":"setup","voice":"Damp cone, damp base plate. Stand on the foot pieces so it can't lift."},
+ {"id":"fill","voice":"Fill it in three layers, each one a third of the volume. Twenty-five strokes per layer."},
+ {"id":"rehook","voice":"Now the step most crews get wrong."},
+ {"id":"lift","voice":"Lift straight up in about five seconds. No twist, no jerk."},
+ {"id":"measure","voice":"Flip the cone, lay the rod across, and measure down to the center of the top. Four inches."},
+ {"id":"payoff","voice":"The ticket says four. Under A S T M C ninety-four, three to five passes. Seven? Call the plant before anyone adds water."},
+ {"id":"cta","voice":"Part three is that water problem. Follow so you catch it."}
+]
