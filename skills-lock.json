@@ -42,6 +42,13 @@
       "skillPath": "skills/hyperframes-registry/SKILL.md",
       "computedHash": "b22ef066fd753edd221fc1873273e8479e97b34ebed3a342027df46afa77241f"
     },
+    "manim-skill": {
+      "source": "Yusuke710/manim-skill",
+      "commit": "a0048d9e265499038f34a9aa58ff16d306b5034c",
+      "sourceType": "github",
+      "skillPath": "skills/manim-skill/SKILL.md",
+      "computedHash": "1b23caea40ec426955e7195ab917ff013e8d51a968045cd5490f547dfee6263f"
+    },
     "marketing-psychology": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -158,6 +165,13 @@
       "sourceType": "github",
       "skillPath": "skills/social/SKILL.md",
       "computedHash": ""
+    },
+    "viral-hooks": {
+      "source": "rediumvex/viral-hooks-skill",
+      "commit": "e26b339ccf452abf43bb97df54603e4781ae0a8e",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "f3ed4bb632b1fca7a966d2413309ae91fd94f4d528deaad9c857c2dbfd009c48"
     }
   }
 }
