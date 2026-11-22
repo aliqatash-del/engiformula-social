@@ -5,8 +5,9 @@ platforms:
 - instagram
 - facebook
 pillar: calculator
-status: approved
-approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18 to 23 Nov series reels)
+status: published
+approved_via: owner approved in the project thread on 17 Nov ("approved" for the 18
+  to 23 Nov series reels)
 motion: truck-order
 source: https://engiformula.com/calculators
 caption: 'Order 52 yards and you pay for a 2-yard truck. Order 50 and you might run
@@ -86,3 +87,14 @@ captions: captions.srt
 reel_built_from: 1a0b6358a052
 media:
 - reel.mp4
+published_at: '2026-11-22T17:02:05.699864+00:00'
+published_ids:
+  instagram: '18136809712871056'
+  facebook: '1906508520337178'
+publish_errors:
+  facebook: 'POST https://graph.facebook.com/v24.0/1906508520337178/comments failed
+    (400): {''error'': {''message'': "Unsupported post request. Object with ID ''1906508520337178''
+    does not exist, cannot be loaded due to missing permissions, or does not support
+    this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api",
+    ''type'': ''GraphMethodException'', ''code'': 100, ''error_subcode'': 33, ''fbtrace_id'':
+    ''AOl4rXpJfjIQZCdkH5UhMcA''}}'
