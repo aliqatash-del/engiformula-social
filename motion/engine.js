@@ -352,3 +352,79 @@
   window.E = E;
   window.SCENES = window.SCENES || {};
 })();
+
+// ---------- v2 reel kit (Nov 2026 upgrade): kinetic captions, per-beat headlines, punch cuts ----------
+(function () {
+  const E = window.E;
+  // Word timings come from the voiceover: window.WORDS = [[word, start, end], ...] (seconds, real time).
+  // Groups of up to 3 words, broken at punctuation; the spoken word is yellow, the rest white.
+  E.capGroups = (words, n = 3) => {
+    const G = []; let g = [];
+    for (const w of words || []) { g.push(w); if (g.length >= n || /[,.;:!?]$/.test(w[0])) { G.push(g); g = []; } }
+    if (g.length) G.push(g);
+    if (G.length) G[0][0] = [G[0][0][0], 0, G[0][0][2]];
+    G.forEach((q, i) => { q.a = q[0][1]; q.b = i + 1 < G.length && G[i + 1][0][1] - q[q.length - 1][2] < 0.5 ? G[i + 1][0][1] : q[q.length - 1][2] + 0.25; });
+    return G;
+  };
+  E.kcap = (ctx, t, G, y = 1330) => {
+    const g = (G || []).find(q => t >= q.a && t < q.b);
+    if (!g) return;
+    const k = E.back(E.seg(t, g.a, g.a + 0.18));
+    ctx.save();
+    ctx.font = E.font(700, 74, 'title');
+    const parts = g.map(w => w[0].replace(/[,.;:!?]$/, '')), sp = 22;
+    const ws = parts.map(p => ctx.measureText(p).width), W = ws.reduce((s, v) => s + v, 0) + sp * (parts.length - 1);
+    ctx.translate(540, y); ctx.scale(E.lerp(0.82, 1, E.clamp(k)), E.lerp(0.82, 1, E.clamp(k))); ctx.globalAlpha = E.clamp(k * 1.5);
+    ctx.fillStyle = 'rgba(8,24,42,0.88)'; E.rrect(ctx, -W / 2 - 30, -70, W + 60, 100, 18); ctx.fill();
+    let x = -W / 2;
+    g.forEach((w, i) => {
+      const on = t >= w[1] - 0.05;
+      ctx.fillStyle = t >= w[1] - 0.05 && t < (g[i + 1] ? g[i + 1][1] : g.b) ? E.C.yellow : on ? '#FFFFFF' : 'rgba(255,255,255,0.55)';
+      ctx.textBaseline = 'alphabetic'; ctx.fillText(parts[i], x, 0); x += ws[i] + sp;
+    });
+    ctx.restore();
+  };
+  // Headline per beat: "plain ==highlight==" in Space Grotesk, slides up at t0. Max 2 lines (wraps at 952 px).
+  E.headline = (ctx, t, t0, s, o = {}) => {
+    const k = E.out(E.seg(t, t0, t0 + 0.28));
+    const size = o.size || 86, x0 = 64, y0 = (o.y || 430) + 40 * (1 - k);
+    ctx.save(); ctx.globalAlpha = o.first ? 1 : k;
+    ctx.font = E.font(700, size, 'title'); ctx.textBaseline = 'alphabetic';
+    const toks = []; s.split(/(==[^=]+==)/).filter(Boolean).forEach(p => { const hl = p.startsWith('=='); p.replace(/==/g, '').split(/(\s+)/).filter(q => q.length).forEach(w => toks.push([w, hl])); });
+    let x = x0, y = y0;
+    for (const [w, hl] of toks) {
+      const wd = ctx.measureText(w).width;
+      if (/^\s+$/.test(w)) { if (hl && x > x0) { ctx.fillStyle = E.C.yellow; ctx.fillRect(x - 2, y - size * 0.8, wd + 4, size * 0.98); } x += wd; continue; }
+      if (x + wd > 1016 && x > x0) { x = x0; y += size * 1.08; }
+      if (hl) { ctx.fillStyle = E.C.yellow; E.rrect(ctx, x - 8, y - size * 0.8, wd + 16, size * 0.98, 10); ctx.fill(); ctx.fillStyle = E.C.navy; }
+      else ctx.fillStyle = o.color || '#FFFFFF';
+      ctx.fillText(w, x, y); x += wd;
+    }
+    ctx.restore();
+  };
+  // Punch cut at each beat start: a quick 6% scale settle + a faint flash. Returns the scale to apply.
+  E.punch = (t, B) => { const i = E.beatOf(t, B); if (i === 0) return 1; return 1 + 0.06 * (1 - E.out(E.seg(t, B[i], B[i] + 0.32))); };
+  E.flash = (ctx, t, B) => {
+    const i = E.beatOf(t, B); if (i === 0) return;
+    const a = 0.12 * (1 - E.seg(t, B[i], B[i] + 0.12)); if (a <= 0) return;
+    ctx.save(); ctx.fillStyle = `rgba(255,255,255,${a})`; ctx.fillRect(0, 0, E.W, E.H); ctx.restore();
+  };
+  // Time (real seconds) the n-th occurrence of a word is spoken, from window.WORDS; fallback f.
+  E.said = (word, f, n = 0) => {
+    const hits = (window.WORDS || []).filter(w => w[0].toLowerCase().replace(/[^a-z0-9']/g, '') === word.toLowerCase());
+    return hits[n] ? hits[n][1] : f;
+  };
+  // Dark blueprint background with a soft vignette so the hero object pops.
+  E.bg2 = (ctx) => {
+    E.bg(ctx, 'blueprint');
+    const g = ctx.createRadialGradient(540, 860, 200, 540, 860, 1200);
+    g.addColorStop(0, 'rgba(30,91,216,0.18)'); g.addColorStop(1, 'rgba(4,14,26,0.65)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, E.W, E.H);
+  };
+  E.bigNum = (ctx, t, t0, s, x, y, o = {}) => {
+    const k = E.back(E.seg(t, t0, t0 + 0.3)); if (k <= 0) return;
+    ctx.save(); ctx.translate(x, y); const sc = E.lerp(1.6, 1, E.clamp(k)); ctx.scale(sc, sc); ctx.globalAlpha = E.clamp(k * 2);
+    E.text(ctx, s, 0, 0, { fam: o.fam || 'title', weight: 700, size: o.size || 120, color: o.color || E.C.yellow, align: o.align || 'center', base: 'middle' });
+    ctx.restore();
+  };
+})();
