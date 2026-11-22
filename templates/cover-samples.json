@@ -1,0 +1,11 @@
+[
+ {"series":"POUR DAY","part":1,"title":["5 checks","==before== the","truck arrives"],"art":"truck","number":"5","numLabel":"CHECKS","theme":"orange"},
+ {"series":"REBAR ON SITE","part":1,"title":["Read a","==bar mark==","in 10 s"],"art":"rebar","number":"10 s","numLabel":"TO READ","theme":"yellow"},
+ {"series":"SETTING OUT","part":1,"title":["The ==3-4-5==","trick for a","square corner"],"art":"square","number":"90°","numLabel":"EVERY TIME","theme":"blue"},
+ {"series":"EARTHWORKS","part":1,"title":["Why 100 yd³","dug is ==not==","100 yd³ hauled"],"art":"roller","number":"+25%","numLabel":"TYPICAL","theme":"green","size":120},
+ {"series":"POUR DAY","part":2,"title":["The ==slump==","test in","60 seconds"],"art":"slump","number":"60 s","numLabel":"ON SITE","theme":"orange"},
+ {"series":"REBAR ON SITE","part":2,"title":["Check ==cover==","with just","a tape"],"art":"cover","number":"2 in","numLabel":"50 mm","theme":"yellow"},
+ {"series":"SETTING OUT","part":2,"title":["Equal","==diagonals==","= square"],"art":"diagonals","number":"50 ft","numLabel":"30 x 40","theme":"blue"},
+ {"series":"EARTHWORKS","part":2,"title":["What ==95%==","compaction","really means"],"art":"roller","number":"95%","numLabel":"PROCTOR","theme":"green"},
+ {"series":"POUR DAY","part":3,"title":["Never add","==water== at","the truck"],"art":"truck","number":"+0.03","numLabel":"W/C PER 10 L","theme":"orange","size":126}
+]

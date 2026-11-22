@@ -1,0 +1,124 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: "Inter"; font-weight: 600; src: url("fonts/inter-latin-600-normal.woff2"); }
+  @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("fonts/space-grotesk-latin-700-normal.woff2"); }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 600; src: url("fonts/jetbrains-mono-latin-600-normal.woff2"); }
+  html, body { margin: 0; background: #000; }
+</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Reel cover (1080x1920). The profile grid shows the centre 1080x1440 (y 240-1680), so everything that matters sits there.
+// window.cover({series, part, title:[...lines with ==hl==], number, numLabel, art, theme}) draws one cover.
+const C = { paper: '#F7F5F0', navy: '#0E2A47', blue: '#1E5BD8', orange: '#F26A1B', yellow: '#FFC145', steel: '#8A9BB0', concrete: '#E6E8EB', green: '#187A50', red: '#C73A3A' };
+const THEMES = {
+  orange: { bg: C.orange, ink: '#FFFFFF', hl: C.navy, hlInk: '#FFFFFF', accent: C.yellow, line: C.navy },
+  yellow: { bg: C.yellow, ink: C.navy, hl: C.navy, hlInk: C.yellow, accent: C.orange, line: C.navy },
+  blue:   { bg: C.blue, ink: '#FFFFFF', hl: C.yellow, hlInk: C.navy, accent: C.yellow, line: C.navy },
+  green:  { bg: C.green, ink: '#FFFFFF', hl: C.yellow, hlInk: C.navy, accent: C.yellow, line: C.navy },
+  paper:  { bg: C.paper, ink: C.navy, hl: C.orange, hlInk: '#FFFFFF', accent: C.orange, line: C.navy },
+};
+const ctx = document.getElementById('c').getContext('2d');
+const F = (w, s, f) => `${w} ${s}px ${f === 'mono' ? '"JetBrains Mono"' : f === 'title' ? '"Space Grotesk"' : 'Inter'}`;
+const rr = (x, y, w, h, r) => { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); };
+const poly = (pts, fill, stroke, lw = 8) => { ctx.beginPath(); pts.forEach((p, i) => i ? ctx.lineTo(...p) : ctx.moveTo(...p)); ctx.closePath(); if (fill) { ctx.fillStyle = fill; ctx.fill(); } if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = lw; ctx.lineJoin = 'round'; ctx.stroke(); } };
+
+// ---------- flat illustrations, drawn in a 1080 x 700 box starting at y0 ----------
+const ART = {
+  slump(T, y0) { // slump cone + slumped concrete + tape
+    poly([[300, y0 + 600], [520, y0 + 600], [470, y0 + 260], [350, y0 + 260]], C.steel, T.line);
+    ctx.fillStyle = C.concrete; ctx.beginPath(); ctx.moveTo(600, y0 + 600); ctx.bezierCurveTo(600, y0 + 430, 660, y0 + 360, 720, y0 + 360); ctx.bezierCurveTo(800, y0 + 360, 860, y0 + 430, 860, y0 + 600); ctx.closePath(); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 8; ctx.stroke();
+    ctx.fillStyle = T.line; ctx.fillRect(220, y0 + 600, 720, 18);
+    ctx.fillStyle = C.yellow; ctx.fillRect(900, y0 + 260, 46, 340); ctx.strokeStyle = T.line; ctx.lineWidth = 6; ctx.strokeRect(900, y0 + 260, 46, 340);
+    for (let y = y0 + 280; y < y0 + 600; y += 34) { ctx.beginPath(); ctx.moveTo(900, y); ctx.lineTo(924, y); ctx.stroke(); }
+    ctx.setLineDash([16, 12]); ctx.beginPath(); ctx.moveTo(600, y0 + 260); ctx.lineTo(890, y0 + 260); ctx.moveTo(760, y0 + 360); ctx.lineTo(890, y0 + 360); ctx.stroke(); ctx.setLineDash([]);
+  },
+  truck(T, y0) { // mixer truck
+    poly([[180, y0 + 300], [430, y0 + 300], [430, y0 + 540], [180, y0 + 540]], '#FFFFFF', T.line);
+    poly([[200, y0 + 330], [400, y0 + 330], [400, y0 + 420], [200, y0 + 420]], '#BFD3FF', T.line, 6);
+    poly([[450, y0 + 500], [930, y0 + 500], [930, y0 + 540], [450, y0 + 540]], C.steel, T.line, 6);
+    ctx.save(); ctx.translate(690, y0 + 380); ctx.rotate(-0.18);
+    ctx.beginPath(); ctx.ellipse(0, 0, 250, 130, 0, 0, 7); ctx.fillStyle = C.concrete; ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 8; ctx.stroke(); ctx.clip();
+    ctx.lineWidth = 10; ctx.strokeStyle = C.orange; for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(-200 + k * 70, -110); ctx.lineTo(-120 + k * 70, 120); ctx.stroke(); }
+    ctx.restore();
+    poly([[160, y0 + 540], [960, y0 + 540], [960, y0 + 580], [160, y0 + 580]], T.line);
+    [[300, 0], [700, 0], [850, 0]].forEach(([x]) => { ctx.beginPath(); ctx.arc(x, y0 + 600, 58, 0, 7); ctx.fillStyle = T.line; ctx.fill(); ctx.beginPath(); ctx.arc(x, y0 + 600, 22, 0, 7); ctx.fillStyle = C.concrete; ctx.fill(); });
+  },
+  rebar(T, y0) { // bars with a bar-mark tag
+    for (let i = 0; i < 5; i++) { const y = y0 + 260 + i * 70; ctx.fillStyle = C.steel; rr(140, y, 800, 34, 17); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 6; ctx.stroke(); ctx.strokeStyle = 'rgba(14,42,71,0.35)'; ctx.lineWidth = 4; for (let x = 160; x < 930; x += 26) { ctx.beginPath(); ctx.moveTo(x, y + 4); ctx.lineTo(x + 12, y + 30); ctx.stroke(); } }
+    ctx.save(); ctx.translate(640, y0 + 230); ctx.rotate(0.08); ctx.fillStyle = '#FFFFFF'; rr(0, 0, 300, 120, 14); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 6; ctx.stroke();
+    ctx.fillStyle = T.line; ctx.font = F(600, 46, 'mono'); ctx.fillText('2#5@12', 30, 76); ctx.restore();
+  },
+  cover(T, y0) { // tape measuring cover to a bar inside a slab edge
+    poly([[140, y0 + 260], [940, y0 + 260], [940, y0 + 620], [140, y0 + 620]], C.concrete, T.line);
+    [[260], [440], [620], [800]].forEach(([x]) => { ctx.beginPath(); ctx.arc(x, y0 + 540, 26, 0, 7); ctx.fillStyle = C.orange; ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 5; ctx.stroke(); });
+    ctx.fillStyle = C.yellow; ctx.fillRect(784, y0 + 566, 32, 54); ctx.strokeStyle = T.line; ctx.lineWidth = 5; ctx.strokeRect(784, y0 + 566, 32, 54);
+    ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(870, y0 + 566); ctx.lineTo(870, y0 + 620); ctx.moveTo(855, y0 + 566); ctx.lineTo(885, y0 + 566); ctx.moveTo(855, y0 + 620); ctx.lineTo(885, y0 + 620); ctx.stroke();
+  },
+  square(T, y0) { // 3-4-5 triangle with pegs and string
+    const A = [220, y0 + 620], B = [820, y0 + 620], Cc = [220, y0 + 170];
+    ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(...A); ctx.lineTo(...B); ctx.lineTo(...Cc); ctx.closePath(); ctx.stroke();
+    ctx.strokeStyle = T.line; ctx.lineWidth = 6; ctx.strokeRect(220, y0 + 560, 60, 60);
+    [A, B, Cc].forEach(p => { ctx.fillStyle = C.orange; rr(p[0] - 18, p[1] - 40, 36, 70, 6); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 5; ctx.stroke(); });
+    ctx.font = F(700, 92, 'title'); ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center';
+    ctx.fillText('4', 520, y0 + 700); ctx.fillText('3', 130, y0 + 430); ctx.fillText('5', 580, y0 + 370); ctx.textAlign = 'left';
+  },
+  level(T, y0) { // level on tripod + staff
+    poly([[430, y0 + 330], [320, y0 + 640], [345, y0 + 640]], null, T.line, 10); poly([[430, y0 + 330], [540, y0 + 640], [515, y0 + 640]], null, T.line, 10);
+    ctx.fillStyle = C.yellow; rr(330, y0 + 250, 220, 90, 14); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 7; ctx.stroke();
+    ctx.fillStyle = T.line; rr(530, y0 + 275, 60, 40, 8); ctx.fill();
+    ctx.setLineDash([14, 12]); ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(590, y0 + 295); ctx.lineTo(800, y0 + 295); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(800, y0 + 160, 70, 480); ctx.strokeStyle = T.line; ctx.lineWidth = 6; ctx.strokeRect(800, y0 + 160, 70, 480);
+    ctx.fillStyle = C.red; for (let y = y0 + 180; y < y0 + 640; y += 60) ctx.fillRect(800, y, 36, 24);
+  },
+  roller(T, y0) { // compaction roller on layers
+    [[C.concrete, 560], ['#C9B28A', 610], ['#A88E62', 660]].forEach(([c, y]) => { ctx.fillStyle = c; ctx.fillRect(60, y0 + y, 960, 50); ctx.strokeStyle = T.line; ctx.lineWidth = 5; ctx.strokeRect(60, y0 + y, 960, 50); });
+    ctx.beginPath(); ctx.arc(330, y0 + 450, 110, 0, 7); ctx.fillStyle = C.steel; ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 8; ctx.stroke();
+    poly([[420, y0 + 300], [760, y0 + 300], [760, y0 + 520], [420, y0 + 520]], C.yellow, T.line);
+    poly([[560, y0 + 180], [740, y0 + 180], [740, y0 + 300], [560, y0 + 300]], '#BFD3FF', T.line, 6);
+    ctx.beginPath(); ctx.arc(700, y0 + 500, 60, 0, 7); ctx.fillStyle = T.line; ctx.fill();
+  },
+  diagonals(T, y0) { // rectangle with both diagonals, equal = square
+    const x0 = 170, x1 = 910, a = y0 + 220, b = y0 + 640;
+    ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 10; ctx.strokeRect(x0, a, x1 - x0, b - a);
+    ctx.strokeStyle = C.yellow; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(x0, a); ctx.lineTo(x1, b); ctx.moveTo(x1, a); ctx.lineTo(x0, b); ctx.stroke();
+    [[x0, a], [x1, a], [x0, b], [x1, b]].forEach(p => { ctx.fillStyle = C.orange; rr(p[0] - 16, p[1] - 30, 32, 60, 6); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 5; ctx.stroke(); });
+    ctx.font = F(700, 64, 'title'); ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center'; ctx.fillText('40 ft', 540, a - 24); ctx.fillText('30', x0 - 60, (a + b) / 2 + 20); ctx.textAlign = 'left';
+  },
+};
+
+window.cover = (o) => {
+  const T = THEMES[o.theme];
+  ctx.fillStyle = T.bg; ctx.fillRect(0, 0, 1080, 1920);
+  // subtle halftone texture
+  ctx.fillStyle = 'rgba(14,42,71,0.07)'; for (let y = 0; y < 1920; y += 28) for (let x = (y / 28) % 2 ? 14 : 0; x < 1080; x += 28) { ctx.beginPath(); ctx.arc(x, y, 3, 0, 7); ctx.fill(); }
+  // series tag + part
+  ctx.font = F(600, 34, 'mono'); const tag = `${o.series} · PART ${o.part}/3`; const tw = ctx.measureText(tag).width;
+  ctx.fillStyle = T.hl; rr(64, 270, tw + 44, 64, 12); ctx.fill(); ctx.fillStyle = T.hlInk; ctx.fillText(tag, 86, 314);
+  // title
+  let y = 470; const size = o.size || 132;
+  ctx.font = F(700, size, 'title');
+  for (const line of o.title) {
+    let x = 64;
+    line.split(/(==[^=]+==)/).filter(Boolean).forEach(seg => {
+      const hl = seg.startsWith('=='); const s = seg.replace(/==/g, ''); const w = ctx.measureText(s).width;
+      if (hl) { ctx.fillStyle = T.hl; rr(x - 10, y - size * 0.82, w + 20, size * 1.0, 14); ctx.fill(); ctx.fillStyle = T.hlInk; } else ctx.fillStyle = T.ink;
+      ctx.fillText(s, x, y); x += w;
+    });
+    y += size * 1.04;
+  }
+  // art
+  ART[o.art](T, y - 180);
+  // number sticker
+  if (o.number) {
+    ctx.save(); ctx.translate(820, 1480); ctx.rotate(-0.08);
+    ctx.fillStyle = T.accent; ctx.beginPath(); ctx.arc(0, 0, 150, 0, 7); ctx.fill(); ctx.strokeStyle = T.line; ctx.lineWidth = 8; ctx.stroke();
+    ctx.fillStyle = C.navy; ctx.textAlign = 'center'; ctx.font = F(700, o.number.length > 4 ? 66 : 84, 'title'); ctx.fillText(o.number, 0, 14);
+    ctx.font = F(600, 26, 'mono'); ctx.fillText(o.numLabel || '', 0, 62); ctx.restore(); ctx.textAlign = 'left';
+  }
+  // brand
+  ctx.font = F(700, 40, 'title'); ctx.fillStyle = T.ink; ctx.fillText('EngiFormula', 64, 1640);
+  return document.getElementById('c').toDataURL('image/jpeg', 0.92);
+};
+window.ready = Promise.all(['600 20px Inter', '700 20px "Space Grotesk"', '600 20px "JetBrains Mono"'].map(f => document.fonts.load(f)));
+</script></body></html>
