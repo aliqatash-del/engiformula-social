@@ -159,12 +159,17 @@ TYPE = f'''<template>
 </script>
 </template>
 '''
+import os
+PLATE = os.environ.get('PLATE') == '1'
+STAGE_BG = 'transparent' if PLATE else '#EFEBE4'
+PLATE_JS = ' window.SLUMP_PLATE = true;' if PLATE else ''
+PLATE_TAG = (f'    <video id="plate" class="clip" src="assets/plate.mp4" muted playsinline data-start="0" data-duration="{END}" data-track-index="0" style="position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover"></video>\n') if PLATE else ''
 STAGE = f'''<template>
 <style>
   @font-face {{ font-family: "Barlow Condensed"; font-weight: 700; src: url("assets/fonts/barlow-condensed-latin-700-normal.woff2"); }}
   @font-face {{ font-family: "Barlow Condensed"; font-weight: 800; src: url("assets/fonts/barlow-condensed-latin-800-normal.woff2"); }}
   @font-face {{ font-family: "Barlow"; font-weight: 600; src: url("assets/fonts/barlow-latin-600-normal.woff2"); }}
-  #root {{ position: absolute; inset: 0; overflow: hidden; background: #EFEBE4; }}
+  #root {{ position: absolute; inset: 0; overflow: hidden; background: {STAGE_BG}; }}
   #stage3d {{ position: absolute; inset: 0; }}
   #draft {{ position: absolute; inset: 0; width: 1080px; height: 1920px; }}
 </style>
@@ -172,7 +177,7 @@ STAGE = f'''<template>
   <div id="stage3d"></div>
   <canvas id="draft" width="1080" height="1920"></canvas>
 </div>
-<script>window.SLUMP_BEATS = {json.dumps(B)};</script>
+<script>window.SLUMP_BEATS = {json.dumps(B)};{PLATE_JS}</script>
 <script src="assets/lib/stage.js"></script>
 <script>
   window.__timelines = window.__timelines || {{}};
@@ -186,7 +191,7 @@ INDEX = f'''<!doctype html>
 <html lang="en" data-resolution="portrait"><head><meta charset="utf-8"><meta name="viewport" content="width=1080, height=1920"><script src="assets/lib/gsap.min.js"></script></head>
 <body>
   <div id="root" data-composition-id="main" data-start="0" data-duration="{END}" data-width="1080" data-height="1920">
-    <div id="stage" data-composition-id="stage" data-composition-src="compositions/stage.html" data-start="0" data-duration="{END}" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+{PLATE_TAG}    <div id="stage" data-composition-id="stage" data-composition-src="compositions/stage.html" data-start="0" data-duration="{END}" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
     <div id="type" data-composition-id="type" data-composition-src="compositions/type.html" data-start="0" data-duration="{END}" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
     <audio id="voice" class="clip" src="assets/voice.wav" data-start="0" data-duration="{END}" data-track-index="5" data-volume="1"></audio>
     <audio id="sfx" class="clip" src="assets/sfx.wav" data-start="0" data-duration="{END}" data-track-index="6" data-volume="0.55"></audio>

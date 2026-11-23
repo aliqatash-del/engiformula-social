@@ -104,7 +104,7 @@ const brushedTex = canvasTex(512, (ctx, n) => {
 const host = document.getElementById("stage3d");
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setPixelRatio(1); renderer.setSize(W, H, false);
-renderer.domElement.style.cssText = "position:absolute;inset:0;width:1080px;height:1920px";
+renderer.domElement.style.cssText = "position:absolute;inset:0;width:1080px;height:1920px" + (window.SLUMP_PLATE ? ";display:none" : "");
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -421,10 +421,10 @@ function renderAt(t) {
 
   if (fill > 0.001) {
     concrete.visible = true;
-    concrete.geometry.dispose(); concrete.geometry = concreteGeo(fill, p, open > 0.98 ? 1 : 0);
+    if (!window.SLUMP_PLATE) { concrete.geometry.dispose(); concrete.geometry = concreteGeo(fill, p, open > 0.98 ? 1 : 0); }
   } else concrete.visible = false;
   section.visible = open > 0.98 && fill > 0.001;
-  if (section.visible) sectionFaces(fill);
+  if (section.visible && !window.SLUMP_PLATE) sectionFaces(fill);
 
   // rod
   rod.visible = !!rodState;
@@ -435,7 +435,10 @@ function renderAt(t) {
     const yTop = HC + rr; rod.position.set(lerp(1.0, 3.35, k), lerp(HC + 1.2, yTop, k), 0.0);
   } else if (rodState) { rod.rotation.set(0, 0, 0); rod.position.set(rodState.x, rodState.y, rodState.z); }
 
-  renderer.render(scene, camera);
+  window.__lastState = { t, cam: { pos: cp, target: ct, fov }, fill, p, open, wetK,
+    cone: { pos: cone.position.toArray(), rotZ: cone.rotation.z },
+    rod: { visible: rod.visible, pos: rod.position.toArray(), rotZ: rod.rotation.z } };
+  if (!window.SLUMP_PLATE) renderer.render(scene, camera); else camera.updateMatrixWorld(true);
 
   // --- drafting overlay ---
   g2.clearRect(0, 0, W, H);
@@ -509,7 +512,7 @@ window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady
 window.__hf.buildReady.stage = (async () => {
   await document.fonts.load('700 40px "Barlow Condensed"'); await document.fonts.load('800 40px "Barlow Condensed"'); await document.fonts.load('600 20px "Barlow"');
   renderAt(0);
-  await renderer.compileAsync(scene, camera);
+  if (!window.SLUMP_PLATE) await renderer.compileAsync(scene, camera);
 })();
 window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
 window.__renderStage = renderAt;
