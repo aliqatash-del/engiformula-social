@@ -8,6 +8,76 @@
       "skillPath": "skills/algorithmic-art/SKILL.md",
       "computedHash": "4a85abfeaa09f2dd2c4b76c85d57b65f61dc10d55c3cca245989cee8897c2be5"
     },
+    "blender-animation": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-animation/SKILL.md",
+      "computedHash": "f2ec65cdf89f36dbf4066223a68e29990d031f1f9bc3a99ec72f14b51c0861d5"
+    },
+    "blender-asset-qa": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-asset-qa/SKILL.md",
+      "computedHash": "968e4435eeba040f0952cc335c8e9e7182e1d7008aa4295f202ddb836fa49ec9"
+    },
+    "blender-core": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-core/SKILL.md",
+      "computedHash": "85c6161bf7a8e648735bd04957caba76f5e9c7b8506b38afd8496cc795563789"
+    },
+    "blender-lighting-lookdev": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-lighting-lookdev/SKILL.md",
+      "computedHash": "adce74e508559230cd078bf658374a66ed1faa8a975eccfa196ea6d5a59e1e54"
+    },
+    "blender-pbr-materials": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-pbr-materials/SKILL.md",
+      "computedHash": "6c02bc13dc33e71d816dc6b498bf38312ed7e17aa2bfcc57446a45efc7c1f318"
+    },
+    "blender-pipeline-automation": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-pipeline-automation/SKILL.md",
+      "computedHash": "1b59d80395ebb270347c64f3e148f873a782c2ff68c64e2239720517c15e8abb"
+    },
+    "blender-rendering": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-rendering/SKILL.md",
+      "computedHash": "0c1a3b2c9537868dda84d981f26060eeeb159d26769c6344f608641ac6fc1b6f"
+    },
+    "blender-scene-setup": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-scene-setup/SKILL.md",
+      "computedHash": "fbfc9b4fb42fd3434d4112700eeda86049908cd65e5f9d939f043e5358d69a25"
+    },
+    "blender-simulation": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-simulation/SKILL.md",
+      "computedHash": "b4c80843a7bbc5e6e31266837f16cab973ed7d4cab45d204d8a7dedb9114f5ce"
+    },
+    "blender-texturing": {
+      "source": "EL4CTEO/blender-skills",
+      "commit": "1a1cc6c49312f9f370aae86f52b7b907f29c94f6",
+      "sourceType": "github",
+      "skillPath": "skills/blender-texturing/SKILL.md",
+      "computedHash": "d1df25354626165849dbaa8905715192318f6044bcdb82381aa4355d602e655d"
+    },
     "canvas-design": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
@@ -21,26 +91,33 @@
       "skillPath": "skills/copywriting/SKILL.md",
       "computedHash": ""
     },
+    "earshot": {
+      "source": "Leonxlnx/earshot",
+      "commit": "7a7f7c5c70d4a763a1eca4b3666af7c77e313f97",
+      "sourceType": "github",
+      "skillPath": "skills/earshot/SKILL.md",
+      "computedHash": "41425a9986200073533d31d16bfdf1c5221151c0440db4fc2d049158ea09117b"
+    },
     "hyperframes": {
       "source": "heygen-com/hyperframes",
-      "commit": "4daeb78c3d8c2f7ab154613b13f6a1d74485d394",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
       "sourceType": "github",
       "skillPath": "skills/hyperframes/SKILL.md",
-      "computedHash": "10efb1144c3ac424135e538fac9fb98c812153c2d017e57e2f4f770994d77550"
+      "computedHash": "6c67ce2bea9d0078b80aeebbf9fdf10f261b541d4e18d04eef9622db81aa9c8e"
     },
     "hyperframes-cli": {
       "source": "heygen-com/hyperframes",
-      "commit": "4daeb78c3d8c2f7ab154613b13f6a1d74485d394",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
       "sourceType": "github",
       "skillPath": "skills/hyperframes-cli/SKILL.md",
-      "computedHash": "2f1c85dc9e017eeb66abcc106da475b60bef55a625a7cdceede206b89bc69054"
+      "computedHash": "f9666e4c9e23908cb0d3c52c4f712bf5b74b46769a486aecbd072a79781b784a"
     },
     "hyperframes-registry": {
       "source": "heygen-com/hyperframes",
-      "commit": "4daeb78c3d8c2f7ab154613b13f6a1d74485d394",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
       "sourceType": "github",
       "skillPath": "skills/hyperframes-registry/SKILL.md",
-      "computedHash": "b22ef066fd753edd221fc1873273e8479e97b34ebed3a342027df46afa77241f"
+      "computedHash": "dc17b1d44ad2cf992e5ab7e3edb83ce0d7ad847ebc660ec513b0c40e660abf09"
     },
     "manim-skill": {
       "source": "Yusuke710/manim-skill",
@@ -57,10 +134,24 @@
     },
     "media-use": {
       "source": "heygen-com/hyperframes",
-      "commit": "4daeb78c3d8c2f7ab154613b13f6a1d74485d394",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
       "sourceType": "github",
       "skillPath": "skills/media-use/SKILL.md",
-      "computedHash": "375a865a7a98b1514d4d36dca0b8696e4e9f04b53b4a95e67524283752451f60"
+      "computedHash": "4342c0a974e30faf53319ae66650b5aec0e2f4d69dbf9d79e8ee7cc13a60f11a"
+    },
+    "openverse-sfx": {
+      "source": "Varnan-Tech/opendirectory",
+      "commit": "caac7cda5621e289591e4e74b400e66ac72ad25b",
+      "sourceType": "github",
+      "skillPath": "skills/openverse-sfx/SKILL.md",
+      "computedHash": "3407e1f8465dcace75eeb1c23f7f18d470bef5c6a65f4b15fa981f8c055d2fef"
+    },
+    "real-sound": {
+      "source": "Leonxlnx/earshot",
+      "commit": "7a7f7c5c70d4a763a1eca4b3666af7c77e313f97",
+      "sourceType": "github",
+      "skillPath": "skills/real-sound/SKILL.md",
+      "computedHash": "4810cd9a42676d927ca3cee29933bdbf2ddb92976e869fa439f38531bbc59a0e"
     },
     "remotion-best-practices": {
       "source": "remotion-dev/skills",
@@ -148,10 +239,10 @@
     },
     "remotion-to-hyperframes": {
       "source": "heygen-com/hyperframes",
-      "commit": "4daeb78c3d8c2f7ab154613b13f6a1d74485d394",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
       "sourceType": "github",
       "skillPath": "skills/remotion-to-hyperframes/SKILL.md",
-      "computedHash": "ce60898a2d008bbc1ab0a22921fe9e0e53f9fd213b303dc93b4aeca1251788c0"
+      "computedHash": "f023772845aefbf83ba688082fca5eb41531ee3e363f97ba873d7570a7bc34cd"
     },
     "remotion-upgrade": {
       "source": "remotion-dev/skills",
@@ -160,11 +251,25 @@
       "computedHash": "47399c091f8504a9225d057c78981c1d1f45baf976dad2bb002a38f52fdcdfec",
       "commit": "6f55706d1069e512430582ad86e4e57dc07afe1b"
     },
+    "reverse-any-video": {
+      "source": "heygen-com/hyperframes",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
+      "sourceType": "github",
+      "skillPath": "skills/reverse-any-video/SKILL.md",
+      "computedHash": "9038cadd1a7b4090f990588498106ca9eb3ca9424df93eb3f9e414d2dae5c0d7"
+    },
     "social": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/social/SKILL.md",
       "computedHash": ""
+    },
+    "style-sampling": {
+      "source": "heygen-com/hyperframes",
+      "commit": "590617475f6f2e4c592b1bc6783bb6dc49d5accf",
+      "sourceType": "github",
+      "skillPath": "skills/style-sampling/SKILL.md",
+      "computedHash": "e53526e3561c6ca0e1cd6e2c6b912585b40be4858a58c2025b1f27f734a178b1"
     },
     "viral-hooks": {
       "source": "rediumvex/viral-hooks-skill",

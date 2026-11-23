@@ -1,0 +1,35 @@
+name: Fetch Openverse media
+
+# Downloads openly licensed sounds (CC0 / PDM / CC BY, Freesound) and CC0 images (textures, tools)
+# listed in media/openverse/requests/*.json and commits them with a manifest and CREDITS.md.
+on:
+  push:
+    paths: ["media/openverse/requests/*.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-openverse-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch requested media
+        run: python scripts/openverse_fetch.py media/openverse/requests/*.json
+      - name: Commit media
+        run: |
+          git config user.name "engiformula-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add media/openverse
+          git diff --cached --quiet && exit 0
+          git commit -m "media: Openverse fetch ${GITHUB_SHA::7}"
+          git push
