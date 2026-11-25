@@ -1,0 +1,17 @@
+{
+  "sounds": [
+    {"name": "cone-set-down", "query": "metal bucket set down", "max_ms": 4000, "n": 3},
+    {"name": "metal-clank", "query": "metal clank", "max_ms": 3000, "n": 3},
+    {"name": "concrete-pour", "query": "wet concrete pour", "max_ms": 8000, "n": 3},
+    {"name": "mud-squelch", "query": "mud squelch", "max_ms": 3000, "n": 3},
+    {"name": "rod-clink", "query": "metal rod clink", "max_ms": 3000, "n": 3},
+    {"name": "paper-slide", "query": "paper slide", "max_ms": 3000, "n": 3},
+    {"name": "whoosh", "query": "whoosh", "max_ms": 2500, "n": 3},
+    {"name": "site-ambience", "query": "construction site ambience", "max_ms": 60000, "n": 2}
+  ],
+  "images": [
+    {"name": "concrete", "query": "concrete texture", "n": 3},
+    {"name": "galvanized", "query": "galvanized steel texture", "n": 3},
+    {"name": "brushed-steel", "query": "brushed metal texture", "n": 2}
+  ]
+}
